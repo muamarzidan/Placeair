@@ -32,22 +32,22 @@ const Navbar = () => {
           <div className="text-2xl font-bold text-primary">
             <a href="/">Placeir</a>
           </div>
-          <div className="items-center hidden px-8 py-4 space-x-8 font-bold border-2 rounded-full md:flex">
-            <a href="/" className="px-5 text-lg transition-all">
+          <div className="w-[418px] justify between items-center hidden h-[55px] justify-evenly text-xl font-normal border-2 rounded-full md:flex">
+            <a href="/" className="transition-all">
               Home
             </a>
-            <a href="/about" className="px-5 text-lg transition-all">
+            <a href="/about" className="transition-all">
               Explore
             </a>
-            <a href="/faq" className="px-5 text-lg transition-all">
+            <a href="/faq" className="transition-all ">
               About Us
             </a>
-            <a href="/faq" className="px-5 text-lg transition-all">
+            <a href="/faq" className="transition-all ">
               Blog
             </a>
           </div>
           <div className="items-center hidden md:flex">
-            <button className="px-[24px] py-[12px] font-semibold text-white rounded-full text-xs bg-primary">Contact Us</button>
+            <button className="px-[24px] py-[12px] font-semibold text-white rounded-full text-lg bg-primary">Contact Us</button>
           </div>
           <div id="hamburger" className="md:hidden">
             <button

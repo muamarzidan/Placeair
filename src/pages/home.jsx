@@ -14,7 +14,7 @@ export default function HomePage() {
             Jelajahi Pesona Alam  Nusantara yang Menakjubkan
           </h1>
         </section>
-        <section id="popular" className="w-full h-auto">
+        <section id="popular" className="w-full h-auto my-20">
           <Popular />
         </section>
       </main>

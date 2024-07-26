@@ -27,7 +27,7 @@ const Navbar = () => {
             <div className="text-3xl font-bold text-white">
               <a href="/">Placeir</a>
             </div>
-            <div className="w-[418px] h-[55px] justify hidden items-center justify-evenly md:flex font-bold text-xl backdrop-blur-2xl rounded-full border-[1px] text-white border-white">
+            <div className="w-[418px] h-[55px] justify hidden items-center justify-evenly md:flex font-bold text-xl bg-[#ffffff2b] rounded-full border-[1px] text-white border-white">
               <a href="/" className="transition-all">
                 Home
               </a>

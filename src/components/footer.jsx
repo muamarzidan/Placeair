@@ -1,91 +1,73 @@
-import { useState, useEffect } from "react";
+import { Icon } from "@iconify-icon/react";
+import logo from "../assets/react.svg";
+
 
 const Footer = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isColorTextChange, setIsColorTextChange] = useState("text-white");
-
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 500) {
-        setIsColorTextChange("text-primary");
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
-
   return (
     <>
-      <nav
-        className={`fixed h-[112px] flex items-center inset-x-0 top-0 z-50 transition-colors duration-300 ${isColorTextChange}`}
-      >
-        <div className="container">
-          <div className="flex items-center justify-between">
-            <div className="text-3xl font-bold text-white">
-              <a href="/">Placeir</a>
+      <footer className="w-full h-auto bg-black">
+        <div className="container xl:px-[100px]">
+          <div className="flex flex-col sm:flex-row justify-between gap-10 py-[100px]">
+            <div
+              id="logo"
+              className="order-1 sm:order-2 w-full sm:w-[33%] flex items-center justify-start sm:justify-center"
+            >
+              <img
+                src={logo}
+                alt="Logo Selfie"
+                className="w-[150px] h-[100px] md:w-[240px] md:h-[140px]"
+              />
             </div>
-            <div className="w-[418px] h-[55px] justify hidden items-center justify-evenly md:flex font-bold text-xl backdrop-blur-2xl rounded-full border-[1px] text-white border-white">
-              <a href="/" className="transition-all">
-                Home
-              </a>
-              <a className="transition-all">
-                Explore
-              </a>
-              <a href="/about" className="transition-all">
-                About Us
-              </a>
-              <a href="/blog" className="transition-all">
-                Blog
-              </a>
+            <div
+              id="menu"
+              className="order-2 sm:order-1 w-full sm:w-[33%] flex flex-col gap-2"
+            >
+              <p className="text-xl font-bold text-white sm:text-lg xl:text-2xl 2xl:text-3xl">
+                <a href="/">Home</a>
+              </p>
+              <p className="text-xl font-bold text-white sm:text-lg xl:text-2xl 2xl:text-3xl">
+                <a href="/about">About Us</a>
+              </p>
+              <p className="text-xl font-bold text-white sm:text-lg xl:text-2xl 2xl:text-3xl">
+                <a href="/faq">FAQ</a>
+              </p>
             </div>
-            <div className="items-center hidden md:flex">
-              <button className="px-[24px] py-[12px] font-semibold text-white rounded-full text-lg bg-primary">
-                Contact Us
-              </button>
-            </div>
-            <div id="hamburger" className="md:hidden">
-              <button
-                onClick={() => setIsMenuOpen(!isMenuOpen)}
-                className="text-white focus:outline-none"
+            <div
+              id="sosial-media"
+              className="order-3 w-full sm:w-[33%] flex flex-col justify-around gap-2"
+            >
+              <div
+                id="sosmed-insta"
+                className="flex items-center gap-10 cursor-pointer"
               >
-                <svg
-                  className="w-6 h-6"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M4 6h16M4 12h16m-7 6h7"
-                  />
-                </svg>
-              </button>
+                <Icon
+                  icon="f7:logo-instagram"
+                  width={42}
+                  height={42}
+                  style={{ color: "white" }}
+                />
+                <p className="text-xl font-bold text-white sm:text-lg xl:text-2xl 2xl:text-3xl">
+                  symbiosix2024
+                </p>
+              </div>
+              <div
+                id="sosmed-wa"
+                className="flex items-center gap-10 cursor-pointer"
+              >
+                <Icon
+                  icon="formkit:whatsapp"
+                  width={42}
+                  height={42}
+                  style={{ color: "white" }}
+                />
+                <p className="text-xl font-bold text-white sm:text-lg xl:text-2xl 2xl:text-3xl">
+                  +62 814-1081-4644
+                </p>
+              </div>
             </div>
           </div>
-
-          {isMenuOpen && (
-            <div
-              className="flex flex-col space-y-2 md:hidden"
-              style={{ transitionProperty: "opacity, transform" }}
-            >
-              <a href="/" className="px-3 text-lg transition-all">
-                Home
-              </a>
-              <a href="/about" className={"text-lg px-3 transition-all"}>
-                About Us
-              </a>
-              <a href="/faq" className="px-3 text-lg transition-all">
-                FAQ
-              </a>
-            </div>
-          )}
         </div>
-      </nav>
+      </footer>
     </>
   );
 };

@@ -17,7 +17,7 @@ const popularCardSwiper = () => {
         <div className="container flex items-center w-full h-auto">
           <div className="flex flex-col w-full container-title-popular">
             <p className="text-3xl font-bold text-secondary">TEMUKAN</p>
-            <h3 className="font-bold pr-[200px] text-6xl text-[#171717]">
+            <h3 className="font-bold pr-[700px] text-6xl text-[#171717]">
               Destinasi Populer yang Wajib Anda Kunjungi
             </h3>
           </div>
@@ -64,7 +64,7 @@ const popularCardSwiper = () => {
                       height: "100%",
                     }}
                   >
-                    <div className="flex items-center justify-evenly w-[67px] py-2 rounded-full bg-[#ffffff2b]">
+                    <div className="flex items-center justify-evenly w-[67px] py-2 px-2 rounded-full bg-[#ffffff2b]">
                       <Icon
                         icon="mingcute:star-fill"
                         width="16"

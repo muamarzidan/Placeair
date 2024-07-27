@@ -6,6 +6,7 @@ import "swiper/css/navigation";
 import { Pagination, Navigation } from "swiper/modules";
 import { Icon } from "@iconify-icon/react";
 
+import formatPrice from "../utils/rupiahFormatter";
 import dataCard from "../api/destionation";
 
 const popularCardSwiper = () => {
@@ -55,7 +56,7 @@ const popularCardSwiper = () => {
                 key={index}
                 className="flex items-center justify-center sm:block sm:items-start sm:justify-start"
               >
-                <div className="card-popular w-[400px] h-[456px] flex flex-col justify-between p-3 rounded-xl border-[1px] border-gray-300">
+                <div className="card-popular w-[400px] h-[456px] flex flex-col justify-between p-3 rounded-3xl border-[1px] border-gray-300">
                   <div
                     className="w-full h-full !max-w-[377px] !max-h-[280px] p-3 rounded-xl"
                     style={{
@@ -92,7 +93,7 @@ const popularCardSwiper = () => {
                     </span>
                   </div>
                   <div className="flex items-center justify-between w-full">
-                   <span className="font-bold text-[26px] text-[#171717]">Rp. {data.price}</span>
+                   <span className="font-bold text-[26px] text-[#171717]">{formatPrice(data.price)}</span>
                    <button className="px-5 py-3 text-lg font-bold text-white rounded-full bg-primary">Selengkapnya</button>
                   </div>
                 </div>

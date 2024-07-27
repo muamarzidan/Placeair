@@ -1,0 +1,81 @@
+.swiper-controller {
+  width: 100%;
+  padding: 70px 30px;
+  position: relative;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  top: unset !important;
+  left: unset !important;
+  bottom: unset !important;
+  right: unset !important;
+  position: unset !important;
+  width: 100px !important;
+  height: 100px !important;
+}
+
+.button-swiper {
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 200px;
+}
+
+.button-atrr {
+  position: absolute;
+  top: 90px;
+  right: 100px;
+}
+
+.swiper-button-prev.swiper-button-disabled::after {
+  background-image: url('src/assets/leftoDisabled.svg') !important;
+  background-repeat: no-repeat !important;
+  width: 100px !important;
+  height: 100px !important;
+  color: #FFFFFF00 !important;
+}
+
+.swiper-button-next.swiper-button-disabled::after {
+  background-image: url('src/assets/rightoDisabled.svg') !important;
+  background-repeat: no-repeat !important;
+  width: 100px !important;
+  height: 100px !important;
+  color: #FFFFFF00 !important;
+}
+
+  /* width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff !important;
+  color: #c3c3d5 !important;
+  border: 5px solid #c3c3d5;
+  border-radius: 100%; */
+
+.swiper-button-prev::after {
+  background-image: url('src/assets/lefto.svg');
+  background-repeat: no-repeat;
+  width: 100px;
+  height: 100px;
+  color: #FFFFFF00;
+}
+
+.swiper-button-next::after {
+  background-image: url('src/assets/righto.svg');
+  background-repeat: no-repeat;
+  width: 100px;
+  height: 100px;
+  color: #FFFFFF00;
+}
+
+  /* width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  background-color: #181b68;
+  border-radius: 100%; */

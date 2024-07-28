@@ -15,7 +15,9 @@ export default {
       },
       colors:{
         primary: '#181B68',
-        secondary: '#4C82FE'
+        secondary: '#4C82FE',
+        textPrimary: '#171717',
+        textSecondary: '#6F706F',
       },
       fontSize: {
         xs: '10px',
@@ -33,6 +35,8 @@ export default {
       },
       backgroundImage: {
         'hero-placeir': "url('assets/images/hero-placeir.png')",
+        'newssteller-placeir': "url('assets/images/newssteller-placeir.png')",
+        'frame-one': "url('assets/images/bg-frame-1.png')",
       }
     },
   },

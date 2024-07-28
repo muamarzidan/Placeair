@@ -1,4 +1,3 @@
-// import { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
@@ -8,21 +7,17 @@ import { Icon } from "@iconify-icon/react";
 
 import formatPrice from "../utils/rupiahFormatter";
 import dataCard from "../api/destionation";
+import "../assets/css/popular.css";
+
 
 const popularCardSwiper = () => {
   return (
     <>
-      <div className="flex flex-col w-full h-auto gap-10">
-        <div className="container flex items-center justify-between w-full h-auto">
-          <div className="flex flex-col w-full gap-5 container-title-popular">
-            <p className="font-bold text-secondary">TEMUKAN</p>
-            <h3 className="font-bold pr-[200px] text-[#171717]">
-              Destinasi Populer yang Wajib Anda Kunjungi
-            </h3>
-          </div>
-          <div className="flex flex-col w-full gap-5 container-title-popular">
-            <p className="font-bold text-secondary">TEMUKAN</p>
-            <h3 className="font-bold pr-[200px] text-[#171717]">
+      <div className="flex flex-col w-full h-auto gap-10 swiper-controller">
+        <div className="container flex items-center w-full h-auto">
+          <div className="flex flex-col w-full container-title-popular">
+            <p className="text-3xl font-bold text-secondary">TEMUKAN</p>
+            <h3 className="font-bold pr-[700px] text-6xl text-[#171717]">
               Destinasi Populer yang Wajib Anda Kunjungi
             </h3>
           </div>
@@ -42,14 +37,16 @@ const popularCardSwiper = () => {
                 spaceBetween: 50,
               },
               1024: {
-                slidesPerView: 3,
-                spaceBetween: 50,
+                slidesPerView: 3.2,
+                spaceBetween: 0,
               },
             }}
             pagination={false}
-            navigation={true}
+            navigation={{
+              nextEl: ".swiper-button-next",
+              prevEl: ".swiper-button-prev",
+            }}
             modules={[Pagination, Navigation]}
-            className=""
           >
             {dataCard.map((data, index) => (
               <SwiperSlide
@@ -67,7 +64,7 @@ const popularCardSwiper = () => {
                       height: "100%",
                     }}
                   >
-                    <div className="flex items-center justify-evenly w-[67px] py-2 rounded-full bg-[#ffffff2b]">
+                    <div className="flex items-center justify-evenly w-[67px] py-2 px-2 rounded-full bg-[#ffffff2b]">
                       <Icon
                         icon="mingcute:star-fill"
                         width="16"
@@ -93,13 +90,23 @@ const popularCardSwiper = () => {
                     </span>
                   </div>
                   <div className="flex items-center justify-between w-full">
-                   <span className="font-bold text-[26px] text-[#171717]">{formatPrice(data.price)}</span>
-                   <button className="px-5 py-3 text-lg font-bold text-white rounded-full bg-primary">Selengkapnya</button>
+                    <span className="font-bold text-[26px] text-[#171717]">
+                      {formatPrice(data.price)}
+                    </span>
+                    <button className="px-5 py-3 text-lg font-bold text-white rounded-full bg-primary">
+                      Selengkapnya
+                    </button>
                   </div>
                 </div>
               </SwiperSlide>
             ))}
           </Swiper>
+          <div className="button-atrr">
+            <div className="button-swiper">
+              <div className="swiper-button-prev swiper-button-disabled"></div>
+              <div className="swiper-button-next swiper-button-disabled"></div>
+            </div>
+          </div>
         </div>
       </div>
     </>

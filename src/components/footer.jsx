@@ -1,91 +1,79 @@
-import { useState, useEffect } from "react";
+import { Icon } from "@iconify-icon/react";
+
 
 const Footer = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isColorTextChange, setIsColorTextChange] = useState("text-white");
-
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 500) {
-        setIsColorTextChange("text-primary");
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
-
   return (
     <>
-      <nav
-        className={`fixed h-[112px] flex items-center inset-x-0 top-0 z-50 transition-colors duration-300 ${isColorTextChange}`}
-      >
-        <div className="container">
-          <div className="flex items-center justify-between">
-            <div className="text-3xl font-bold text-white">
-              <a href="/">Placeir</a>
+      <footer className="bg-[#f4f4f4] w-full h-auto">
+        <div className="container flex flex-col w-full h-auto gap-5 pb-8 border-2 pt-14">
+          <div className="flex w-full h-auto">
+            <div className="flex flex-col basis-[70%]">
+              <h3 className="text-4xl font-semibold text-primary">Placeir</h3>
+              <p className="text-lg pr-[350px] text-textSecondary">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint Velit officia.</p>
             </div>
-            <div className="w-[418px] h-[55px] justify hidden items-center justify-evenly md:flex font-bold text-xl backdrop-blur-2xl rounded-full border-[1px] text-white border-white">
-              <a href="/" className="transition-all">
-                Home
-              </a>
-              <a className="transition-all">
-                Explore
-              </a>
-              <a href="/about" className="transition-all">
-                About Us
-              </a>
-              <a href="/blog" className="transition-all">
-                Blog
-              </a>
-            </div>
-            <div className="items-center hidden md:flex">
-              <button className="px-[24px] py-[12px] font-semibold text-white rounded-full text-lg bg-primary">
-                Contact Us
-              </button>
-            </div>
-            <div id="hamburger" className="md:hidden">
-              <button
-                onClick={() => setIsMenuOpen(!isMenuOpen)}
-                className="text-white focus:outline-none"
-              >
-                <svg
-                  className="w-6 h-6"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M4 6h16M4 12h16m-7 6h7"
-                  />
-                </svg>
-              </button>
+            <div className="flex basis-[30%]">
+              <ul className="flex flex-col gap-4 basis-1/3">
+                <li className="mb-1 text-2xl font-semibold text-primary">Layanan</li>
+                <li className="text-lg text-[#6F706F]">Contact Us</li>
+              </ul>
+              <ul className="flex flex-col gap-4 basis-1/3">
+                <li className="mb-1 text-2xl font-semibold text-primary">Layanan</li>
+                <li className="text-lg text-[#6F706F]">Explore</li>
+                <li className="text-lg text-[#6F706F]">About Us</li>
+                <li className="text-lg text-[#6F706F]">Blog</li>
+              </ul>
+              <ul className="flex flex-col gap-4 basis-1/3">
+                <li className="flex justify-between w-full h-auto mb-1 text-2xl font-semibold text-primary">Media Sosial</li>
+                <ul className="flex justify-between w-full h-auto text-2xl font-semibold text-primary">
+                  <li className=""><Icon icon="ri:instagram-fill" width="19" height="19"  style={{color: "#181b68"}} /></li>
+                  <li className=""><Icon icon="ph:twitter-logo-fill" width="19" height="19"  style={{color: "#181b68"}} /></li>
+                  <li className=""><Icon icon="ph:youtube-logo-fill" width="19" height="19"  style={{color: "#181b68"}} /></li>
+                </ul>
+              </ul>
             </div>
           </div>
+          <hr className="w-full h-[2px] mt-5 mb-2 bg-[#D9D9D9]" />
+          <div className="w-full h-auto">
+            <div className="sm:flex sm:justify-between">
+              <p className="text-lg text-gray-500">
+                &copy; 2024 Placeir. All right reserved
+              </p>
 
-          {isMenuOpen && (
-            <div
-              className="flex flex-col space-y-2 md:hidden"
-              style={{ transitionProperty: "opacity, transform" }}
-            >
-              <a href="/" className="px-3 text-lg transition-all">
-                Home
-              </a>
-              <a href="/about" className={"text-lg px-3 transition-all"}>
-                About Us
-              </a>
-              <a href="/faq" className="px-3 text-lg transition-all">
-                FAQ
-              </a>
+              <ul className="flex flex-wrap justify-start gap-4 mt-8 text-lg sm:mt-0 lg:justify-end">
+                <li>
+                  <a
+                    href="#"
+                    className="text-gray-500 transition hover:opacity-75"
+                  >
+                    {" "}
+                    Privacy Policy{" "}
+                  </a>
+                </li>
+
+                <li>
+                  <a
+                    href="#"
+                    className="text-gray-500 transition hover:opacity-75"
+                  >
+                    {" "}
+                    License{" "}
+                  </a>
+                </li>
+
+                <li>
+                  <a
+                    href="#"
+                    className="text-gray-500 transition hover:opacity-75"
+                  >
+                    {" "}
+                    Term and Condition{" "}
+                  </a>
+                </li>
+              </ul>
             </div>
-          )}
+          </div>
         </div>
-      </nav>
+      </footer>
     </>
   );
 };

@@ -3,12 +3,17 @@ import { useState, useEffect } from "react";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isColorTextChange, setIsColorTextChange] = useState("text-white");
+  const [isChangeTeksColor, setIsChangeTeksColor] = useState("text-white");
+  const [isChangeMenuNav, setIsChangeMenuNav] = useState("text-white border-white border-[1px] bg-[#ffffff2b]");
 
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 500) {
-        setIsColorTextChange("text-primary");
+        setIsChangeTeksColor("text-primary");
+        setIsChangeMenuNav("text-primary border-none bg-[#FFFFFF7F]");
+      } else {
+        setIsChangeTeksColor("text-white");
+        setIsChangeMenuNav("text-white border-white border-[1px] bg-[#ffffff2b]");
       }
     };
 
@@ -21,14 +26,14 @@ const Navbar = () => {
   return (
     <>
       <nav
-        className={`fixed h-[112px] flex items-center inset-x-0 top-0 z-50 transition-colors duration-300 ${isColorTextChange}`}
+        className="fixed h-[140px] flex items-center inset-x-0 top-0 z-50 transition-colors duration-300"
       >
         <div className="container">
           <div className="flex items-center justify-between">
-            <div className="text-3xl font-bold text-white">
-              <a href="/">Placeir</a>
+            <div className={`text-3xl font-bold  ${isChangeTeksColor}`}>
+              <a href="/" >Placeir</a>
             </div>
-            <div className="w-[418px] h-[55px] justify hidden items-center justify-evenly md:flex font-semibold text-xl bg-[#ffffff2b] rounded-full border-[1px] text-white border-white">
+            <div className={`w-[418px] h-[55px] justify hidden items-center justify-evenly md:flex font-semibold text-xl rounded-full ${isChangeMenuNav}`}>
               <a href="/" className="transition-all">
                 Home
               </a>

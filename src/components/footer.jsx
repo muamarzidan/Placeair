@@ -9,7 +9,7 @@ const Footer = () => {
           <div className="flex w-full h-auto">
             <div className="flex flex-col basis-[70%]">
               <h3 className="text-4xl font-semibold text-primary">Placeir</h3>
-              <p className="text-lg pr-[350px] text-textSecondary">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint Velit officia.</p>
+              <p className="text-lg pr-[350px] text-fourly">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint Velit officia.</p>
             </div>
             <div className="flex basis-[30%]">
               <ul className="flex flex-col gap-4 basis-1/3">

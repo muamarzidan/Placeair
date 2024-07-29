@@ -3,7 +3,7 @@ import { Icon } from "@iconify-icon/react";
 import Navbar from "../components/navbar";
 import Footer from "../components/footer";
 import Popular from "../components/popularSlider";
-import imageChoosePlaceir from "../assets/images/choose-placeir.png";
+import imageChoosePlaceir from "../assets/images/thumbnail-choose-placeir.png";
 
 
 export default function HomePage() {
@@ -11,7 +11,7 @@ export default function HomePage() {
     <>
       <Navbar />
       <main className="w-full h-auto bg-white">
-        <section id="hero" className="relative flex flex-col items-center justify-center h-screen m-3 bg-top bg-cover rounded-xl bg-hero-placeir">
+        <section id="hero" className="relative flex flex-col items-center justify-center h-screen m-3 bg-top bg-cover rounded-xl bg-hero-home-placeir">
           <div className="absolute inset-0 bg-black rounded-xl opacity-35"></div>
           <div className="relative px-3">
           <h1 className="relative font-semibold text-center text-white px-0 sm:px-5 lg:px-[50px] xl:px-[100px] 2xl:px-[200px] text-5xl md:text-6xl xl:text-8xl">
@@ -25,7 +25,7 @@ export default function HomePage() {
         </section>
         <section id="calculation" className="w-full h-auto my-20">
           <div className="container w-full h-auto">
-            <div className="flex items-center justify-between w-full h-auto p-16 bg-center bg-cover rounded-3xl bg-frame-one">
+            <div className="flex items-center justify-between w-full h-auto p-16 bg-center bg-cover rounded-3xl bg-frame-one-placeir">
               <span className="font-semibold pr-[40px] text-white text-7xl basis-1/2">Buat Perjalananan Anda Berkesan!</span>
               <div className="flex justify-between w-full h-auto basis-1/2">
                 <div className="flex flex-col basis-1/2">
@@ -61,23 +61,23 @@ export default function HomePage() {
                 <div className="flex flex-col w-full h-full gap-2">
                   <div className="flex items-center gap-2 w-fit">
                     <Icon icon="material-symbols:circle" width="18" height="18" style={{ color: "#4377ef" }} />
-                    <h5 className="text-3xl font-semibold text-textPrimary">Lorem Ipsum</h5>
+                    <h5 className="text-3xl font-semibold text-thridly">Lorem Ipsum</h5>
                   </div>
-                  <p className="text-2xl text-textSecondary">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis quis semper dolor. Aenean sed mattis libero</p>
+                  <p className="text-2xl text-fourly">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis quis semper dolor. Aenean sed mattis libero</p>
                 </div>
                 <div className="flex flex-col w-full h-full gap-2">
                   <div className="flex items-center gap-2 w-fit">
                     <Icon icon="material-symbols:circle" width="18" height="18" style={{ color: "#4377ef" }} />
-                    <h5 className="text-3xl font-semibold text-textPrimary">Lorem Ipsum</h5>
+                    <h5 className="text-3xl font-semibold text-thridly">Lorem Ipsum</h5>
                   </div>
-                  <p className="text-2xl text-textSecondary">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis quis semper dolor. Aenean sed mattis libero</p>
+                  <p className="text-2xl text-fourly">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis quis semper dolor. Aenean sed mattis libero</p>
                 </div>
                 <div className="flex flex-col w-full h-full gap-2">
                   <div className="flex items-center gap-2 w-fit">
                     <Icon icon="material-symbols:circle" width="18" height="18" style={{ color: "#4377ef" }} />
-                    <h5 className="text-3xl font-semibold text-textPrimary">Lorem Ipsum</h5>
+                    <h5 className="text-3xl font-semibold text-thridly">Lorem Ipsum</h5>
                   </div>
-                  <p className="text-2xl text-textSecondary">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis quis semper dolor. Aenean sed mattis libero</p>
+                  <p className="text-2xl text-fourly">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis quis semper dolor. Aenean sed mattis libero</p>
                 </div>
               </div>
             </div>
@@ -88,11 +88,11 @@ export default function HomePage() {
         </section>
         <section id="newssletter" className="w-full h-auto my-20">
           <div className="container w-full h-[400px]">
-            <div className="relative w-full h-full flex flex-col items-center justify-center gap-8 bg-cover bg-center bg-newssteller-placeir rounded-[30px]">
+            <div className="relative w-full h-full flex flex-col items-center justify-center gap-8 bg-cover bg-center bg-newsletter-placeir rounded-[30px]">
               <div className="absolute inset-0 bg-black opacity-35 rounded-[30px]"></div>
               <span className="relative font-semibold px-[300px] text-center text-white text-7xl">Ayo Berlangganan ke Newsletter Kami</span>
               <div className="relative flex justify-between w-[482px] h-[61px] gap-5 pl-5 pr-1 py-1 bg-white rounded-full">
-                <input type="email" placeholder="Masukkan email anda" className="w-full h-auto p-2 text-lg border-none rounded-full outline-none text-textPrimary" />
+                <input type="email" placeholder="Masukkan email anda" className="w-full h-auto p-2 text-lg border-none rounded-full outline-none text-thridly" />
                 <button className="w-auto h-auto px-8 py-2 text-lg text-white rounded-full bg-primary">Kirim</button>
               </div>
             </div>

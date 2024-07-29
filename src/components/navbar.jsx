@@ -37,7 +37,9 @@ const Navbar = () => {
               <a href="/" className="transition-all">
                 Home
               </a>
-              <a className="transition-all">Explore</a>
+              <a href="/explore" className="transition-all">
+                Explore
+              </a>
               <a href="/about" className="transition-all">
                 About Us
               </a>

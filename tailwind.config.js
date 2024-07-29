@@ -9,7 +9,11 @@ export default {
       container: {
         center: true,
         padding: {
-          DEFAULT: '1rem',
+          DEFAULT: '1.5rem',
+          sm: '1rem',
+          md: '1rem',
+          lg: '1rem',
+          xl: '1rem',
           '2xl': '5rem',
         },
       },
@@ -22,7 +26,7 @@ export default {
       fontSize: {
         xs: '10px',
         sm: '12px',
-        base: '14px',
+        md: '14px',
         lg: '16px',
         xl: '18px',
         '2xl': '20px',

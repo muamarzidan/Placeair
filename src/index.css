@@ -25,3 +25,7 @@ body {
   font-family: "Plus Jakarta Sans", sans-serif !important;
   background-color: #ffffff;
 }
+
+::-webkit-scrollbar {
+  display: none;
+}

@@ -1,0 +1,162 @@
+.swiper-controller {
+  width: 100%;
+  position: relative;
+}
+
+.button-controller {
+  position: absolute;
+  top: 70px;
+  right: 100px;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+}
+
+.button-swiper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 140px;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  top: unset !important;
+  left: unset !important;
+  bottom: unset !important;
+  right: unset !important;
+  position: unset !important;
+  width: auto !important;
+  height: auto !important;
+}
+
+.swiper-button-prev.swiper-button-disabled::after {
+  background-image: url("src/assets/leftoDisabled.svg") !important;
+  background-repeat: no-repeat !important;
+  background-size: 100% 100% !important;
+  width: 60px !important;
+  height: 60px !important;
+  color: #ffffff00 !important;
+}
+
+.swiper-button-next.swiper-button-disabled::after {
+  background-image: url("src/assets/rightoDisabled.svg") !important;
+  background-repeat: no-repeat !important;
+  background-size: 100% 100% !important;
+  width: 60px !important;
+  height: 60px !important;
+  color: #ffffff00 !important;
+}
+
+/* width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff !important;
+  color: #c3c3d5 !important;
+  border: 5px solid #c3c3d5;
+  border-radius: 100%; */
+
+.swiper-button-prev::after {
+  background-image: url("src/assets/lefto.svg");
+  background-repeat: no-repeat;
+  background-size: 100% 100% !important;
+  width: 60px;
+  height: 60px;
+  color: #ffffff00;
+}
+
+.swiper-button-next::after {
+  background-image: url("src/assets/righto.svg");
+  background-repeat: no-repeat;
+  background-size: 100% 100% !important;
+  width: 60px;
+  height: 60px;
+  color: #ffffff00;
+}
+
+/* width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  background-color: #181b68;
+  border-radius: 100%; */
+
+@media only screen and (max-width: 768px) {
+  .button-controller {
+    top: 85px;
+    right: 65px;
+  }
+  .button-swiper {
+    width: 100px;
+  }
+  .swiper-button-prev.swiper-button-disabled::after,
+  .swiper-button-next.swiper-button-disabled::after {
+    width: 40px !important;
+    height: 40px !important;
+  }
+  .swiper-button-prev::after,
+  .swiper-button-next::after {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+@media only screen and (max-width: 730px) {
+  .button-controller {
+    right: 60px;
+  }
+}
+
+@media only screen and (max-width: 730px) {
+  .button-controller {
+    right: 45px;
+  }
+}
+
+@media only screen and (max-width: 670px) {
+  .button-controller {
+    right: 25px;
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  .button-controller {
+    top: 75px;
+  }
+}
+
+@media only screen and (max-width: 442px) {
+  .button-controller {
+    top: 70px;
+  }
+  .button-swiper {
+    width: 70px;
+  }
+  .swiper-button-prev.swiper-button-disabled::after,
+  .swiper-button-next.swiper-button-disabled::after {
+    width: 30px !important;
+    height: 30px !important;
+  }
+  .swiper-button-prev::after,
+  .swiper-button-next::after {
+    width: 30px;
+    height: 30px;
+  }
+  #sub-title-swiper-card{
+    font-size: 1rem !important;
+  }
+  #title-swiper-card {
+    font-size: 1.2rem !important;
+    padding-right: 60px !important;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  #container-swiper-card {
+    padding-left: 0px !important;
+  }
+}

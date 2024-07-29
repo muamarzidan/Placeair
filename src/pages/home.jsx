@@ -13,10 +13,12 @@ export default function HomePage() {
       <main className="w-full h-auto bg-white">
         <section id="hero" className="relative flex flex-col items-center justify-center h-screen m-3 bg-top bg-cover rounded-xl bg-hero-placeir">
           <div className="absolute inset-0 bg-black rounded-xl opacity-35"></div>
-          <h1 className="relative font-semibold text-center text-white px-[30px] sm:px-5 lg:px-[50px] xl:px-[100px] 2xl:px-[200px] text-6xl sm:text-5xl md:text-6xl xl:text-8xl">
+          <div className="relative px-3">
+          <h1 className="relative font-semibold text-center text-white px-0 sm:px-5 lg:px-[50px] xl:px-[100px] 2xl:px-[200px] text-5xl md:text-6xl xl:text-8xl">
             Jelajahi Pesona Alam  Nusantara yang Menakjubkan
           </h1>
-          <p className="relative md:text-lg xl:text-2xl text-center px-14 md:px-[50px] lg:px-[100px] xl:px-[220px] 2xl:px-[320px] text-white pt-5">Temukan destinasi menakjubkan di seluruh Nusantara. Rencanakan liburan  Anda sekarang dan temukan petualangan tak terlupakan di setiap sudut negeri.</p>
+          <p className="relative text-base md:text-lg xl:text-2xl text-center px-2 sm:px-16 md:px-[50px] lg:px-[100px] xl:px-[220px] 2xl:px-[320px] text-white pt-5">Temukan destinasi menakjubkan di seluruh Nusantara. Rencanakan liburan  Anda sekarang dan temukan petualangan tak terlupakan di setiap sudut negeri.</p>
+          </div>
         </section>
         <section id="popular" className="w-full h-auto my-20">
           <Popular />

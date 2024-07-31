@@ -48,9 +48,9 @@ const Navbar = () => {
               </Link>
             </div>
             <div className="items-center hidden md:flex">
-              <button className="px-[24px] py-[12px] font-semibold text-white rounded-full text-lg bg-primary">
+              <Link to="/contact" className="px-[24px] py-[12px] font-semibold text-white rounded-full text-lg bg-primary">
                 Contact Us
-              </button>
+              </Link>
             </div>
             <div id="hamburger" className="md:hidden">
               <button
@@ -75,33 +75,14 @@ const Navbar = () => {
           </div>
 
           <div className={`flex flex-col w-full h-auto pt-2 space-y-2 md:hidden sm:text-lg text-md transition-all duration-300 transform ${isMenuOpen ? 'opacity-100 scale-100' : 'opacity-0 scale-95 pointer-events-none'}`}>
-            <a href="/" className={`transition-all font-semibold ${isChangeTeksColor}`}>Home</a>
-            <a href="/about" className={`transition-all ${isChangeTeksColor}`}>About Us</a>
-            <a href="/faq" className={`transition-all ${isChangeTeksColor}`}>FAQ</a>
+            <Link to="/" className={`transition-all font-semibold ${isChangeTeksColor}`}>Home</Link>
+            <Link to="/about" className={`transition-all ${isChangeTeksColor}`}>About Us</Link>
+            <Link to="/faq" className={`transition-all ${isChangeTeksColor}`}>FAQ</Link>
+            <Link to="/blog" className={`transition-all ${isChangeTeksColor}`}>Blog</Link>
             <div className="flex items-center">
-              <button className="px-[12px] py-[6px] font-semibold text-white rounded-full bg-primary">Contact Us</button>
+              <Link to="/blog" className="px-[12px] py-[6px] font-semibold text-white rounded-full bg-primary">Contact Us</Link>
             </div>
           </div>
-          {/* {isMenuOpen && (
-            <div
-              className="flex flex-col w-full h-auto pt-2 space-y-2 md:hidden sm:text-lg text-md"
-            >
-              <a href="/" className="text-white transition-all">
-                Home
-              </a>
-              <a href="/about" className="text-white transition-all">
-                About Us
-              </a>
-              <a href="/faq" className="text-white transition-all">
-                FAQ
-              </a>
-              <div className="flex items-center">
-                <button className="px-[12px] py-[6px] font-semibold text-white rounded-full bg-primary">
-                  Contact Us
-                </button>
-              </div>
-            </div>
-          )} */}
         </div>
       </nav>
     </>

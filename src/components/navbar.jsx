@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -34,18 +34,18 @@ const Navbar = () => {
               <a href="/" >Placeir</a>
             </div>
             <div className={`w-[418px] h-[55px] justify hidden items-center justify-evenly md:flex font-semibold text-xl rounded-full ${isChangeMenuNav}`}>
-              <a href="/" className="transition-all">
+              <Link to="/" className="transition-all">
                 Home
-              </a>
-              <a href="/explore" className="transition-all">
+              </Link>
+              <Link to="/explore" className="transition-all">
                 Explore
-              </a>
-              <a href="/about" className="transition-all">
+              </Link>
+              <Link to="/about" className="transition-all">
                 About Us
-              </a>
-              <a href="/blog" className="transition-all">
+              </Link>
+              <Link to="/blog" className="transition-all">
                 Blog
-              </a>
+              </Link>
             </div>
             <div className="items-center hidden md:flex">
               <button className="px-[24px] py-[12px] font-semibold text-white rounded-full text-lg bg-primary">

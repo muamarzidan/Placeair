@@ -20,8 +20,8 @@ export default {
       colors:{
         primary: '#181B68',
         secondary: '#4C82FE',
-        textPrimary: '#171717',
-        textSecondary: '#6F706F',
+        thridly: '#171717',
+        fourly: '#6F706F',
       },
       fontSize: {
         xs: '10px',
@@ -38,9 +38,10 @@ export default {
         '8xl': '68px',
       },
       backgroundImage: {
-        'hero-placeir': "url('assets/images/hero-placeir.png')",
-        'newssteller-placeir': "url('assets/images/newssteller-placeir.png')",
-        'frame-one': "url('assets/images/bg-frame-1.png')",
+        'hero-home-placeir': "url('assets/images/hero-home-placeir.png')",
+        'hero-explore-placeir': "url('assets/images/hero-explore-placeir.png')",
+        'newsletter-placeir': "url('assets/images/bg-newsletter-placeir.png')",
+        'frame-one-placeir': "url('assets/images/bg-frameOne-placeir.png')",
       }
     },
   },

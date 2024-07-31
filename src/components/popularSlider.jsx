@@ -90,7 +90,7 @@ const PopularCardSwiper = () => {
                     style={{
                       backgroundImage: `url(${data.thumbnail})`,
                       backgroundSize: "cover",
-                      backgroundPosition: "center", 
+                      backgroundPosition: "center",
                     }}
                   >
                     <div className="flex items-center justify-evenly w-[67px] py-2 px-2 rounded-full bg-[#ffffff2b]">

@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
+
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isChangeTeksColor, setIsChangeTeksColor] = useState("text-white");
@@ -80,7 +81,7 @@ const Navbar = () => {
             <Link to="/faq" className={`transition-all ${isChangeTeksColor}`}>FAQ</Link>
             <Link to="/blog" className={`transition-all ${isChangeTeksColor}`}>Blog</Link>
             <div className="flex items-center">
-              <Link to="/blog" className="px-[12px] py-[6px] font-semibold text-white rounded-full bg-primary">Contact Us</Link>
+              <Link to="/contact" className="px-[12px] py-[6px] font-semibold text-white rounded-full bg-primary">Contact Us</Link>
             </div>
           </div>
         </div>

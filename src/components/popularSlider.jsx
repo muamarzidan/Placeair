@@ -55,7 +55,7 @@ const PopularCardSwiper = () => {
                 slidesPerView: 1.5,
                 spaceBetween: 0,
               },
-              560: {
+              560: {  
                 slidesPerView: 2,
                 spaceBetween: 0,
               },

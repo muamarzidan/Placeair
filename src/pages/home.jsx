@@ -11,41 +11,41 @@ export default function HomePage() {
     <>
       <Navbar />
       <main className="w-full h-auto bg-white">
-        <section id="hero" className="relative flex flex-col items-center justify-center h-screen m-3 bg-top bg-cover rounded-xl bg-hero-home-placeir">
+        <section id="hero" className="relative flex flex-col items-center justify-center h-[45vh] sm:h-screen !mt-[75px] m-3 bg-top bg-cover md:!mt-3 rounded-xl bg-hero-home-placeir">
           <div className="absolute inset-0 bg-black rounded-xl opacity-35"></div>
           <div className="relative px-3">
-          <h1 className="relative font-semibold text-center text-white px-0 sm:px-5 lg:px-[50px] xl:px-[100px] 2xl:px-[200px] text-5xl md:text-6xl xl:text-8xl">
+          <h1 className="relative font-semibold text-center text-white px-0 sm:px-5 lg:px-[50px] xl:px-[100px] 2xl:px-[200px] text-4xl sm:text-5xl md:text-6xl xl:text-8xl">
             Jelajahi Pesona Alam  Nusantara yang Menakjubkan
           </h1>
-          <p className="relative text-md md:text-lg xl:text-2xl text-center px-2 sm:px-16 md:px-[50px] lg:px-[100px] xl:px-[220px] 2xl:px-[320px] text-white pt-5">Temukan destinasi menakjubkan di seluruh Nusantara. Rencanakan liburan  Anda sekarang dan temukan petualangan tak terlupakan di setiap sudut negeri.</p>
+          <p className="relative text-sm sm:text-md md:text-lg xl:text-2xl text-center px-0 sm:px-16 md:px-[50px] lg:px-[100px] xl:px-[220px] 2xl:px-[320px] text-white pt-5">Temukan destinasi menakjubkan di seluruh Nusantara. Rencanakan liburan  Anda sekarang dan temukan petualangan tak terlupakan di setiap sudut negeri.</p>
           </div>
         </section>
         <section id="popular" className="w-full h-auto my-20">
           <Popular />
         </section>
-        <section id="calculation" className="w-full h-auto my-20">
+        <section id="calculation" className="w-full h-auto my-24">
           <div className="container w-full h-auto">
-            <div className="flex items-center justify-between w-full h-auto p-16 bg-center bg-cover rounded-3xl bg-frame-one-placeir">
-              <span className="font-semibold pr-[40px] text-white text-7xl basis-1/2">Buat Perjalananan Anda Berkesan!</span>
-              <div className="flex justify-between w-full h-auto basis-1/2">
+            <div className="flex flex-col flex-wrap items-center justify-between w-full h-auto gap-5 p-6 bg-center bg-cover sm:p-10 md:gap-0 md:flex-row md:p-16 rounded-3xl bg-frame-two-placeir md:bg-frame-one-placeir">
+              <span className="font-semibold pr-0 md:pr-[40px] text-white text-4xl lg:text-6xl xl:text-7xl basis-full md:basis-1/2 text-left sm:text-center md:text-left">Buat Perjalananan Anda Berkesan!</span>
+              <div className="flex justify-between w-full h-auto basis-full md:basis-1/2">
                 <div className="flex flex-col basis-1/2">
                   <div className="flex flex-col w-full h-full gap-2">
-                    <span className="text-center text-white text-7xl">10+</span>
-                    <span className="text-3xl text-center text-white">Provinsi tersedia</span>
+                    <span className="text-6xl text-center text-white sm:text-4xl lg:text-6xl xl:text-7xl">10+</span>
+                    <span className="text-lg text-center text-white lg:text-2xl xl:text-3xl">Provinsi tersedia</span>
                   </div>
-                  <div className="flex flex-col w-full h-full gap-2">
-                    <span className="text-center text-white text-7xl">10+</span>
-                    <span className="text-3xl text-center text-white">Provinsi tersedia</span>
+                  <div className="flex flex-col w-full h-full gap-2 mt-5 md:mt-0">
+                    <span className="text-6xl text-center text-white sm:text-center sm:text-4xl lg:text-6xl xl:text-7xl">10+</span>
+                    <span className="text-lg text-center text-white lg:text-2xl xl:text-3xl">Provinsi tersedia</span>
                   </div>
                 </div>
                 <div className="flex flex-col basis-1/2">
                   <div className="flex flex-col w-full h-full gap-2">
-                    <span className="text-center text-white text-7xl">100+</span>
-                    <span className="text-3xl text-center text-white">Destinasi Wisata</span>
+                    <span className="text-6xl text-center text-white sm:text-4xl lg:text-6xl xl:text-7xl">100+</span>
+                    <span className="text-lg text-center text-white lg:text-2xl xl:text-3xl">Destinasi Wisata</span>
                   </div>
-                  <div className="flex flex-col w-full h-full gap-2">
-                    <span className="text-center text-white text-7xl">10+</span>
-                    <span className="text-3xl text-center text-white">Provinsi tersedia</span>
+                  <div className="flex flex-col w-full h-full gap-2 mt-5 md:mt-0">
+                    <span className="text-6xl text-center text-white sm:text-4xl lg:text-6xl xl:text-7xl">10+</span>
+                    <span className="text-lg text-center text-white lg:text-2xl xl:text-3xl">Provinsi tersedia</span>
                   </div>
                 </div>
               </div>

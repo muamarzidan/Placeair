@@ -12,17 +12,21 @@ import "../assets/css/components/popular.css";
 
 
 const PopularCardSwiper = () => {
-  const [resizeIcon, setResizeIcon] = useState("24");
+  const [resizeIconStar, setResizeIconStar] = useState("16");
+  const [resizeIconLoc, setResizeIconLoc] = useState("24");
 
   const handleResizeIcon = () => {
     if (window.innerWidth < 480) {
-      setResizeIcon("14");
+        setResizeIconStar("12");
+        setResizeIconLoc("14");
     } else if (window.innerWidth < 768) {
-      setResizeIcon("18");
+        setResizeIconStar("14");
+        setResizeIconLoc("18");
     } else {
-      setResizeIcon("24");
+        setResizeIconStar("16");
+        setResizeIconLoc("24");
     }
-  };
+};
 
   useEffect(() => {
     handleResizeIcon();
@@ -36,7 +40,7 @@ const PopularCardSwiper = () => {
 
   return (
     <>
-      <div className="flex flex-col w-full h-auto gap-10 swiper-controller">
+      <div className="flex flex-col w-full h-auto gap-7 swiper-controller">
         <div className="container flex items-center w-full h-auto">
           <div className="flex flex-col w-full container-title-popular">
             <p id="sub-title-swiper-card" className="text-xl font-bold md:text-3xl text-secondary">TEMUKAN</p>
@@ -45,9 +49,9 @@ const PopularCardSwiper = () => {
             </h3>
           </div>
         </div>
-        <div id="container-swiper-card" className="w-full h-auto pl-3 my-1 sm:my-10 sm:pl-9 xl:pl-5 2xl:pl-20">
+        <div id="container-swiper-card" className="w-full h-auto pl-3 sm:pl-9 xl:pl-5 2xl:pl-20">
           <Swiper
-            slidesPerView={1}
+            slidesPerView={1.4}
             spaceBetween={0}
             loop={false}
             breakpoints={{
@@ -55,7 +59,7 @@ const PopularCardSwiper = () => {
                 slidesPerView: 1.5,
                 spaceBetween: 0,
               },
-              560: {
+              560: {  
                 slidesPerView: 2,
                 spaceBetween: 0,
               },
@@ -84,31 +88,36 @@ const PopularCardSwiper = () => {
                 key={index}
                 className="flex items-center justify-center sm:block sm:items-start sm:justify-start"
               >
-                <div className="card-popular w-[250px] h-[306px] sm:w-[300px] sm:h-[356px] md:w-[350px] md:h-[406px] lg:w-full lg:h-[456px] max-w-[400px] max-h-[456px] flex flex-col justify-between p-3 rounded-3xl border-[1px] border-gray-300">
+                <div className="card-popular w-[250px] h-[306px] sm:w-[300px] sm:h-[356px] md:w-[350px] md:h-[406px] lg:w-full lg:h-[456px] max-w-[400px] max-h-[456px] flex flex-col justify-between p-3 rounded-xl md:rounded-3xl border-[1px] border-gray-300">
+                  {/* image section */}
                   <div
-                    className="w-[227px] h-[180px] sm:w-[277px] sm:h-[220px] md:w-[327px] md:h-[230px] lg:w-full lg:h-full !max-w-[377px] !max-h-[280px] p-3 rounded-xl"
+                    className="card-image-popular w-[227px] h-[180px] sm:w-[277px] sm:h-[220px] md:w-[327px] md:h-[230px] lg:w-full lg:h-full !max-w-[377px] !max-h-[280px] p-3 rounded-lg md:rounded-xl"
                     style={{
                       backgroundImage: `url(${data.thumbnail})`,
                       backgroundSize: "cover",
                       backgroundPosition: "center",
                     }}
                   >
-                    <div className="flex items-center justify-evenly w-[67px] py-2 px-2 rounded-full bg-[#ffffff2b]">
+                    <div className="flex items-center justify-between gap-1 sm:gap-0 sm:justify-evenly w-fit sm:w-[67px] py-[6px] px-3 sm:py-2 sm:px-2 rounded-full bg-[#ffffff43]">
                       <Icon
                         icon="mingcute:star-fill"
                         style={{ color: "#ff9b48" }}
+                        width={resizeIconStar}
+                        height={resizeIconStar}
                       />
                       <span className="text-xs text-white sm:text-sm">{data.rating}</span>
                     </div>
                   </div>
-                  <span className="w-fit text-[#171717] font-bold sm:text-xl md:text-3xl">
+                  {/* title section */}
+                  <span className="w-fit text-[#171717] font-bold text-lg sm:text-xl md:text-3xl">
                     {data.name}
                   </span>
+                  {/* icon and location section */}
                   <div className="flex items-center gap-1 sm:gap-2 w-fit">
                     <Icon
                       icon="fluent:location-16-filled"
-                      width={resizeIcon}
-                      height={resizeIcon}
+                      width={resizeIconLoc}
+                      height={resizeIconLoc}
                       style={{ color: "#4c82fe" }}
                     />
                     <span className="text-sm sm:text-md md:text-xl">
@@ -116,12 +125,13 @@ const PopularCardSwiper = () => {
                       <a href={data.locationLink}></a>
                     </span>
                   </div>
-                  <div className="flex items-center justify-between w-full">
-                    <span className="font-bold text-md sm:text-[16px] md:text-[26px] text-[#171717]">
+                  {/* price and button section */}
+                  <div className="flex items-center justify-between w-full sm:!mt-4">
+                    <span className="font-bold text-lg sm:text-[16px] md:text-[26px] text-[#171717]">
                       {formatPrice(data.price)}
                     </span>
-                    <button className="px-3 py-2 text-sm font-bold text-white rounded-full sm:px-5 md:py-3 sm:text-md md:text-lg bg-primary">
-                      Selengkapnya
+                    <button className="px-4 py-2 text-sm font-normal text-white rounded-full md:font-semibold sm:px-8 md:px-10 md:py-[10px] sm:text-md md:text-lg bg-primary">
+                      Lihat
                     </button>
                   </div>
                 </div>

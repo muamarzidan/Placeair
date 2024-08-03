@@ -1,86 +1,188 @@
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { useLocation, Link } from "react-router-dom";
+import { Icon } from "@iconify-icon/react";
 
 const Navbar = () => {
+  const locationPath = useLocation().pathname;
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isChangeTeksColor, setIsChangeTeksColor] = useState("text-white");
-  const [isChangeMenuNav, setIsChangeMenuNav] = useState("text-white border-white border-[1px] bg-[#ffffff2b]");
+  const [isChangeMenuNav, setIsChangeMenuNav] = useState(
+    "text-white border-white border-[1px] bg-[#ffffff2b]"
+  );
 
   useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 500) {
+    const handleResize = () => {
+      if (window.innerWidth < 768) {
         setIsChangeTeksColor("text-primary");
-        setIsChangeMenuNav("text-primary border-none bg-[#FFFFFF7F]");
       } else {
-        setIsChangeTeksColor("text-white");
-        setIsChangeMenuNav("text-white border-white border-[1px] bg-[#ffffff2b]");
+        setIsChangeTeksColor(
+          window.scrollY > 500 ? "text-primary" : "text-white"
+        );
       }
     };
 
+    const handleScroll = () => {
+      if (window.innerWidth >= 768) {
+        if (window.scrollY > 500) {
+          setIsChangeTeksColor("text-primary");
+          setIsChangeMenuNav("text-primary border-none bg-[#FFFFFF7F]");
+        } else {
+          setIsChangeTeksColor("text-white");
+          setIsChangeMenuNav(
+            "text-white border-white border-[1px] bg-[#ffffff2b]"
+          );
+        }
+      }
+    };
+
+    window.addEventListener("resize", handleResize);
     window.addEventListener("scroll", handleScroll);
+
+    handleResize();
+    handleScroll();
+
     return () => {
+      window.removeEventListener("resize", handleResize);
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
   return (
     <>
-      <nav
-        className="fixed h-auto pt-4 md:pt-0 md:h-[140px] flex items-center inset-x-0 top-0 z-50 transition-colors duration-300"
-      >
+      <nav className="fixed h-auto pb-4 md:pb-0 pt-4 md:pt-0 md:h-[140px] bg-white md:bg-transparent flex items-center inset-x-0 top-0 z-50 transition-colors duration-300">
         <div className="container">
           <div className="flex items-center justify-between">
             <div className={`text-3xl font-bold ${isChangeTeksColor}`}>
-              <a href="/" >Placeir</a>
+              <a href="/">Placeir</a>
             </div>
-            <div className={`w-[418px] h-[55px] justify hidden items-center justify-evenly md:flex font-semibold text-xl rounded-full ${isChangeMenuNav}`}>
-              <Link to="/" className="transition-all">
+            <div
+              className={`w-[418px] h-[55px] justify hidden items-center justify-evenly md:flex font-semibold text-xl rounded-full ${isChangeMenuNav}`}
+            >
+              <Link
+                to="/"
+                className={`transition-all ${
+                  locationPath === "/" ? "font-bold" : "font-normal"
+                }`}
+              >
                 Home
               </Link>
-              <Link to="/explore" className="transition-all">
+              <Link
+                to="/explore"
+                className={`transition-all ${
+                  locationPath === "/explore" ? "font-bold" : "font-normal"
+                }`}
+              >
                 Explore
               </Link>
-              <Link to="/about" className="transition-all">
+              <Link
+                to="/about"
+                className={`transition-all ${
+                  locationPath === "/about" ? "font-bold" : "font-normal"
+                }`}
+              >
                 About Us
               </Link>
-              <Link to="/blog" className="transition-all">
+              <Link
+                to="/blog"
+                className={`transition-all ${
+                  locationPath === "/blog" ? "font-bold" : "font-normal"
+                }`}
+              >
                 Blog
               </Link>
             </div>
             <div className="items-center hidden md:flex">
-              <Link to="/contact" className="px-[24px] py-[12px] font-semibold text-white rounded-full text-lg bg-primary">
+              <Link
+                to="/contact"
+                className="px-[24px] py-[12px] font-semibold text-white rounded-full text-lg bg-primary"
+              >
                 Contact Us
               </Link>
             </div>
             <div id="hamburger" className="md:hidden">
               <button
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
-                className={`${isChangeTeksColor} focus:outline-none`}
+                className={`${isChangeTeksColor} focus:outline-none bg-primary p-2 rounded-full flex items-center`}
               >
-                <svg
-                  className="w-6 h-6"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M4 6h16M4 12h16m-7 6h7"
-                  />
-                </svg>
+                <Icon
+                  icon="charm:menu-hamburger"
+                  width="26"
+                  height="24"
+                  style={{ color: "#ffffff" }}
+                />
               </button>
             </div>
           </div>
 
-          <div className={`flex flex-col w-full h-auto pt-2 space-y-2 md:hidden sm:text-lg text-md transition-all duration-300 transform ${isMenuOpen ? 'opacity-100 scale-100' : 'opacity-0 scale-95 pointer-events-none'}`}>
-            <Link to="/" className={`transition-all font-semibold ${isChangeTeksColor}`}>Home</Link>
-            <Link to="/about" className={`transition-all ${isChangeTeksColor}`}>About Us</Link>
-            <Link to="/faq" className={`transition-all ${isChangeTeksColor}`}>FAQ</Link>
-            <Link to="/blog" className={`transition-all ${isChangeTeksColor}`}>Blog</Link>
-            <div className="flex items-center">
-              <Link to="/blog" className="px-[12px] py-[6px] font-semibold text-white rounded-full bg-primary">Contact Us</Link>
+          <div
+            className={`fixed inset-y-0 right-0 bg-white transition-transform transform ${
+              isMenuOpen ? "translate-x-0" : "translate-x-full"
+            } w-[65%] md:hidden`}
+          >
+            <div className="px-6 pt-4">
+              <div className="flex justify-end">
+                <button
+                  onClick={() => setIsMenuOpen(false)}
+                  className="flex items-center p-2 rounded-full focus:outline-none bg-primary"
+                >
+                  <Icon
+                    icon="uis:multiply"
+                    width="27"
+                    height="26"
+                    style={{ color: "#ffffff" }}
+                  />
+                </button>
+              </div>
+              <div className="flex flex-col w-full h-auto pt-2 space-y-4 text-xl">
+                <Link
+                  to="/"
+                  className={`transition-all font-semibold ${
+                    locationPath === "/" ? "font-bold" : "font-normal"
+                  }`}
+                >
+                  Home
+                </Link>
+                <Link
+                  to="/explore"
+                  className={`transition-all ${
+                    locationPath === "/explore" ? "font-bold" : "font-normal"
+                  }`}
+                >
+                  Explore
+                </Link>
+                <Link
+                  to="/about"
+                  className={`transition-all ${
+                    locationPath === "/about" ? "font-bold" : "font-normal"
+                  }`}
+                >
+                  About Us
+                </Link>
+                <Link
+                  to="/faq"
+                  className={`transition-all ${
+                    locationPath === "/faq" ? "font-bold" : "font-normal"
+                  }`}
+                >
+                  FAQ
+                </Link>
+                <Link
+                  to="/blog"
+                  className={`transition-all ${
+                    locationPath === "/blog" ? "font-bold" : "font-normal"
+                  }`}
+                >
+                  Blog
+                </Link>
+                <div className="flex items-center">
+                  <Link
+                    to="/contact"
+                    className="px-[12px] py-[10px] md:py-[6px] text-lg font-semibold text-white rounded-full w-full text-center bg-primary"
+                  >
+                    Contact Us
+                  </Link>
+                </div>
+              </div>
             </div>
           </div>
         </div>

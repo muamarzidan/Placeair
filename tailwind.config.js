@@ -42,6 +42,7 @@ export default {
         'hero-explore-placeir': "url('assets/images/hero-explore-placeir.png')",
         'newsletter-placeir': "url('assets/images/bg-newsletter-placeir.png')",
         'frame-one-placeir': "url('assets/images/bg-frameOne-placeir.png')",
+        'frame-two-placeir': "url('assets/images/bg-frameTwo-placeir.png')",
       }
     },
   },

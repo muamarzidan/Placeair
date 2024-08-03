@@ -160,3 +160,15 @@
     padding-left: 0px !important;
   }
 }
+
+@media only screen and (max-width: 375px) {
+  .card-popular {
+    width: 222px !important;
+    height: 253px !important;
+    padding: 8px !important;
+  }
+  .card-image-popular {
+    width: 100% !important;
+    height: 100% !important;
+  }
+}

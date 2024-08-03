@@ -25,7 +25,7 @@ const routes = createBrowserRouter([
     ),
   },
   {
-    path: "/todolist",
+    path: "/blog",
     element: (
       <BlogPage />
     ),

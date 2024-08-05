@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react"
 import { Icon } from "@iconify-icon/react";
 
 import Navbar from "../components/navbar";
@@ -7,6 +8,27 @@ import imageChoosePlaceir from "../assets/images/thumbnail-choose-placeir.png";
 
 
 export default function HomePage() {
+  const [resizeIconBullet, setResizeIconBullet] = useState("16");
+
+  const handleResizeIcon = () => {
+    if (window.innerWidth < 480) {
+      setResizeIconBullet("12");
+    } else if (window.innerWidth < 1024) {
+      setResizeIconBullet("14");
+    } else {
+      setResizeIconBullet("18");
+    }
+  };
+
+  useEffect(() => {
+    handleResizeIcon();
+    window.addEventListener('resize', handleResizeIcon);
+    // Always cleanup event listener on component unmount or to prevent memory leak
+    return () => {
+      window.removeEventListener('resize', handleResizeIcon);
+    };
+  }, []);
+
   return (
     <>
       <Navbar />
@@ -20,14 +42,15 @@ export default function HomePage() {
           <p className="relative text-sm sm:text-md md:text-lg xl:text-2xl text-center px-0 sm:px-16 md:px-[50px] lg:px-[100px] xl:px-[220px] 2xl:px-[320px] text-white pt-5">Temukan destinasi menakjubkan di seluruh Nusantara. Rencanakan liburan  Anda sekarang dan temukan petualangan tak terlupakan di setiap sudut negeri.</p>
           </div>
         </section>
-        <section id="popular" className="w-full h-auto my-20">
+        <section id="popular" className="w-full h-auto my-10 md:my-20">
           <Popular />
         </section>
-        <section id="calculation" className="w-full h-auto my-24">
+        <section id="calculation" className="w-full h-auto my-14 sm:my-20 md:my-24">
           <div className="container w-full h-auto">
             <div className="flex flex-col flex-wrap items-center justify-between w-full h-auto gap-5 p-6 bg-center bg-cover sm:p-10 md:gap-0 md:flex-row md:p-16 rounded-3xl bg-frame-two-placeir md:bg-frame-one-placeir">
               <span className="font-semibold pr-0 md:pr-[40px] text-white text-4xl lg:text-6xl xl:text-7xl basis-full md:basis-1/2 text-left sm:text-center md:text-left">Buat Perjalananan Anda Berkesan!</span>
               <div className="flex justify-between w-full h-auto basis-full md:basis-1/2">
+                {/* Left side calculation area */}
                 <div className="flex flex-col basis-1/2">
                   <div className="flex flex-col w-full h-full gap-2">
                     <span className="text-6xl text-center text-white sm:text-4xl lg:text-6xl xl:text-7xl">10+</span>
@@ -38,6 +61,7 @@ export default function HomePage() {
                     <span className="text-lg text-center text-white lg:text-2xl xl:text-3xl">Provinsi tersedia</span>
                   </div>
                 </div>
+                {/* Right side calculation area */}
                 <div className="flex flex-col basis-1/2">
                   <div className="flex flex-col w-full h-full gap-2">
                     <span className="text-6xl text-center text-white sm:text-4xl lg:text-6xl xl:text-7xl">100+</span>
@@ -52,48 +76,50 @@ export default function HomePage() {
             </div>
           </div>
         </section>
-        <section id="choose" className="w-full h-auto my-20">
-          <div className="container flex items-center w-full h-[500px]">
-            <div className="flex flex-col justify-between w-full h-full gap-2 pr-28 basis-1/2">
-              <h4 className="text-2xl font-semibold text-secondary">WHY CHOOSE US</h4>
-              <h3 className="text-6xl font-semibold">Mengapa Pilih Placeir?</h3>
-              <div className="flex flex-col justify-between w-full h-full !mt-4 gap-6">
+        <section id="choose" className="w-full h-auto my-10 md:my-20">
+          <div className="container flex flex-wrap items-center gap-8  sm:gap-10 md:gap-0 w-full h-auto md:h-[500px]">
+            {/* Left/top side choose area */}
+            <div className="flex flex-col justify-between w-full h-full gap-1 pr-0 xl:gap-2 xl:pr-28 basis-full md:basis-1/2">
+              <h4 className="text-sm font-semibold sm:text-lg md:text-xl xl:text-2xl text-secondary">WHY CHOOSE US</h4> 
+              <h3 className="text-2xl font-semibold sm:text-5xl xl:text-6xl">Mengapa Pilih Placeir?</h3> 
+              <div className="flex flex-col justify-between w-full h-full !mt-3 xl:!mt-4 gap-1 xl:gap-6">
                 <div className="flex flex-col w-full h-full gap-2">
                   <div className="flex items-center gap-2 w-fit">
-                    <Icon icon="material-symbols:circle" width="18" height="18" style={{ color: "#4377ef" }} />
-                    <h5 className="text-3xl font-semibold text-thridly">Lorem Ipsum</h5>
+                    <Icon icon="material-symbols:circle" width={resizeIconBullet} height={resizeIconBullet} style={{ color: "#4377ef" }} />
+                    <h5 className="font-semibold text-md sm:text-2xl xl:text-3xl text-thridly">Lorem Ipsum</h5>
                   </div>
-                  <p className="text-2xl text-fourly">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis quis semper dolor. Aenean sed mattis libero</p>
+                  <p className="text-sm sm:text-xl xl:text-2xl text-fourly">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis quis semper dolor. Aenean sed mattis libero</p>
                 </div>
                 <div className="flex flex-col w-full h-full gap-2">
                   <div className="flex items-center gap-2 w-fit">
-                    <Icon icon="material-symbols:circle" width="18" height="18" style={{ color: "#4377ef" }} />
-                    <h5 className="text-3xl font-semibold text-thridly">Lorem Ipsum</h5>
+                    <Icon icon="material-symbols:circle" width={resizeIconBullet} height={resizeIconBullet} style={{ color: "#4377ef" }} />
+                    <h5 className="font-semibold text-md sm:text-2xl xl:text-3xl text-thridly">Lorem Ipsum</h5>
                   </div>
-                  <p className="text-2xl text-fourly">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis quis semper dolor. Aenean sed mattis libero</p>
+                  <p className="text-sm sm:text-xl xl:text-2xl text-fourly">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis quis semper dolor. Aenean sed mattis libero</p>
                 </div>
                 <div className="flex flex-col w-full h-full gap-2">
                   <div className="flex items-center gap-2 w-fit">
-                    <Icon icon="material-symbols:circle" width="18" height="18" style={{ color: "#4377ef" }} />
-                    <h5 className="text-3xl font-semibold text-thridly">Lorem Ipsum</h5>
+                    <Icon icon="material-symbols:circle" width={resizeIconBullet} height={resizeIconBullet} style={{ color: "#4377ef" }} />
+                    <h5 className="font-semibold text-md sm:text-2xl xl:text-3xl text-thridly">Lorem Ipsum</h5>
                   </div>
-                  <p className="text-2xl text-fourly">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis quis semper dolor. Aenean sed mattis libero</p>
+                  <p className="text-sm sm:text-xl xl:text-2xl text-fourly">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis quis semper dolor. Aenean sed mattis libero</p>
                 </div>
               </div>
             </div>
-            <div className="flex items-center justify-between w-full h-full gap-2 basis-1/2">
-              <img src={imageChoosePlaceir} alt="choose placeir" className="w-full h-[95%] bg-center bg-no-repeat bg-cover rounded-2xl" />
+            {/* Right/bottom side choose area */}
+            <div className="flex items-center justify-between w-full h-full gap-2 basis-full md:basis-1/2">
+              <img src={imageChoosePlaceir} alt="choose banner placeir" className="w-full h-full md:h-[70%] lg:h-[80%] xl:h-[95%] bg-center bg-no-repeat bg-cover rounded-2xl brightness-75 md:brightness-100" />
             </div>
           </div>
         </section>
         <section id="newssletter" className="w-full h-auto my-20">
-          <div className="container w-full h-[400px]">
-            <div className="relative w-full h-full flex flex-col items-center justify-center gap-8 bg-cover bg-center bg-newsletter-placeir rounded-[30px]">
+          <div className="container w-full h-[270px] lg:h-[350px] xl:h-[400px]">
+            <div className="relative w-full h-full flex flex-col items-center justify-center gap-4 xl:gap-8 bg-cover bg-center bg-newsletter-placeir rounded-[30px]">
               <div className="absolute inset-0 bg-black opacity-35 rounded-[30px]"></div>
-              <span className="relative font-semibold px-[300px] text-center text-white text-7xl">Ayo Berlangganan ke Newsletter Kami</span>
-              <div className="relative flex justify-between w-[482px] h-[61px] gap-5 pl-5 pr-1 py-1 bg-white rounded-full">
-                <input type="email" placeholder="Masukkan email anda" className="w-full h-auto p-2 text-lg border-none rounded-full outline-none text-thridly" />
-                <button className="w-auto h-auto px-8 py-2 text-lg text-white rounded-full bg-primary">Kirim</button>
+              <span className="relative font-semibold px-[190px] lg:px-[200px] xl:px-[300px] text-center text-white text-4xl lg:text-6xl xl:text-7xl">Ayo Berlangganan ke Newsletter Kami</span>
+              <div className="relative flex justify-between w-[280px] lg:w-[422px] xl:w-[482px] md:h-[40px] lg:h-[55px] xl:h-[61px] gap-5 pl-5 pr-1 py-1 bg-white rounded-full">
+                <input type="email" placeholder="Masukkan email anda" className="w-full h-auto p-1 text-sm border-none rounded-full outline-none lg:p-2 lg:text-lg text-thridly" />
+                <button className="w-auto h-auto px-5 py-1 text-white rounded-full lg:px-8 text-md lg:text-lg bg-primary">Kirim</button>
               </div>
             </div>
           </div>

@@ -2,10 +2,12 @@ import { useState, useEffect } from "react";
 import { useLocation, Link } from "react-router-dom";
 import { Icon } from "@iconify-icon/react";
 
+
 const Navbar = () => {
   const locationPath = useLocation().pathname;
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isChangeTeksColor, setIsChangeTeksColor] = useState("text-white");
+  const [isBgChangeNav, setIsBgChangeNav] = useState("bg-white");
   const [isChangeMenuNav, setIsChangeMenuNav] = useState(
     "text-white border-white border-[1px] bg-[#ffffff2b]"
   );
@@ -22,6 +24,12 @@ const Navbar = () => {
     };
 
     const handleScroll = () => {
+      if (window.scrollY > 500) {
+        setIsBgChangeNav("bg-white h-auto md:h-[90px]");
+      } else {
+        setIsBgChangeNav("bg-white md:bg-transparent h-auto md:h-[140px]");
+      }
+      
       if (window.innerWidth >= 768) {
         if (window.scrollY > 500) {
           setIsChangeTeksColor("text-primary");
@@ -34,13 +42,13 @@ const Navbar = () => {
         }
       }
     };
-
     window.addEventListener("resize", handleResize);
     window.addEventListener("scroll", handleScroll);
 
     handleResize();
     handleScroll();
 
+    // Always cleanup event listener to prevent memory leak
     return () => {
       window.removeEventListener("resize", handleResize);
       window.removeEventListener("scroll", handleScroll);
@@ -49,8 +57,9 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="fixed h-auto pb-4 md:pb-0 pt-4 md:pt-0 md:h-[140px] bg-white md:bg-transparent flex items-center inset-x-0 top-0 z-50 transition-colors duration-300">
+      <nav className={`fixed pb-4 md:pb-0 pt-4 md:pt-0 flex items-center inset-x-0 top-0 z-50 transition-all duration-300 ${isBgChangeNav}`}>
         <div className="container">
+          {/* Menu default area */}
           <div className="flex items-center justify-between">
             <div className={`text-3xl font-bold ${isChangeTeksColor}`}>
               <a href="/">Placeir</a>
@@ -113,7 +122,7 @@ const Navbar = () => {
               </button>
             </div>
           </div>
-
+          {/* Open menu with hamburger area */}
           <div
             className={`fixed inset-y-0 right-0 bg-white transition-transform transform ${
               isMenuOpen ? "translate-x-0" : "translate-x-full"

@@ -17,22 +17,21 @@ const PopularCardSwiper = () => {
 
   const handleResizeIcon = () => {
     if (window.innerWidth < 480) {
-        setResizeIconStar("12");
-        setResizeIconLoc("14");
+      setResizeIconStar("12");
+      setResizeIconLoc("14");
     } else if (window.innerWidth < 768) {
-        setResizeIconStar("14");
-        setResizeIconLoc("18");
+      setResizeIconStar("14");
+      setResizeIconLoc("18");
     } else {
-        setResizeIconStar("16");
-        setResizeIconLoc("24");
+      setResizeIconStar("16");
+      setResizeIconLoc("24");
     }
-};
+  };
 
   useEffect(() => {
     handleResizeIcon();
-    // important to add event listener on window resize to resize automatically
     window.addEventListener('resize', handleResizeIcon);
-    // Cleanup event listener on component unmount
+    // Always cleanup event listener on component unmount or to prevent memory leak
     return () => {
       window.removeEventListener('resize', handleResizeIcon);
     };

@@ -30,9 +30,8 @@ const PopularCardSwiper = () => {
 
   useEffect(() => {
     handleResizeIcon();
-    // important to add event listener on window resize to resize automatically
     window.addEventListener('resize', handleResizeIcon);
-    // Cleanup event listener on component unmount
+    // Always cleanup event listener on component unmount or to prevent memory leak
     return () => {
       window.removeEventListener('resize', handleResizeIcon);
     };

@@ -5,7 +5,8 @@ import Navbar from "../components/navbar";
 import Footer from "../components/footer";
 import Popular from "../components/cardPopularSlider";
 import imageChoosePlaceir from "../assets/images/thumbnail-choose-placeir.png";
-import "../assets/css/pages/home.css";
+import NumCountUp from "../utils/counterUp";
+import "../assets/css/pages/home.css";  
 
 
 export default function HomePage() {
@@ -54,22 +55,30 @@ export default function HomePage() {
                 {/* Left side calculation area */}
                 <div className="flex flex-col basis-1/2">
                   <div className="flex flex-col w-full h-full gap-2">
-                    <span className="text-6xl text-center text-white sm:text-4xl lg:text-6xl xl:text-7xl">10+</span>
+                    <span className="text-6xl text-center text-white sm:text-4xl lg:text-6xl xl:text-7xl">
+                      <NumCountUp end={10} duration={2} /> +
+                    </span>
                     <span className="text-lg text-center text-white lg:text-2xl xl:text-3xl">Provinsi tersedia</span>
                   </div>
                   <div className="flex flex-col w-full h-full gap-2 mt-5 md:mt-0">
-                    <span className="text-6xl text-center text-white sm:text-center sm:text-4xl lg:text-6xl xl:text-7xl">10+</span>
+                    <span className="text-6xl text-center text-white sm:text-center sm:text-4xl lg:text-6xl xl:text-7xl">
+                      <NumCountUp end={20} duration={2} /> +
+                    </span>
                     <span className="text-lg text-center text-white lg:text-2xl xl:text-3xl">Provinsi tersedia</span>
                   </div>
                 </div>
                 {/* Right side calculation area */}
                 <div className="flex flex-col basis-1/2">
                   <div className="flex flex-col w-full h-full gap-2">
-                    <span className="text-6xl text-center text-white sm:text-4xl lg:text-6xl xl:text-7xl">100+</span>
+                    <span className="text-6xl text-center text-white sm:text-4xl lg:text-6xl xl:text-7xl">
+                      <NumCountUp end={100} duration={2} /> +
+                    </span>
                     <span className="text-lg text-center text-white lg:text-2xl xl:text-3xl">Destinasi Wisata</span>
                   </div>
                   <div className="flex flex-col w-full h-full gap-2 mt-5 md:mt-0">
-                    <span className="text-6xl text-center text-white sm:text-4xl lg:text-6xl xl:text-7xl">10+</span>
+                    <span className="text-6xl text-center text-white sm:text-4xl lg:text-6xl xl:text-7xl">
+                      <NumCountUp end={200} duration={2} /> +
+                    </span>
                     <span className="text-lg text-center text-white lg:text-2xl xl:text-3xl">Provinsi tersedia</span>
                   </div>
                 </div>

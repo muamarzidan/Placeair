@@ -17,16 +17,16 @@ const PopularCardSwiper = () => {
 
   const handleResizeIcon = () => {
     if (window.innerWidth < 480) {
-        setResizeIconStar("12");
-        setResizeIconLoc("14");
+      setResizeIconStar("12");
+      setResizeIconLoc("14");
     } else if (window.innerWidth < 768) {
-        setResizeIconStar("14");
-        setResizeIconLoc("18");
+      setResizeIconStar("14");
+      setResizeIconLoc("18");
     } else {
-        setResizeIconStar("16");
-        setResizeIconLoc("24");
+      setResizeIconStar("16");
+      setResizeIconLoc("24");
     }
-};
+  };
 
   useEffect(() => {
     handleResizeIcon();

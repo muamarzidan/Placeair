@@ -39,7 +39,7 @@ export default {
       },
       backgroundImage: {
         'hero-home-placeir': "url('assets/images/hero-home-placeir.png')",
-        'hero-explore-placeir': "url('assets/images/hero-explore-placeir.png')",
+        'hero-explore-placeir': "url('assets/images/hero-explore-placeir.webp')",
         'newsletter-placeir': "url('assets/images/bg-newsletter-placeir.png')",
         'frame-one-placeir': "url('assets/images/bg-frameOne-placeir.png')",
         'frame-two-placeir': "url('assets/images/bg-frameTwo-placeir.png')",

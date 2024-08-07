@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import { Icon } from "@iconify-icon/react";
 
 import Navbar from "../../components/navbar";
@@ -68,11 +69,13 @@ export default function ExplorePage() {
         setSearchDestination(e.target.value);
     };
 
-    const filterMostViewData = Destination.filter((data) => {
+    const filterMostViewDestination = Destination.filter((data) => {
         const categoryFilter = categoryType === "Semua" || data.category.toLowerCase() === categoryType.toLowerCase();
         const searchFilterByCategory = data.name.toLowerCase().includes(debouncedSearchDestination.toLowerCase());
         return categoryFilter && searchFilterByCategory;
     }).sort((a, b) => b.viewCount - a.viewCount);
+
+    const maxMostViewDestination = filterMostViewDestination.slice(0,6);
 
     return (
         <>
@@ -127,6 +130,7 @@ export default function ExplorePage() {
                         <h3 className="text-6xl font-semibold text-center text-thridly">
                             Temukan Destinasi Sesuai Keinginan Anda
                         </h3>
+                        {/* Select category area */}
                         <ul className="flex w-auto h-auto gap-3 pt-4 text-white">
                             {categories.map((category) => (
                                 <li
@@ -141,6 +145,7 @@ export default function ExplorePage() {
                                 </li>
                             ))}
                         </ul>
+                        {/* Search destination area */}
                         <div className="flex justify-center w-full h-auto pt-8">
                             <Search
                                 className="w-full h-auto pr-2 text-3xl text-[#6F706F] placeholder-[#6F706F] outline-none px-9 py-5 peer bg-[#f4f4f4] rounded-full"
@@ -151,9 +156,10 @@ export default function ExplorePage() {
                                 onChange={handleSearchDestination}
                             />
                         </div>
+                        {/* Popular destination area */}
                         <div className="flex flex-wrap items-center justify-between w-full h-auto gap-5 pt-5">
-                            {filterMostViewData.length > 0 ? (
-                                filterMostViewData.map((data, index) => (
+                            {maxMostViewDestination.length > 0 ? (
+                                maxMostViewDestination.map((data, index) => (
                                     <div
                                         key={index}
                                         className="card-popular w-[250px] h-[306px] sm:w-[300px] sm:h-[356px] md:w-[350px] md:h-[406px] lg:w-full lg:h-[456px] max-w-[400px] max-h-[456px] flex flex-col justify-between p-3 rounded-3xl border-[1px] border-gray-300"
@@ -210,6 +216,13 @@ export default function ExplorePage() {
                                     </div>
                                 )
                             }
+                        </div>
+                        <div className="flex justify-center w-full h-auto mt-10">
+                            <Link to="/explore-destination">
+                                <button className="py-2 text-3xl font-semibold border-2 border-solid rounded-full px-7 text-primary border-primary">
+                                    Selengkapnya
+                                </button>
+                            </Link>
                         </div>
                     </div>
                 </section>

@@ -200,8 +200,8 @@ export default function ExplorePage() {
                                             <span className="font-bold text-md sm:text-[16px] md:text-[26px] text-[#171717]">
                                                 {formatPrice(data.price)}
                                             </span>
-                                            <button className="px-3 py-2 text-sm font-bold text-white rounded-full sm:px-5 md:py-3 sm:text-md md:text-lg bg-primary">
-                                                Selengkapnya
+                                            <button className="px-4 py-2 text-sm font-normal text-white rounded-full md:font-semibold sm:px-8 md:px-10 md:py-[10px] sm:text-md md:text-lg bg-primary">
+                                                Lihat
                                             </button>
                                         </div>
                                     </div>

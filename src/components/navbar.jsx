@@ -2,7 +2,6 @@ import { useState, useEffect } from "react";
 import { useLocation, Link } from "react-router-dom";
 import { Icon } from "@iconify-icon/react";
 
-
 const Navbar = () => {
   const locationPath = useLocation().pathname;
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -13,13 +12,23 @@ const Navbar = () => {
   );
 
   useEffect(() => {
+    if (locationPath === "/explore-destination") {
+      setIsChangeTeksColor("text-primary");
+      setIsChangeMenuNav("text-primary border-2 border-primary bg-[#FFFFFF7F]");
+    } else {
+      setIsChangeTeksColor("text-white");
+      setIsChangeMenuNav("text-white border-white border-[1px] bg-[#ffffff2b]");
+    }
+
     const handleResize = () => {
       if (window.innerWidth < 768) {
         setIsChangeTeksColor("text-primary");
       } else {
-        setIsChangeTeksColor(
-          window.scrollY > 500 ? "text-primary" : "text-white"
-        );
+        if (window.scrollY > 500) {
+          setIsChangeTeksColor("text-primary");
+        } else {
+          setIsChangeTeksColor(locationPath === "/explore-destination" ? "text-primary" : "text-white");
+        }
       }
     };
 
@@ -35,25 +44,28 @@ const Navbar = () => {
           setIsChangeTeksColor("text-primary");
           setIsChangeMenuNav("text-primary border-none bg-[#FFFFFF7F]");
         } else {
-          setIsChangeTeksColor("text-white");
+          setIsChangeTeksColor(locationPath === "/explore-destination" ? "text-primary" : "text-white");
           setIsChangeMenuNav(
-            "text-white border-white border-[1px] bg-[#ffffff2b]"
+            locationPath === "/explore-destination"
+              ? "text-primary border-2 border-primary bg-[#FFFFFF7F]"
+              : "text-white border-white border-[1px] bg-[#ffffff2b]"
           );
         }
       }
     };
+
     window.addEventListener("resize", handleResize);
     window.addEventListener("scroll", handleScroll);
 
     handleResize();
     handleScroll();
 
-    // Always cleanup event listener to prevent memory leak
+    // Always cleanup event listener to save memory leak
     return () => {
       window.removeEventListener("resize", handleResize);
       window.removeEventListener("scroll", handleScroll);
     };
-  }, []);
+  }, [locationPath]);
 
   return (
     <>

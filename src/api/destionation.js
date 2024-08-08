@@ -4,7 +4,7 @@ export default [
         name: "Kelingking Beach",
         category: "alam", 
         thumbnail: "./src/assets/images/card-kelingking.webp",
-        thumbnailProvince: "./src/assets/images/card-province-placeir.png",
+        thumbnailProvince: "./src/assets/images/thumbnail-surabaya.png",
         description: "This is a description",
         province: "Bali",
         location: "Nusa Penida, Bali",
@@ -19,7 +19,7 @@ export default [
         name: "Gunung Selamet",
         category: "alam", 
         thumbnail: "./src/assets/images/card-kelingking.webp",
-        thumbnailProvince: "./src/assets/images/card-province-placeir.png",
+        thumbnailProvince: "./src/assets/images/thumbnail-jateng.webp",
         description: "This is a description",
         province: "Jawa tengah",
         location: "Gunungsari, Pemalang",
@@ -34,7 +34,7 @@ export default [
         name: "Monumen Kebulatan Tekad",
         category: "sejarah", 
         thumbnail: "/src/assets/images/card-kelingking.webp",
-        thumbnailProvince: "/src/assets/images/card-province-placeir.png",
+        thumbnailProvince: "/src/assets/images/thumbnail-jateng.webp",
         description: "This is a description",
         province: "Jawa Barat",
         location: "Rengasdengklok, Kerawang",
@@ -49,7 +49,7 @@ export default [
         name: "Monumen Nasional",
         category: "sejarah", 
         thumbnail: "/src/assets/images/card-kelingking.webp",
-        thumbnailProvince: "/src/assets/images/card-province-placeir.png",
+        thumbnailProvince: "/src/assets/images/thumbnail-surabaya.png",
         description: "This is a description",
         province: "Jakarta",
         location: "Jakarta Pusat",
@@ -119,7 +119,6 @@ export default [
         viewCount: 2001,
         createdAt: "2023-11-15 10:21:37.261134+01:00"
     },
-    
     {
         id: 9, 
         name: "Kelingki",
@@ -135,7 +134,6 @@ export default [
         viewCount: 63,
         createdAt: "2023-11-15 10:21:37.261134+01:00"
     },
-    
     {
         id: 10, 
         name: "Kelingking Beach",

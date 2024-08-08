@@ -1,13 +1,12 @@
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
 import { Icon } from "@iconify-icon/react";
 
-import Navbar from "../../components/navbar";
-import Footer from "../../components/footer";
-import Search from "../../components/Search";
-import useDebounceSearch from "../../hooks/debounce";
-import Destination from "../../api/destionation";
-import formatPrice from "../../utils/rupiahFormatter";
+import Navbar from "../../../components/navbar";
+import Footer from "../../../components/footer";
+import Search from "../../../components/Search";
+import useDebounceSearch from "../../../hooks/debounce";
+import Destination from "../../../api/destionation";
+import formatPrice from "../../../utils/rupiahFormatter";
 
 
 const categories = ["Semua", "Alam", "Sejarah", "Kesenian"];
@@ -43,22 +42,6 @@ export default function ExplorePage() {
         };
     }, []);
 
-    // handler unique province
-    const filterUniqueProvinces = (data) => {
-        const uniqueProvinces = [];
-        const result = [];
-    
-        data.forEach(item => {
-            if (!uniqueProvinces.includes(item.province)) {
-                uniqueProvinces.push(item.province);
-                result.push(item);
-            }
-        });
-    
-        return result;
-    }
-    const uniqueProvinceDestination= filterUniqueProvinces(Destination);
-
     // handler select & search destination
     const handleCategoryClick = (category) => {
         setCategoryType(category);
@@ -72,54 +55,13 @@ export default function ExplorePage() {
         const categoryFilter = categoryType === "Semua" || data.category.toLowerCase() === categoryType.toLowerCase();
         const searchFilterByCategory = data.name.toLowerCase().includes(debouncedSearchDestination.toLowerCase());
         return categoryFilter && searchFilterByCategory;
-    }).sort((a, b) => b.viewCount - a.viewCount).slice(0, 6);
+    }).sort((a, b) => b.viewCount - a.viewCount);
 
     return (
         <>
             <Navbar />
             <main className="w-full h-auto bg-white">
-                <section id="hero"
-                    className="relative flex flex-col items-center justify-center h-[80vh] m-3 bg-center bg-cover rounded-xl bg-hero-explore-placeir"
-                >
-                    <div className="absolute inset-0 bg-black rounded-xl opacity-35"></div>
-                    <div className="relative px-3">
-                        <h1 className="relative font-semibold text-center text-white px-0 sm:px-5 lg:px-[50px] xl:px-[100px] 2xl:px-[200px] text-5xl md:text-6xl xl:text-8xl">
-                            Jelajahi Pesona Alam Nusantara yang Menakjubkan
-                        </h1>
-                        <p className="relative text-md md:text-lg xl:text-2xl text-center px-2 sm:px-16 md:px-[50px] lg:px-[100px] xl:px-[220px] 2xl:px-[320px] text-white pt-5">
-                            Temukan destinasi menakjubkan di seluruh Nusantara. Rencanakan
-                            liburan Anda sekarang dan temukan petualangan tak terlupakan di
-                            setiap sudut negeri.
-                        </p>
-                    </div>
-                </section>
-                <section id="kategori" className="w-full h-auto py-10">
-                    <div className="container flex flex-col w-full h-auto gap-4">
-                        <h4 className="font-semibold text-[24px] text-secondary text-center">
-                            KATEGORI
-                        </h4>
-                        <h3 className="text-6xl font-semibold text-center text-thridly">
-                            Destinasi Berdasarkan Provinsi
-                        </h3>
-                        <div className="flex flex-wrap items-center justify-between w-full h-auto gap-5 pt-5">
-                            {uniqueProvinceDestination.map((data, index) => (
-                                    <div
-                                        key={index}
-                                        className="w-[445px] h-[460px] max-w-[800px] max-h-[430px] rounded-[30px] bg-center bg-cover"
-                                        style={{ backgroundImage: `url(${data.thumbnailProvince})`}}
-                                    >
-                                        <div className="flex items-end w-full h-full p-5">
-                                            <h4 className="text-6xl font-semibold text-white 0">
-                                                {data.province}
-                                            </h4>
-                                        </div>
-                                    </div>
-                                ))
-                            }
-                        </div>
-                    </div>
-                </section>
-                <section id="jelajah" className="w-full h-auto pt-10 pb-20">
+                <section id="jelajah" className="w-full h-auto pt-40 pb-20">
                     <div className="container flex flex-col items-center w-full h-auto gap-1 item">
                         <h4 className="font-semibold text-[24px] text-secondary text-center">
                             JELAJAHI TEMPAT IMPIAN ANDA
@@ -213,13 +155,6 @@ export default function ExplorePage() {
                                     </div>
                                 )
                             }
-                        </div>
-                        <div className="flex justify-center w-full h-auto mt-10">
-                            <Link to="/explore-destination">
-                                <button className="py-2 text-3xl font-semibold border-2 border-solid rounded-full px-7 text-primary border-primary">
-                                    Selengkapnya
-                                </button>
-                            </Link>
                         </div>
                     </div>
                 </section>

@@ -40,6 +40,7 @@ const PopularCardSwiper = () => {
   return (
     <>
       <div className="flex flex-col w-full h-auto gap-7 swiper-controller">
+        {/* Heading area */}
         <div className="container flex items-center w-full h-auto">
           <div className="flex flex-col w-full container-title-popular">
             <p id="sub-title-swiper-card" className="text-xl font-bold md:text-3xl text-secondary">TEMUKAN</p>
@@ -48,6 +49,7 @@ const PopularCardSwiper = () => {
             </h3>
           </div>
         </div>
+        {/* Card swiper area */}
         <div id="container-swiper-card" className="w-full h-auto pl-3 sm:pl-9 xl:pl-5 2xl:pl-20">
           <Swiper
             slidesPerView={1.4}
@@ -88,7 +90,7 @@ const PopularCardSwiper = () => {
                 className="flex items-center justify-center sm:block sm:items-start sm:justify-start"
               >
                 <div className="card-popular w-[250px] h-[306px] sm:w-[300px] sm:h-[356px] md:w-[350px] md:h-[406px] lg:w-full lg:h-[456px] max-w-[400px] max-h-[456px] flex flex-col justify-between p-3 rounded-xl md:rounded-3xl border-[1px] border-gray-300">
-                  {/* image section */}
+                  {/* image area */}
                   <div
                     className="card-image-popular w-[227px] h-[180px] sm:w-[277px] sm:h-[220px] md:w-[327px] md:h-[230px] lg:w-full lg:h-full !max-w-[377px] !max-h-[280px] p-3 rounded-lg md:rounded-xl"
                     style={{
@@ -107,11 +109,11 @@ const PopularCardSwiper = () => {
                       <span className="text-xs text-white sm:text-sm">{data.rating}</span>
                     </div>
                   </div>
-                  {/* title section */}
+                  {/* title area */}
                   <span className="w-fit text-[#171717] font-bold text-lg sm:text-xl md:text-3xl">
                     {data.name}
                   </span>
-                  {/* icon and location section */}
+                  {/* icon and location area */}
                   <div className="flex items-center gap-1 sm:gap-2 w-fit">
                     <Icon
                       icon="fluent:location-16-filled"
@@ -124,7 +126,7 @@ const PopularCardSwiper = () => {
                       <a href={data.locationLink}></a>
                     </span>
                   </div>
-                  {/* price and button section */}
+                  {/* price and button area */}
                   <div className="flex items-center justify-between w-full sm:!mt-4">
                     <span className="font-bold text-lg sm:text-[16px] md:text-[26px] text-[#171717]">
                       {formatPrice(data.price)}

@@ -6,7 +6,8 @@ import Navbar from "../../components/navbar";
 import Footer from "../../components/footer";
 import Search from "../../components/Search";
 import useDebounceSearch from "../../hooks/debounce";
-import Destination from "../../api/destionation";
+import dataDestination from "../../api/destionation";
+import dataProvince from "../../api/province";
 import formatPrice from "../../utils/rupiahFormatter";
 
 
@@ -18,7 +19,7 @@ export default function ExplorePage() {
     const [categoryType, setCategoryType] = useState("Semua");
     const [searchDestination, setSearchDestination] = useState("");
     const debouncedSearchDestination = useDebounceSearch(searchDestination, 300);
-    
+
     // handler resize icon
     const handleResizeIcon = () => {
         if (window.innerWidth < 480) {
@@ -32,7 +33,7 @@ export default function ExplorePage() {
             setResizeIconLoc("24");
         }
     };
-    
+
     useEffect(() => {
         handleResizeIcon();
         // important to add event listener on window when resize the width then resize the size of icon automatically
@@ -43,43 +44,35 @@ export default function ExplorePage() {
         };
     }, []);
 
-    // handler unique province
-    const filterUniqueProvinces = (data) => {
-        const uniqueProvinces = [];
-        const result = [];
-    
-        data.forEach(item => {
-            if (!uniqueProvinces.includes(item.province)) {
-                uniqueProvinces.push(item.province);
-                result.push(item);
-            }
-        });
-    
-        return result;
-    }
-    const uniqueProvinceDestination= filterUniqueProvinces(Destination);
-
-    // handler select & search destination
+    // handler select & search destination with calculate most view destination
     const handleCategoryClick = (category) => {
         setCategoryType(category);
     };
-    
+
     const handleSearchDestination = (e) => {
         setSearchDestination(e.target.value);
     };
 
-    const filterMostViewDestination = Destination.filter((data) => {
-        const categoryFilter = categoryType === "Semua" || data.category.toLowerCase() === categoryType.toLowerCase();
-        const searchFilterByCategory = data.name.toLowerCase().includes(debouncedSearchDestination.toLowerCase());
-        return categoryFilter && searchFilterByCategory;
-    }).sort((a, b) => b.viewCount - a.viewCount).slice(0, 6);
+    const filterMostViewDestination = dataDestination
+        .filter((data) => {
+            const categoryFilter =
+                categoryType === "Semua" ||
+                data.category.toLowerCase() === categoryType.toLowerCase();
+            const searchFilterByCategory = data.name
+                .toLowerCase()
+                .includes(debouncedSearchDestination.toLowerCase());
+            return categoryFilter && searchFilterByCategory;
+        })
+        .sort((a, b) => b.viewCount - a.viewCount)
+        .slice(0, 6);
 
     return (
         <>
             <Navbar />
             <main className="w-full h-auto bg-white">
-                <section id="hero"
-                    className="relative flex flex-col items-center justify-center h-[80vh] m-3 bg-center bg-cover rounded-xl bg-hero-explore-placeir"
+                <section
+                    id="hero"
+                    className="relative flex flex-col items-center justify-center h-[85vh] m-3 bg-center bg-cover rounded-xl bg-hero-explore-placeir"
                 >
                     <div className="absolute inset-0 bg-black rounded-xl opacity-35"></div>
                     <div className="relative px-3">
@@ -93,7 +86,7 @@ export default function ExplorePage() {
                         </p>
                     </div>
                 </section>
-                <section id="kategori" className="w-full h-auto py-10">
+                <section id="kategori" className="w-full h-auto py-14">
                     <div className="container flex flex-col w-full h-auto gap-4">
                         <h4 className="font-semibold text-[24px] text-secondary text-center">
                             KATEGORI
@@ -101,12 +94,17 @@ export default function ExplorePage() {
                         <h3 className="text-6xl font-semibold text-center text-thridly">
                             Destinasi Berdasarkan Provinsi
                         </h3>
+                        {/* Province data area */}
                         <div className="flex flex-wrap items-center justify-between w-full h-auto gap-5 pt-5">
-                            {uniqueProvinceDestination.map((data, index) => (
+                            {dataProvince.map((data, index) => (
+                                <Link to={`/explore/${data.province}`} key={index}>
                                     <div
-                                        key={index}
-                                        className="w-[445px] h-[460px] max-w-[800px] max-h-[430px] rounded-[30px] bg-center bg-cover"
-                                        style={{ backgroundImage: `url(${data.thumbnailProvince})`}}
+                                        className="w-[445px] h-[460px] max-w-[800px] max-h-[430px] rounded-[30px] bg-center bg-cover brightness-75"
+                                        style={{
+                                            backgroundImage: `url(${data.thumbnailProvince})`,
+                                            backgroundSize: "cover",
+                                            backgroundPosition: "center",
+                                        }}
                                     >
                                         <div className="flex items-end w-full h-full p-5">
                                             <h4 className="text-6xl font-semibold text-white 0">
@@ -114,8 +112,8 @@ export default function ExplorePage() {
                                             </h4>
                                         </div>
                                     </div>
-                                ))
-                            }
+                                </Link>
+                            ))}
                         </div>
                     </div>
                 </section>
@@ -133,8 +131,8 @@ export default function ExplorePage() {
                                 <li
                                     key={category}
                                     className={`px-5 py-2 font-semibold rounded-full cursor-pointer ${categoryType === category
-                                        ? "bg-primary text-white"
-                                        : "bg-[#F4F4F4] text-fourly"
+                                            ? "bg-primary text-white"
+                                            : "bg-[#F4F4F4] text-fourly"
                                         }`}
                                     onClick={() => handleCategoryClick(category)}
                                 >
@@ -205,14 +203,14 @@ export default function ExplorePage() {
                                             </button>
                                         </div>
                                     </div>
-                                ))) : (
-                                    <div className="flex items-center justify-center w-full h-auto p-5">
-                                        <h4 className="font-semibold text-[24px] text-secondary text-center">
-                                            Destinasi tidak ditemukan
-                                        </h4>
-                                    </div>
-                                )
-                            }
+                                ))
+                            ) : (
+                                <div className="flex items-center justify-center w-full h-auto p-5">
+                                    <h4 className="font-semibold text-[24px] text-secondary text-center">
+                                        Destinasi tidak ditemukan
+                                    </h4>
+                                </div>
+                            )}
                         </div>
                         <div className="flex justify-center w-full h-auto mt-10">
                             <Link to="/explore-destination">

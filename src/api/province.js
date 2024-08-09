@@ -37,7 +37,7 @@ export default [
     },
     {
         id: 7,
-        thumbnailProvince: "./src/assets/images/thumbnail-ntb.webp",
+        thumbnailProvince: "./src/assets/images/thumbnail-nusbat.webp",
         province: "Nusa Tenggara Barat",
         createdAt: "2023-11-15 10:21:37.261134+01:00"
     },

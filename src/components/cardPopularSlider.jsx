@@ -7,7 +7,7 @@ import { Pagination, Navigation } from "swiper/modules";
 import { Icon } from "@iconify-icon/react";
 
 import formatPrice from "../utils/rupiahFormatter";
-import dataCard from "../api/destionation";
+import dataDestination from "../api/destionation";
 import "../assets/css/components/popular.css";
 
 
@@ -84,7 +84,7 @@ const PopularCardSwiper = () => {
             }}
             modules={[Pagination, Navigation]}
           >
-            {dataCard.map((data, index) => (
+            {dataDestination.map((data, index) => (
               <SwiperSlide
                 key={index}
                 className="flex items-center justify-center sm:block sm:items-start sm:justify-start"

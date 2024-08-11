@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 
 import Navbar from "../../../components/navbar";
@@ -7,11 +7,26 @@ import Search from "../../../components/Search";
 import useDebounceSearch from "../../../hooks/debounce";
 import dataDestination from "../../../api/destionation";
 
-
 export default function ExploreProvincePage() {
     const { province } = useParams();
     const [searchDestination, setSearchDestination] = useState("");
+    const [makeBaseThumbnail, setMakeBaseThumbnail] = useState("");
     const debouncedSearch = useDebounceSearch(searchDestination, 500);
+
+    // handle scroll to top page was loaded ( hardcoded :) )
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
+
+    // handler thumbnail, search, filter destination by province
+    useEffect(() => {
+        const filteredByProvince = dataDestination.filter(
+            destination => destination.province.toLowerCase() === province.toLowerCase()
+        );
+        if (filteredByProvince.length > 0) {
+            setMakeBaseThumbnail(filteredByProvince[0].thumbnailProvince);
+        }
+    }, [province]);
 
     const handleSearchDestination = (e) => {
         setSearchDestination(e.target.value);
@@ -22,7 +37,6 @@ export default function ExploreProvincePage() {
         .filter(destination => 
             destination.name.toLowerCase().includes(debouncedSearch.toLowerCase())
         );
-    console.log(filterDestinationByProvince[0]?.thumbnailProvince);
 
     return (
         <>
@@ -32,7 +46,7 @@ export default function ExploreProvincePage() {
                     id="hero"
                     className="relative flex flex-col items-center justify-center h-[80vh] m-3 bg-center bg-cover rounded-xl"
                     style={{
-                        backgroundImage: `url(${filterDestinationByProvince[0]?.thumbnailProvince})`
+                        backgroundImage: `url(${filterDestinationByProvince[0]?.thumbnailProvince || makeBaseThumbnail})`
                     }}
                 >
                     <div className="absolute inset-0 bg-black rounded-xl opacity-35"></div>

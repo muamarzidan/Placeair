@@ -72,14 +72,14 @@ export default function ExplorePage() {
             <main className="w-full h-auto bg-white">
                 <section
                     id="hero"
-                    className="relative flex flex-col items-center justify-center h-[85vh] m-3 bg-center bg-cover rounded-xl bg-hero-explore-placeir"
+                    className="relative flex flex-col items-center justify-center h-[45vh] sm:h-[85vh]  !mt-[75px] md:!mt-3 m-3 bg-center bg-cover rounded-xl bg-hero-explore-placeir"
                 >
                     <div className="absolute inset-0 bg-black rounded-xl opacity-35"></div>
                     <div className="relative px-3">
-                        <h1 className="relative font-semibold text-center text-white px-0 sm:px-5 lg:px-[50px] xl:px-[100px] 2xl:px-[200px] text-5xl md:text-6xl xl:text-8xl">
-                            Jelajahi Pesona Alam Nusantara yang Menakjubkan
+                        <h1 className="relative font-semibold text-center text-white px-0 sm:px-5 lg:px-[50px] xl:px-[100px] 2xl:px-[200px] text-4xl sm:text-5xl md:text-6xl xl:text-8xl">
+                            Eksplor Beragam Keindahan Keajaiban Indonesia
                         </h1>
-                        <p className="relative text-md md:text-lg xl:text-2xl text-center px-2 sm:px-16 md:px-[50px] lg:px-[100px] xl:px-[220px] 2xl:px-[320px] text-white pt-5">
+                        <p className="relative text-sm sm:text-md md:text-lg xl:text-2xl text-center px-2 sm:px-16 md:px-[50px] lg:px-[100px] xl:px-[220px] 2xl:px-[320px] text-white pt-3 sm:pt-5">
                             Temukan destinasi menakjubkan di seluruh Nusantara. Rencanakan
                             liburan Anda sekarang dan temukan petualangan tak terlupakan di
                             setiap sudut negeri.
@@ -87,27 +87,28 @@ export default function ExplorePage() {
                     </div>
                 </section>
                 <section id="kategori" className="w-full h-auto py-14">
-                    <div className="container flex flex-col w-full h-auto gap-4">
-                        <h4 className="font-semibold text-[24px] text-secondary text-center">
+                    <div className="container flex flex-col w-full h-auto gap-2 sm:gap-4">
+                        <h4 className="font-semibold text-sm sm:text-xl md:text-[24px] text-secondary text-left sm:text-center">
                             KATEGORI
                         </h4>
-                        <h3 className="text-6xl font-semibold text-center text-thridly">
+                        <h3 className="text-2xl font-semibold text-left sm:text-4xl md:text-6xl sm:text-center text-thridly">
                             Destinasi Berdasarkan Provinsi
                         </h3>
                         {/* Province data area */}
                         <div className="flex flex-wrap items-center justify-between w-full h-auto gap-5 pt-5">
                             {dataProvince.map((data, index) => (
                                 <Link to={`/explore/${data.province}`} key={index}>
-                                    <div
-                                        className="w-[445px] h-[460px] max-w-[800px] max-h-[430px] rounded-[30px] bg-center bg-cover brightness-75"
-                                        style={{
-                                            backgroundImage: `url(${data.thumbnailProvince})`,
-                                            backgroundSize: "cover",
-                                            backgroundPosition: "center",
-                                        }}
-                                    >
-                                        <div className="flex items-end w-full h-full p-5">
-                                            <h4 className="text-6xl font-semibold text-white 0">
+                                    <div className="relative w-[445px] h-[460px] max-w-[445px] max-h-[460px] rounded-[30px] overflow-hidden">
+                                        <div
+                                            className="absolute inset-0 bg-center bg-cover brightness-75"
+                                            style={{
+                                                backgroundImage: `url(${data.thumbnailProvince})`,
+                                                backgroundSize: "cover",
+                                                backgroundPosition: "center",
+                                            }}
+                                        />
+                                        <div className="relative z-10 flex items-end w-full h-full p-5">
+                                            <h4 className="text-6xl font-semibold text-white">
                                                 {data.province}
                                             </h4>
                                         </div>
@@ -189,10 +190,9 @@ export default function ExplorePage() {
                                                 width={resizeIconLoc}
                                                 height={resizeIconLoc}
                                             />
-                                            <span className="text-sm sm:text-md md:text-xl">
+                                            <Link to={data.locationLink} target="_blank" className="text-sm sm:text-md md:text-xl">
                                                 {data.location}
-                                                <a href={data.locationLink}></a>
-                                            </span>
+                                            </Link>
                                         </div>
                                         <div className="flex items-center justify-between w-full">
                                             <span className="font-bold text-md sm:text-[16px] md:text-[26px] text-[#171717]">
@@ -212,13 +212,16 @@ export default function ExplorePage() {
                                 </div>
                             )}
                         </div>
-                        <div className="flex justify-center w-full h-auto mt-10">
-                            <Link to="/explore-destination">
-                                <button className="py-2 text-3xl font-semibold border-2 border-solid rounded-full px-7 text-primary border-primary">
-                                    Selengkapnya
-                                </button>
-                            </Link>
-                        </div>
+                        {/* handler to show more destination if the destination is avaible */}
+                        {filterMostViewDestination.length > 0 && (
+                            <div className="flex justify-center w-full h-auto mt-10">
+                                <Link to="/explore-destination">
+                                    <button className="py-2 text-3xl font-semibold border-2 border-solid rounded-full px-7 text-primary border-primary">
+                                        Selengkapnya
+                                    </button>
+                                </Link>
+                            </div>
+                        )}
                     </div>
                 </section>
             </main>

@@ -9,6 +9,7 @@ import useDebounceSearch from "../../hooks/debounce";
 import dataDestination from "../../api/destionation";
 import dataProvince from "../../api/province";
 import formatPrice from "../../utils/rupiahFormatter";
+import "../../assets/css/pages/explore.css";
 
 
 const categories = ["Semua", "Alam", "Sejarah", "Kesenian"];
@@ -95,10 +96,10 @@ export default function ExplorePage() {
                             Destinasi Berdasarkan Provinsi
                         </h3>
                         {/* Province data area */}
-                        <div className="flex flex-wrap items-center justify-between w-full h-auto gap-5 pt-5">
+                        <div id="explore-container-card" className="flex flex-wrap items-center justify-between w-full h-auto gap-5 pt-5 xl:pt-5 xl:gap-5 md:justify-between">
                             {dataProvince.map((data, index) => (
                                 <Link to={`/explore/${data.province}`} key={index}>
-                                    <div className="relative w-[445px] h-[460px] max-w-[445px] max-h-[460px] rounded-[30px] overflow-hidden">
+                                    <div id="explore-card-province" className="relative w-[500px] h-[500px] max-w-[280px] max-h-[320px] sm:max-w-[290px] sm:max-h-[320px] md:max-w-[315px] md:max-h-[350px] xl:max-w-[400px] xl:max-h-[430px] 2xl:max-w-[430px] 2xl:max-h-[460px] rounded-[20px] xl:rounded-[30px] overflow-hidden">
                                         <div
                                             className="absolute inset-0 bg-center bg-cover brightness-75"
                                             style={{
@@ -107,8 +108,8 @@ export default function ExplorePage() {
                                                 backgroundPosition: "center",
                                             }}
                                         />
-                                        <div className="relative z-10 flex items-end w-full h-full p-5">
-                                            <h4 className="text-6xl font-semibold text-white">
+                                        <div className="relative z-10 flex items-end w-full h-full p-3 sm:p-5">
+                                            <h4 className="text-2xl font-semibold text-white sm:text-3xl md:text-5xl xl:text-6xl">
                                                 {data.province}
                                             </h4>
                                         </div>
@@ -118,20 +119,20 @@ export default function ExplorePage() {
                         </div>
                     </div>
                 </section>
-                <section id="jelajah" className="w-full h-auto pt-10 pb-20">
+                <section id="jelajah" className="w-full h-auto pb-20">
                     <div className="container flex flex-col items-center w-full h-auto gap-1 item">
-                        <h4 className="font-semibold text-[24px] text-secondary text-center">
+                        <h4 className="font-semibold text-sm sm:text-lg md:text-[24px] text-secondary text-center">
                             JELAJAHI TEMPAT IMPIAN ANDA
                         </h4>
-                        <h3 className="text-6xl font-semibold text-center text-thridly">
+                        <h3 className="text-2xl font-semibold text-center sm:text-4xl md:text-6xl text-thridly">
                             Temukan Destinasi Sesuai Keinginan Anda
                         </h3>
                         {/* Select category area */}
-                        <ul className="flex w-auto h-auto gap-3 pt-4 text-white">
+                        <ul className="flex w-auto h-auto gap-3 pt-4 text-white sm:gap-5">
                             {categories.map((category) => (
                                 <li
                                     key={category}
-                                    className={`px-5 py-2 font-semibold rounded-full cursor-pointer ${categoryType === category
+                                    className={`px-4 sm:px-6 py-2 font-semibold rounded-full cursor-pointer text-sm sm:text-xl md:text-3xl ${categoryType === category
                                             ? "bg-primary text-white"
                                             : "bg-[#F4F4F4] text-fourly"
                                         }`}
@@ -144,7 +145,7 @@ export default function ExplorePage() {
                         {/* Search destination area */}
                         <div className="flex justify-center w-full h-auto pt-8">
                             <Search
-                                className="w-full h-auto pr-2 text-3xl text-[#6F706F] placeholder-[#6F706F] outline-none px-9 py-5 peer bg-[#f4f4f4] rounded-full"
+                                className="w-full h-auto pr-2 sm:text-2xl 2xl:text-3xl text-[#6F706F] placeholder-[#6F706F] outline-none sm:px-7 2xl:px-9 sm:py-4 2xl:py-5 bg-[#f4f4f4] rounded-full"
                                 type="text"
                                 id="search"
                                 placeholder="Cari destinasi..."

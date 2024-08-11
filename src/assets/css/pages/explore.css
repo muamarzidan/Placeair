@@ -1,0 +1,127 @@
+@media only screen and (max-width: 629px) {
+    #explore-card-province {
+        width: 270px !important;
+        height: 310px !important;
+    }
+}
+
+@media only screen and (max-width: 608px) {
+    #explore-card-province {
+        width: 260px !important;
+        height: 290px !important;
+    }
+}
+
+@media only screen and (max-width: 588px) {
+    #explore-card-province {
+        width: 250px !important;
+        height: 280px !important;
+    }
+}
+
+@media only screen and (max-width: 568px) {
+    #explore-card-province {
+        width: 240px !important;
+        height: 280px !important;
+    }
+}
+
+@media only screen and (max-width: 548px) {
+    #explore-card-province {
+        width: 230px !important;
+        height: 280px !important;
+    }
+}
+
+@media only screen and (max-width: 548px) {
+    #explore-card-province {
+        width: 230px !important;
+        height: 280px !important;
+    }
+}
+
+@media only screen and (max-width: 528px) {
+    #explore-card-province {
+        width: 220px !important;
+        height: 260px !important;
+    }
+}
+
+@media only screen and (max-width: 528px) {
+    #explore-card-province {
+        width: 220px !important;
+        height: 260px !important;
+    }
+}
+
+@media only screen and (max-width: 508px) {
+    #explore-card-province {
+        width: 210px !important;
+        height: 260px !important;
+    }
+}
+
+@media only screen and (max-width: 488px) {
+    #explore-card-province {
+        width: 200px !important;
+        height: 250px !important;
+    }
+}
+
+@media only screen and (max-width: 467px) {
+    #explore-container-card {
+        gap: 15px !important;
+    }
+    #explore-card-province {
+        border-radius: 14px !important;
+    }
+}
+
+@media only screen and (max-width: 467px) {
+    #explore-card-province {
+        width: 190px !important;
+        height: 240px !important;
+    }
+}
+
+@media only screen and (max-width: 444px) {
+    #explore-card-province {
+        width: 180px !important;
+        height: 230px !important;
+    }
+}
+
+@media only screen and (max-width: 425px) {
+    #explore-card-province {
+        width: 170px !important;
+        height: 220px !important;
+    }
+}
+
+@media only screen and (max-width: 403px) {
+    #explore-card-province {
+        width: 160px !important;
+        height: 210px !important;
+    }
+}
+
+@media only screen and (max-width: 388px) {
+    #explore-card-province {
+        width: 150px !important;
+        height: 190px !important;
+    }
+}
+
+@media only screen and (max-width: 362px) {
+    #explore-card-province {
+        width: 140px !important;
+        height: 180px !important;
+    }
+}
+
+@media only screen and (max-width: 342px) {
+    #explore-card-province {
+        width: 130px !important;
+        height: 170px !important;
+    }
+}

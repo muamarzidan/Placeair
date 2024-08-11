@@ -14,7 +14,7 @@ export default {
           md: '1rem',
           lg: '1rem',
           xl: '1rem',
-          '2xl': '5rem',
+          '2xl': '102px',
         },
       },
       colors:{

@@ -128,7 +128,7 @@ export default function HomePage() {
               <div className="absolute inset-0 bg-black opacity-35 rounded-[30px]"></div>
               <span id="title-newsletter" className="relative font-semibold px-[30px] sm:px-[100px] md:px-[190px] lg:px-[200px] xl:px-[300px] text-center text-white text-2xl sm:text-4xl lg:text-6xl xl:text-7xl">Ayo Berlangganan ke Newsletter Kami</span>
               {/* button and input area */}
-              <div className="relative flex justify-between w-[270px] h-[43px] sm:h-[40px] sm:w-[280px] lg:w-[422px] xl:w-[482px] lg:h-[55px] xl:h-[61px] gap-2 sm:gap-5 pl-5 pr-1 py-1 bg-white rounded-full">
+              <div id="newsletter-input" className="relative flex justify-between w-[270px] h-[43px] sm:h-[40px] sm:w-[280px] lg:w-[422px] xl:w-[482px] lg:h-[55px] xl:h-[61px] gap-2 sm:gap-5 pl-5 pr-1 py-1 bg-white rounded-full">
                 <input type="email" placeholder="Masukkan email anda" className="w-full h-auto p-1 text-sm border-none rounded-full outline-none lg:p-2 lg:text-lg text-thridly" />
                 <button className="w-auto h-auto px-5 py-1 text-sm text-white rounded-full lg:px-8 sm:text-md lg:text-lg bg-primary">Kirim</button>
               </div>

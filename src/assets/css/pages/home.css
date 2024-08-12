@@ -15,4 +15,7 @@
     #title-newsletter {
         padding: 0 20px !important;
     }
+    #newsletter-input {
+        width: 250px !important;
+    }
 }

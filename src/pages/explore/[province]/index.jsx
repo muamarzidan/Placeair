@@ -6,6 +6,8 @@ import Footer from "../../../components/footer";
 import Search from "../../../components/Search";
 import useDebounceSearch from "../../../hooks/debounce";
 import dataDestination from "../../../api/destionation";
+import "../../../assets/css/pages/explore.css";
+
 
 export default function ExploreProvincePage() {
     const { province } = useParams();
@@ -44,20 +46,19 @@ export default function ExploreProvincePage() {
             <main className="w-full h-auto bg-white">
                 <section
                     id="hero"
-                    className="relative flex flex-col items-center justify-center h-[80vh] m-3 bg-center bg-cover rounded-xl"
+                    className="relative flex flex-col items-center justify-center h-[45vh] sm:h-[80vh] !mt-[75px] md:!mt-3 m-3 bg-center bg-cover rounded-xl"
                     style={{
                         backgroundImage: `url(${filterDestinationByProvince[0]?.thumbnailProvince || makeBaseThumbnail})`
                     }}
                 >
                     <div className="absolute inset-0 bg-black rounded-xl opacity-35"></div>
-                    <div className="relative px-3">
-                        <h1 className="relative font-semibold text-center text-white px-0 sm:px-5 lg:px-[50px] xl:px-[100px] 2xl:px-[250px] text-5xl md:text-6xl xl:text-8xl">
-                            Jelajahi Destinasi Impian di
+                    <div className="relative w-full px-0 lg:px-[70px] xl:px-0">
+                        <h1 id="explore-province-title" className="relative text-4xl sm:text-5xl font-semibold text-center text-white md:text-6xl lg:text-8xl px-[100px] sm:px-[130px] md:px-[100px] lg:px-[66px] xl:px-[140px] 2xl:px-[270px]">
+                            Jelajahi Destinasi Impian di {province} 
                         </h1>
-                        <span className="relative block px-0 text-5xl font-semibold text-center text-white md:text-6xl xl:text-8xl">{province}</span> 
-                        <div className="flex items-center justify-center w-full h-auto px-32 pt-8">
+                        <div className="flex flex-col items-center justify-center w-full h-auto pt-5 md:pt-8">
                             <Search
-                                className="w-full h-auto pr-2 text-3xl text-[#ffffff] placeholder-[#ffffff] outline-none px-9 py-5 peer backdrop-blur-md bg-[#ffffff59] rounded-full"
+                                className="w-[85%] md:w-[75%] lg:w-[95%] xl:w-[75%] h-auto pr-2 sm:text-lg md:text-xl xl:text-3xl text-[#ffffff] placeholder-[#ffffff] outline-none px-6 md:px-7 2xl:px-9 py-3 md:py-4 2xl:py-5 backdrop-blur-md bg-[#ffffff59] rounded-full"
                                 type="text"
                                 id="search"
                                 placeholder="Cari destinasi..."

@@ -82,7 +82,7 @@ const Navbar = () => {
               <Link
                 to="/"
                 className={`transition-all ${
-                  locationPath === "/" ? "font-bold" : "font-normal"
+                  locationPath === "/" ? "font-semibold" : "font-normal"
                 }`}
               >
                 Home
@@ -90,7 +90,7 @@ const Navbar = () => {
               <Link
                 to="/explore"
                 className={`transition-all ${
-                  locationPath === "/explore" ? "font-bold" : "font-normal"
+                  locationPath === "/explore" ? "font-semibold" : "font-normal"
                 }`}
               >
                 Explore
@@ -98,7 +98,7 @@ const Navbar = () => {
               <Link
                 to="/about"
                 className={`transition-all ${
-                  locationPath === "/about" ? "font-bold" : "font-normal"
+                  locationPath === "/about" ? "font-semibold" : "font-normal"
                 }`}
               >
                 About Us
@@ -106,7 +106,7 @@ const Navbar = () => {
               <Link
                 to="/blog"
                 className={`transition-all ${
-                  locationPath === "/blog" ? "font-bold" : "font-normal"
+                  locationPath === "/blog" ? "font-semibold" : "font-normal"
                 }`}
               >
                 Blog
@@ -157,8 +157,8 @@ const Navbar = () => {
               <div className="flex flex-col w-full h-auto pt-2 space-y-4 text-xl">
                 <Link
                   to="/"
-                  className={`transition-all font-semibold ${
-                    locationPath === "/" ? "font-bold" : "font-normal"
+                  className={`transition-all ${
+                    locationPath === "/" ? "font-semibold" : "font-normal"
                   }`}
                 >
                   Home
@@ -166,7 +166,7 @@ const Navbar = () => {
                 <Link
                   to="/explore"
                   className={`transition-all ${
-                    locationPath === "/explore" ? "font-bold" : "font-normal"
+                    locationPath === "/explore" ? "font-semibold" : "font-normal"
                   }`}
                 >
                   Explore
@@ -174,7 +174,7 @@ const Navbar = () => {
                 <Link
                   to="/about"
                   className={`transition-all ${
-                    locationPath === "/about" ? "font-bold" : "font-normal"
+                    locationPath === "/about" ? "font-semibold" : "font-normal"
                   }`}
                 >
                   About Us
@@ -182,7 +182,7 @@ const Navbar = () => {
                 <Link
                   to="/faq"
                   className={`transition-all ${
-                    locationPath === "/faq" ? "font-bold" : "font-normal"
+                    locationPath === "/faq" ? "font-semibold" : "font-normal"
                   }`}
                 >
                   FAQ
@@ -190,7 +190,7 @@ const Navbar = () => {
                 <Link
                   to="/blog"
                   className={`transition-all ${
-                    locationPath === "/blog" ? "font-bold" : "font-normal"
+                    locationPath === "/blog" ? "font-semibold" : "font-normal"
                   }`}
                 >
                   Blog

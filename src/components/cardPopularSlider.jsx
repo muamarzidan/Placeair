@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { Link } from "react-router-dom";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
@@ -50,7 +51,7 @@ const PopularCardSwiper = () => {
           </div>
         </div>
         {/* Card swiper area */}
-        <div id="container-swiper-card" className="w-full h-auto pl-3 sm:pl-9 xl:pl-5 2xl:pl-20">
+        <div id="container-swiper-card" className="w-full h-auto">
           <Swiper
             slidesPerView={1.4}
             spaceBetween={0}
@@ -114,7 +115,7 @@ const PopularCardSwiper = () => {
                     {data.name}
                   </span>
                   {/* icon and location area */}
-                  <div className="flex items-center gap-1 sm:gap-2 w-fit">
+                  <Link to={data.locationLink} target="_blank" className="flex items-center gap-1 sm:gap-2 w-fit">
                     <Icon
                       icon="fluent:location-16-filled"
                       width={resizeIconLoc}
@@ -123,9 +124,8 @@ const PopularCardSwiper = () => {
                     />
                     <span className="text-sm sm:text-md md:text-xl">
                       {data.location}
-                      <a href={data.locationLink}></a>
                     </span>
-                  </div>
+                  </Link>
                   {/* price and button area */}
                   <div className="flex items-center justify-between w-full sm:!mt-4">
                     <span className="font-bold text-lg sm:text-[16px] md:text-[26px] text-[#171717]">

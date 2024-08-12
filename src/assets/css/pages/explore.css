@@ -1,127 +1,299 @@
+/* Explore page */
 @media only screen and (max-width: 629px) {
-    #explore-card-province {
+    .explore-card-prov {
         width: 270px !important;
         height: 310px !important;
     }
 }
 
 @media only screen and (max-width: 608px) {
-    #explore-card-province {
+    .explore-card-prov {
         width: 260px !important;
         height: 290px !important;
     }
 }
 
 @media only screen and (max-width: 588px) {
-    #explore-card-province {
+    .explore-card-prov {
         width: 250px !important;
         height: 280px !important;
     }
 }
 
 @media only screen and (max-width: 568px) {
-    #explore-card-province {
+    .explore-card-prov {
         width: 240px !important;
         height: 280px !important;
     }
 }
 
 @media only screen and (max-width: 548px) {
-    #explore-card-province {
+    .explore-card-prov {
         width: 230px !important;
         height: 280px !important;
     }
 }
 
 @media only screen and (max-width: 548px) {
-    #explore-card-province {
+    .explore-card-prov {
         width: 230px !important;
         height: 280px !important;
     }
 }
 
 @media only screen and (max-width: 528px) {
-    #explore-card-province {
-        width: 220px !important;
-        height: 260px !important;
-    }
-}
-
-@media only screen and (max-width: 528px) {
-    #explore-card-province {
+    .explore-card-prov {
         width: 220px !important;
         height: 260px !important;
     }
 }
 
 @media only screen and (max-width: 508px) {
-    #explore-card-province {
+    .explore-card-prov {
         width: 210px !important;
         height: 260px !important;
     }
 }
 
 @media only screen and (max-width: 488px) {
-    #explore-card-province {
+    .explore-card-prov {
         width: 200px !important;
         height: 250px !important;
     }
 }
 
 @media only screen and (max-width: 467px) {
-    #explore-container-card {
+    .explore-container-card {
         gap: 15px !important;
     }
-    #explore-card-province {
+    .explore-card-prov {
+        width: 190px !important;
+        height: 240px !important;
         border-radius: 14px !important;
     }
 }
 
-@media only screen and (max-width: 467px) {
-    #explore-card-province {
-        width: 190px !important;
-        height: 240px !important;
-    }
-}
-
 @media only screen and (max-width: 444px) {
-    #explore-card-province {
+    .explore-card-prov {
         width: 180px !important;
         height: 230px !important;
     }
 }
 
 @media only screen and (max-width: 425px) {
-    #explore-card-province {
+    .explore-card-prov {
         width: 170px !important;
         height: 220px !important;
     }
 }
 
 @media only screen and (max-width: 403px) {
-    #explore-card-province {
+    .explore-card-prov {
         width: 160px !important;
         height: 210px !important;
     }
 }
 
 @media only screen and (max-width: 388px) {
-    #explore-card-province {
+    .explore-card-prov {
         width: 150px !important;
         height: 190px !important;
     }
 }
 
-@media only screen and (max-width: 362px) {
-    #explore-card-province {
+@media only screen and (max-width: 362.5px) {
+    .explore-card-prov {
         width: 140px !important;
         height: 180px !important;
     }
 }
 
 @media only screen and (max-width: 342px) {
-    #explore-card-province {
+    .explore-card-prov {
         width: 130px !important;
         height: 170px !important;
+    }
+    .explore-prov-title {
+        font-size: 16px !important;
+    }
+}
+
+@media only screen and (max-width: 323px) {
+    .explore-card-prov {
+        width: 125px !important;
+        height: 165px !important;
+    }
+}
+
+@media only screen and (max-width: 629px) {
+    .explore-card-des {
+        width: 270px !important;
+        height: 310px !important;
+    }
+}
+
+@media only screen and (max-width: 608px) {
+    .explore-card-des {
+        width: 260px !important;
+        height: 290px !important;
+    }
+}
+
+@media only screen and (max-width: 588px) {
+    .explore-card-des {
+        width: 250px !important;
+        height: 280px !important;
+    }
+}
+
+@media only screen and (max-width: 568px) {
+    .explore-card-des {
+        width: 240px !important;
+        height: 280px !important;
+    }
+}
+
+@media only screen and (max-width: 548px) {
+    .explore-card-des {
+        width: 230px !important;
+        height: 280px !important;
+    }
+}
+
+@media only screen and (max-width: 528px) {
+    .explore-card-des {
+        width: 220px !important;
+        height: 260px !important;
+    }
+}
+
+@media only screen and (max-width: 528px) {
+    .explore-card-des {
+        width: 220px !important;
+        height: 260px !important;
+    }
+}
+
+@media only screen and (max-width: 508px) {
+    .explore-card-des {
+        width: 210px !important;
+        height: 260px !important;
+    }
+}
+
+@media only screen and (max-width: 488px) {
+    .explore-card-des {
+        width: 200px !important;
+        height: 250px !important;
+    }
+}
+
+@media only screen and (max-width: 467px) {
+    .explore-container-card {
+        gap: 15px !important;
+    }
+    .explore-card-des {
+        width: 190px !important;
+        height: 240px !important;
+    }
+}
+
+@media only screen and (min-width: 467px) and (max-width: 640px) {
+    .card-des-title, .card-des-price {
+        font-size: 14px !important;
+    }
+}
+
+@media only screen and (max-width: 444px) {
+    .explore-card-des {
+        width: 180px !important;
+        height: 230px !important;
+    }
+    .card-des-button {
+        font-size: 10px !important;
+        padding: 7px 14px !important;
+    }
+}
+
+@media only screen and (max-width: 425px) {
+    .explore-card-des {
+        width: 170px !important;
+        height: 220px !important;
+    }
+    .explore-des-cardImage {
+        height: 65% !important;
+    }
+}
+
+@media only screen and (max-width: 403px) {
+    .explore-card-des {
+        width: 160px !important;
+        height: 210px !important;
+    }
+}
+
+@media only screen and (max-width: 388px) {
+    .explore-card-des {
+        width: 150px !important;
+        height: 190px !important;
+        padding: 6px !important;
+    }
+    .explore-des-cardImage {
+        height: 62% !important;
+    }
+    .card-des-button {
+        font-size: 10px !important;
+        padding: 5px 10px !important;
+    }
+}
+
+@media only screen and (max-width: 362.5px) {
+    .explore-card-des {
+        width: 140px !important;
+        height: 180px !important;
+    }
+    .card-des-title, .card-des-price {
+        font-size: 12px !important;
+    }
+    .card-loc-des {
+        font-size: 10px !important;
+    }
+}
+
+@media only screen and (max-width: 342px) {
+    .explore-card-des {
+        width: 130px !important;
+        height: 170px !important;
+    }
+    .card-des-button {
+        font-size: 8px !important;
+        padding: 4px 10px !important;
+    }
+}
+
+@media only screen and (max-width: 323px) {
+    .explore-card-des {
+        width: 125px !important;
+        height: 165px !important;
+    }
+}
+
+@media only screen and (max-width: 428px) {
+    #explore-button-more {
+        
+    }
+}
+
+
+/* Explore detail province page */
+@media only screen and (max-width: 483px) {
+    #explore-province-title {
+        padding: 0 50px !important;
+    }
+}
+
+@media only screen and (max-width: 385px) {
+    #explore-province-title {
+        padding: 0 10px !important;
     }
 }

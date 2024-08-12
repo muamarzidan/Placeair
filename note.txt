@@ -10,7 +10,9 @@ PAGE
  - DETAIL BLOG 
 
 ENHANCE 
- - RESPONSIVE EXPLORE PAGE         DONE
+ - FIX BOLD HOME IN NAVBAR WHEN MOBILE
+ - RESPONSIVE HOME(POPULAR SWIPER MARGIN LEFT)
+ - RESPONSIVE EXPLORE PAGE                      DONE
  - RESPONSIVE EXPLORE DESTINATION 
  - RESPONSIVE ABOUT 
  - RESPONSIVE CONTACT US 
@@ -18,3 +20,40 @@ ENHANCE
  - RESPONSIVE DETAIL PROVINCE
  - RESPONSIVE DETAIL DESTINATION
  - RESPONSIVE DETAIL BLOG
+
+
+
+
+ UNUSE CODE
+
+// UNUSE CODE TO HANDLE SEARCH DESTINATION
+// const [searchDestination, setSearchDestination] = useState("");
+// const debouncedSearchDestination = useDebounceSearch(searchDestination, 300);
+
+// const handleSearchDestination = (e) => {
+//     setSearchDestination(e.target.value);
+// };
+
+// const filterMostViewDestination = dataDestination
+//     .filter((data) => {
+//         const categoryFilter =
+//             categoryType === "Semua" ||
+//             data.category.toLowerCase() === categoryType.toLowerCase();
+//         const searchFilterByCategory = data.name
+//             .toLowerCase()
+//             .includes(debouncedSearchDestination.toLowerCase());
+//         return categoryFilter && searchFilterByCategory;
+//     })
+//     .sort((a, b) => b.viewCount - a.viewCount).slice(0, 6);
+
+{/* Search destination area */}
+{/* <div className="flex justify-center w-full h-auto pt-8">
+    <Search
+        className="w-full h-auto pr-2 sm:text-2xl 2xl:text-3xl text-[#6F706F] placeholder-[#6F706F] outline-none sm:px-7 2xl:px-9 sm:py-4 2xl:py-5 bg-[#f4f4f4] rounded-full"
+        type="text"
+        id="search"
+        placeholder="Cari destinasi..."
+        value={searchDestination}
+        onChange={handleSearchDestination}
+    />
+</div> */}

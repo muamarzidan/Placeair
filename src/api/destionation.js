@@ -168,5 +168,50 @@ export default [
         rating: 4,
         viewCount: 10,
         createdAt: "2023-11-15 10:21:37.261134+01:00"
-    }
+    },
+    {
+        id: 13, 
+        name: "Ini Bali 2",
+        category: "alam", 
+        thumbnail: "/src/assets/images/card-kelingking.webp",
+        thumbnailProvince: "/src/assets/images/thumbnail-bali.webp",
+        description: "This is a description",
+        province: "Bali",
+        location: "Tabanan, Bali",
+        locationLink: "https://maps.app.goo.gl/PHCgoG8gmPksbWiU9",
+        price: 150000,
+        rating: 4.3,
+        viewCount: 1000,
+        createdAt: "2023-11-15 10:21:37.261134+01:00"
+    },
+    {
+        id: 14, 
+        name: "Ini Bali 3",
+        category: "alam", 
+        thumbnail: "/src/assets/images/card-kelingking.webp",
+        thumbnailProvince: "/src/assets/images/thumbnail-bali.webp",
+        description: "This is a description",
+        province: "Bali",
+        location: "Tabanan, Bali",
+        locationLink: "https://maps.app.goo.gl/PHCgoG8gmPksbWiU9",
+        price: 150000,
+        rating: 4.3,
+        viewCount: 1000,
+        createdAt: "2023-11-15 10:21:37.261134+01:00"
+    },
+    {
+        id: 15, 
+        name: "Ini Bali 4",
+        category: "alam", 
+        thumbnail: "/src/assets/images/card-kelingking.webp",
+        thumbnailProvince: "/src/assets/images/thumbnail-bali.webp",
+        description: "This is a description",
+        province: "Bali",
+        location: "Tabanan, Bali",
+        locationLink: "https://maps.app.goo.gl/PHCgoG8gmPksbWiU9",
+        price: 150000,
+        rating: 4.3,
+        viewCount: 1000,
+        createdAt: "2023-11-15 10:21:37.261134+01:00"
+    },
 ];

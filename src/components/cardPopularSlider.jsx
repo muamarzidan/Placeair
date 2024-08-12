@@ -51,7 +51,7 @@ const PopularCardSwiper = () => {
           </div>
         </div>
         {/* Card swiper area */}
-        <div id="container-swiper-card" className="w-full h-auto pl-3 sm:pl-9 xl:pl-5 2xl:pl-20">
+        <div id="container-swiper-card" className="w-full h-auto">
           <Swiper
             slidesPerView={1.4}
             spaceBetween={0}

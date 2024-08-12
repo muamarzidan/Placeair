@@ -1,3 +1,18 @@
+/* Calculation section */
+@media only screen and (max-width: 368px) {
+    .calcu-number {
+        font-size: 2rem !important;
+    }
+}
+
+@media only screen and (max-width: 350px) {
+    .calcu-desc {
+        font-size: 0.8rem !important;
+    }
+}
+
+
+
 /* Newsletter section */
 @media only screen and (max-width: 640px) {
     #title-newsletter {

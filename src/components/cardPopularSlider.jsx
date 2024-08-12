@@ -53,10 +53,18 @@ const PopularCardSwiper = () => {
         {/* Card swiper area */}
         <div id="container-swiper-card" className="w-full h-auto">
           <Swiper
-            slidesPerView={1.4}
+            slidesPerView={1.2}
             spaceBetween={0}
             loop={false}
             breakpoints={{
+              330: {
+                slidesPerView: 1.3,
+                spaceBetween: 0,
+              },
+              350: {
+                slidesPerView: 1.4,
+                spaceBetween: 0,
+              },
               400: {
                 slidesPerView: 1.5,
                 spaceBetween: 0,

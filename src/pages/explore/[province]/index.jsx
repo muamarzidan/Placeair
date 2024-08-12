@@ -90,9 +90,9 @@ export default function ExploreProvincePage() {
                         <h1 id="explore-province-title" className="relative text-4xl sm:text-5xl font-semibold text-center text-white md:text-6xl lg:text-8xl px-[100px] sm:px-[130px] md:px-[100px] lg:px-[66px] xl:px-[140px] 2xl:px-[270px]">
                             Jelajahi Destinasi Impian di {province} 
                         </h1>
-                        <div className="flex flex-col items-center justify-center w-full h-auto pt-5 md:pt-8">
+                        <div className="flex flex-col items-center justify-center h-auto pt-5 md:pt-8">
                             <Search
-                                className="w-[85%] md:w-[75%] lg:w-[95%] xl:w-[75%] h-auto pr-2 sm:text-lg md:text-xl xl:text-3xl text-[#ffffff] placeholder-[#ffffff] outline-none px-6 md:px-7 2xl:px-9 py-3 md:py-4 2xl:py-5 backdrop-blur-md bg-[#ffffff59] rounded-full"
+                                className="w-[85%] md:w-[75%] lg:w-[95%] xl:w-[75%] sm:text-lg md:text-xl xl:text-3xl text-[#ffffff] placeholder-[#ffffff]"
                                 type="text"
                                 id="search"
                                 placeholder="Cari destinasi..."

@@ -4,8 +4,9 @@ import { Icon } from "@iconify-icon/react";
 import Navbar from "../components/navbar";
 import Footer from "../components/footer";
 import Popular from "../components/cardPopularSlider";
-import imageChoosePlaceir from "../assets/images/thumbnail-choose-placeir.png";
+import NewsletterForm from "../components/NewsletterForm";
 import NumCountUp from "../utils/counterUp";
+import imageChoosePlaceir from "../assets/images/thumbnail-choose-placeir.png";
 import "../assets/css/pages/home.css";  
 
 
@@ -122,16 +123,14 @@ export default function HomePage() {
             </div>
           </div>
         </section>
-        <section id="newssletter" className="w-full h-auto my-14 md:my-20">
+        <section id="newsletter" className="w-full h-auto my-14 md:my-20">
           <div className="container w-full h-[264px] sm:h-[270px] lg:h-[350px] xl:h-[400px]">
             <div className="relative w-full h-full flex flex-col items-center justify-center gap-4 xl:gap-8 bg-cover bg-center bg-newsletter-placeir rounded-[30px]">
               <div className="absolute inset-0 bg-black opacity-35 rounded-[30px]"></div>
-              <span id="title-newsletter" className="relative font-semibold px-[30px] sm:px-[100px] md:px-[190px] lg:px-[200px] xl:px-[300px] text-center text-white text-2xl sm:text-4xl lg:text-6xl xl:text-7xl">Ayo Berlangganan ke Newsletter Kami</span>
-              {/* button and input area */}
-              <div id="newsletter-input" className="relative flex justify-between w-[270px] h-[43px] sm:h-[40px] sm:w-[280px] lg:w-[422px] xl:w-[482px] lg:h-[55px] xl:h-[61px] gap-2 sm:gap-5 pl-5 pr-1 py-1 bg-white rounded-full">
-                <input type="email" placeholder="Masukkan email anda" className="w-full h-auto p-1 text-sm border-none rounded-full outline-none lg:p-2 lg:text-lg text-thridly" />
-                <button className="w-auto h-auto px-5 py-1 text-sm text-white rounded-full lg:px-8 sm:text-md lg:text-lg bg-primary">Kirim</button>
-              </div>
+              <span id="title-newsletter" className="relative font-semibold px-[30px] sm:px-[100px] md:px-[190px] lg:px-[200px] xl:px-[300px] text-center text-white text-2xl sm:text-4xl lg:text-6xl xl:text-7xl">
+                Ayo Berlangganan ke Newsletter Kami
+              </span>
+              <NewsletterForm />
             </div>
           </div>
         </section>

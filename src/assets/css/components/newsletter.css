@@ -1,0 +1,8 @@
+.sweetalert-button {
+    @apply rounded-full px-6 py-3;
+}
+
+.sweetalert-button {
+    border-radius: 9999px;
+    padding: 1rem 1.6rem;
+}

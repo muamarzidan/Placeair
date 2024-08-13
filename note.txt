@@ -27,7 +27,7 @@ ENHANCE
  LOGIC
  - HANDLE EMAIL                                       DONE
  - HANDLE SEARCH HISTORY
- - HANDLE TITLE DI TAB
+ - HANDLE TITLE DI TAB                                DONE
  - HANDLE LOGIC BOLD NAV EXPLORE DI PER SUB EXPLORE
 
 

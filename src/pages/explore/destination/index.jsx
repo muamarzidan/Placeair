@@ -11,9 +11,12 @@ import dataDestination from "../../../api/destionation";
 import "../../../assets/css/pages/explore.css";
 
 
+const categories = ["Semua", "Alam", "Sejarah", "Kesenian"];
+
 export default function ExploreDestinationPage() {
     const [resizeIconStar, setResizeIconStar] = useState("16");
     const [resizeIconLoc, setResizeIconLoc] = useState("24");
+    const [categoryType, setCategoryType] = useState("Semua");
     const [searchDestination, setSearchDestination] = useState("");
     const debouncedSearch = useDebounceSearch(searchDestination, 500);
 
@@ -21,7 +24,7 @@ export default function ExploreDestinationPage() {
     useEffect(() => {
         window.scrollTo(0, 0);
     }, []);
-    
+
     // handler resize icon
     const handleResizeIcon = () => {
         if (window.innerWidth < 362) {
@@ -52,13 +55,25 @@ export default function ExploreDestinationPage() {
         };
     }, []);
 
-    // handler search
+    // handler search, category and filter destination by most viewCount
     const handleSearchDestination = (e) => {
         setSearchDestination(e.target.value);
     };
 
-    const filterDestinationByProvince = dataDestination
-        .filter(destination => destination.name.toLowerCase().includes(debouncedSearch.toLowerCase())).sort((a, b) => b.viewCount - a.viewCount);
+    const handleCategoryDestination = (category) => {
+        setCategoryType(category);
+    };
+
+    const filterMostViewDestination = dataDestination
+        .filter((data) => {
+            const categoryFilter =
+                categoryType === "Semua" ||
+                data.category.toLowerCase() === categoryType.toLowerCase();
+            const searchFilter =
+                data.name.toLowerCase().includes(debouncedSearch.toLowerCase());
+            return categoryFilter && searchFilter;
+        })
+        .sort((a, b) => b.viewCount - a.viewCount);
 
     return (
         <>
@@ -66,15 +81,31 @@ export default function ExploreDestinationPage() {
             <main className="w-full h-auto bg-white">
                 <section
                     id="hero"
-                    className="flex flex-col items-center justify-center h-auto pt-[180px]"
+                    className="flex flex-col items-center justify-center h-auto pt-[90px] sm:pt-[110px] md:pt-[180px]"
                 >
-                    <h3 id="explore-province-title" className="relative text-4xl font-semibold text-center text-secondary sm:text-5xl md:text-6xl lg:text-[24px]">
+                    <h3 id="explore-province-title" className="text-sm font-semibold text-center text-secondary sm:text-xl md:text-2xl lg:text-[24px]">
                         JELAJAHI TEMPAT IMPIAN ANDA
                     </h3>
-                    <h1 id="explore-province-title" className="relative text-4xl sm:text-5xl font-semibold text-center text-black md:text-6xl lg:text-8xl px-[100px] sm:px-[130px] md:px-[100px] lg:px-[66px] xl:px-[140px] 2xl:px-[10px]">
+                    <h1 id="explore-province-title" className="text-2xl font-semibold text-center text-black sm:text-3xl md:text-5xl lg:text-6xl">
                         Temukan Destinasi Sesuai Keinginan Anda
                     </h1>
-                    <div className="flex flex-col items-center justify-center w-full h-auto pt-5 md:pt-8">
+                    {/* Select category area */}
+                    <ul className="flex w-auto h-auto gap-3 pt-4 text-white sm:gap-5">
+                        {categories.map((category) => (
+                            <li
+                                key={category}
+                                className={`px-4 sm:px-6 py-2 font-semibold rounded-full cursor-pointer text-sm sm:text-lg md:text-xl lg:text-3xl ${categoryType === category
+                                    ? "bg-primary text-white"
+                                    : "bg-[#F4F4F4] text-fourly"
+                                    }`}
+                                onClick={() => handleCategoryDestination(category)}
+                            >
+                                {category}
+                            </li>
+                        ))}
+                    </ul>
+                    {/* Search area */}
+                    <div className="flex flex-col items-center justify-center w-full h-auto pt-5 md:pt-12">
                         <Search
                             className="w-[85%] md:w-[75%] lg:w-[95%] xl:w-[75%] sm:text-lg md:text-xl xl:text-3xl text-[#6F706F] placeholder-[#6F706F]"
                             type="text"
@@ -85,11 +116,11 @@ export default function ExploreDestinationPage() {
                         />
                     </div>
                 </section>
-                <section id="kategori" className="w-full h-auto py-10">
+                <section id="kategori" className="w-full h-auto py-3 sm:py-5 md:py-10">
                     <div className="container flex flex-col w-full h-auto">
                         <div className="flex flex-wrap items-center justify-between w-full h-auto gap-5 pt-5 explore-container-card">
-                            {filterDestinationByProvince.length > 0 ? (
-                                filterDestinationByProvince.map((data, index) => (
+                            {filterMostViewDestination.length > 0 ? (
+                                filterMostViewDestination.map((data, index) => (
                                     <div
                                         key={index}
                                         className="explore-card-des w-[500px] h-[500px] max-w-[279px] max-h-[320px] sm:max-w-[290px] sm:max-h-[320px] md:max-w-[315px] md:max-h-[350px] xl:max-w-[400px] xl:max-h-[430px] 2xl:max-w-[430px] 2xl:max-h-[460px] flex flex-col justify-between p-2 sm:p-3 rounded-[11px] sm:rounded-3xl border-[1px] border-gray-300"
@@ -103,22 +134,22 @@ export default function ExploreDestinationPage() {
                                                 backgroundPosition: "center",
                                             }}
                                         >
-                                        <div className="explore-prov-rate flex items-center justify-evenly w-[57px] sm:w-[67px] py-[6px] sm:py-2 px-1 sm:px-2 rounded-full bg-[#ffffff42]">
-                                            <Icon
-                                                icon="mingcute:star-fill"
-                                                style={{ color: "#ff9b48" }}
-                                                width={resizeIconStar}
-                                                height={resizeIconStar}
-                                            />
-                                            <span className="text-xs text-white sm:text-sm">
-                                                {data.rating}
-                                            </span>
-                                        </div>
+                                            <div className="explore-prov-rate flex items-center justify-evenly w-[57px] sm:w-[67px] py-[6px] sm:py-2 px-1 sm:px-2 rounded-full bg-[#ffffff42]">
+                                                <Icon
+                                                    icon="mingcute:star-fill"
+                                                    style={{ color: "#ff9b48" }}
+                                                    width={resizeIconStar}
+                                                    height={resizeIconStar}
+                                                />
+                                                <span className="text-xs text-white sm:text-sm">
+                                                    {data.rating}
+                                                </span>
+                                            </div>
                                         </div>
                                         <span className="card-des-title w-fit text-[#171717] font-bold text-md sm:text-xl lg:text-2xl xl:text-3xl">
                                             {data.name}
                                         </span>
-                                        {/* Icon and link location area */}
+                                        {/* Icon and location link area */}
                                         <Link to={data.locationLink} target="_blank" className="flex items-center gap-1 sm:gap-2 w-fit">
                                             <Icon
                                                 icon="fluent:location-16-filled"
@@ -128,7 +159,7 @@ export default function ExploreDestinationPage() {
                                             />
                                             <span className="text-sm card-loc-des sm:text-md xl:text-xl">{data.location}</span>
                                         </Link>
-                                        {/* Price and button area */}
+                                        {/* Price and buton area */}
                                         <div className="flex items-center justify-between w-full">
                                             <span className="card-des-price font-bold text-md sm:text-2xl md:text-[20px] lg:text-[22px] xl:text-[26px] text-[#171717]">
                                                 {formatPrice(data.price)}
@@ -142,7 +173,7 @@ export default function ExploreDestinationPage() {
                             ) : (
                                 <div className="flex items-center justify-center w-full h-auto p-5">
                                     <h4 className="font-semibold text-md sm:text-2xl md:text-[24px] text-secondary text-center">
-                                        Destinasi tidak ditemukan di provinsi
+                                        Destinasi tidak ditemukan
                                     </h4>
                                 </div>
                             )}

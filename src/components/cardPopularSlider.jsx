@@ -16,6 +16,7 @@ const PopularCardSwiper = () => {
   const [resizeIconStar, setResizeIconStar] = useState("16");
   const [resizeIconLoc, setResizeIconLoc] = useState("24");
 
+  // handler resize icon
   const handleResizeIcon = () => {
     if (window.innerWidth < 480) {
       setResizeIconStar("12");
@@ -38,6 +39,9 @@ const PopularCardSwiper = () => {
     };
   }, []);
 
+  // handler filter by viewcount
+  const filterDestinationByViewCount = dataDestination.sort((a, b) => b.viewCount - a.viewCount);
+
   return (
     <>
       <div className="flex flex-col w-full h-auto gap-7 swiper-controller">
@@ -53,10 +57,18 @@ const PopularCardSwiper = () => {
         {/* Card swiper area */}
         <div id="container-swiper-card" className="w-full h-auto">
           <Swiper
-            slidesPerView={1.4}
+            slidesPerView={1.2}
             spaceBetween={0}
             loop={false}
             breakpoints={{
+              330: {
+                slidesPerView: 1.3,
+                spaceBetween: 0,
+              },
+              350: {
+                slidesPerView: 1.4,
+                spaceBetween: 0,
+              },
               400: {
                 slidesPerView: 1.5,
                 spaceBetween: 0,
@@ -85,7 +97,7 @@ const PopularCardSwiper = () => {
             }}
             modules={[Pagination, Navigation]}
           >
-            {dataDestination.map((data, index) => (
+            {filterDestinationByViewCount.map((data, index) => (
               <SwiperSlide
                 key={index}
                 className="flex items-center justify-center sm:block sm:items-start sm:justify-start"

@@ -152,7 +152,7 @@ export default function ExplorePage() {
                                                 backgroundPosition: "center",
                                             }}
                                         >
-                                        <div className="flex items-center justify-evenly w-[67px] py-2 px-2 rounded-full bg-[#ffffff2b]">
+                                        <div className="explore-prov-rate flex items-center justify-evenly w-[57px] sm:w-[67px] py-[6px] sm:py-2 px-1 sm:px-2 rounded-full bg-[#ffffff42]">
                                             <Icon
                                                 icon="mingcute:star-fill"
                                                 style={{ color: "#ff9b48" }}
@@ -190,7 +190,7 @@ export default function ExplorePage() {
                                 ))
                             ) : (
                                 <div className="flex items-center justify-center w-full h-auto p-5">
-                                    <h4 className="font-semibold text-md sm:text-xl md:text-[24px] text-secondary text-center">
+                                    <h4 className="font-semibold text-md sm:text-2xl md:text-[24px] text-secondary text-center">
                                         Destinasi tidak ditemukan
                                     </h4>
                                 </div>

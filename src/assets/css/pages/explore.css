@@ -62,7 +62,7 @@
     }
 }
 
-@media only screen and (max-width: 467px) {
+@media only screen and (max-width: 467.5px) {
     .explore-container-card {
         gap: 15px !important;
     }
@@ -295,5 +295,22 @@
 @media only screen and (max-width: 385px) {
     #explore-province-title {
         padding: 0 10px !important;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .explore-prov-rate {
+        width: 50px !important;
+        padding: 5px 5px !important;
+    }
+}
+
+@media only screen and (max-width: 362px) {
+    .explore-prov-rate {
+        width: 40px !important;
+        padding: 5px 5px !important;
+    }
+    .explore-prov-rate, span {
+        font-size: 8px !important;
     }
 }

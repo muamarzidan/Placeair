@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
-const Layout = ({ children }) => {
+const TitleTab = ({ children }) => {
     const location = useLocation();
 
     useEffect(() => {
@@ -31,8 +31,8 @@ const Layout = ({ children }) => {
     );
 };
 
-Layout.propTypes = {
+TitleTab.propTypes = {
     children: PropTypes.node.isRequired,
 };
 
-export default Layout;
+export default TitleTab;

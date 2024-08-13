@@ -72,7 +72,7 @@ export default function ExploreProvincePage() {
         .filter(destination => destination.province.toLowerCase() === province.toLowerCase())
         .filter(destination => 
             destination.name.toLowerCase().includes(debouncedSearch.toLowerCase())
-        );
+        ).sort((a, b) => b.viewCount - a.viewCount);
 
     return (
         <>

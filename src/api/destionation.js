@@ -211,7 +211,7 @@ export default [
         locationLink: "https://maps.app.goo.gl/PHCgoG8gmPksbWiU9",
         price: 150000,
         rating: 4.3,
-        viewCount: 1000,
+        viewCount: 4000,
         createdAt: "2023-11-15 10:21:37.261134+01:00"
     },
 ];

@@ -16,6 +16,7 @@ const PopularCardSwiper = () => {
   const [resizeIconStar, setResizeIconStar] = useState("16");
   const [resizeIconLoc, setResizeIconLoc] = useState("24");
 
+  // handler resize icon
   const handleResizeIcon = () => {
     if (window.innerWidth < 480) {
       setResizeIconStar("12");
@@ -37,6 +38,9 @@ const PopularCardSwiper = () => {
       window.removeEventListener('resize', handleResizeIcon);
     };
   }, []);
+
+  // handler filter by viewcount
+  const filterDestinationByViewCount = dataDestination.sort((a, b) => b.viewCount - a.viewCount);
 
   return (
     <>
@@ -93,7 +97,7 @@ const PopularCardSwiper = () => {
             }}
             modules={[Pagination, Navigation]}
           >
-            {dataDestination.map((data, index) => (
+            {filterDestinationByViewCount.map((data, index) => (
               <SwiperSlide
                 key={index}
                 className="flex items-center justify-center sm:block sm:items-start sm:justify-start"

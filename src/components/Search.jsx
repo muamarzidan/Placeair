@@ -7,6 +7,7 @@ const Search = ({ className, type, id, placeholder, value, onChange }) => {
     const locationPath = useLocation().pathname;
     const [resizeIcon, setResizeIcon] = useState("28");
     const [isChangeColorIcon, setIsChangeColorIcon] = useState("![#ffffff]");
+    const [isChangeBgSearch, setIsChangeBgSearch] = useState("bg-[#f4f4f430]");
 
     const handleResizeIcon = () => {  
         if (window.innerWidth < 768) {
@@ -31,13 +32,15 @@ const Search = ({ className, type, id, placeholder, value, onChange }) => {
     useEffect(() => {
         if (locationPath === "/explore-destination") {
             setIsChangeColorIcon("!text-[#6F706F]");
+            setIsChangeBgSearch("bg-[#F4F4F4]");
         } else {
             setIsChangeColorIcon("!text-[#ffffff]");
+            setIsChangeBgSearch("bg-[#f4f4f430]");
         }
     }, [locationPath]);
 
     return (
-        <div className="flex items-center w-[85%] md:w-[75%] lg:w-[95%] xl:w-[75%] bg-[#ffffff59] backdrop-blur-md rounded-full">
+        <div className={`flex items-center w-[85%] md:w-[75%] lg:w-[95%] xl:w-[75%] backdrop-blur-md rounded-full ${isChangeBgSearch}`}>
             <input
                 className={`${className} flex-1 bg-transparent outline-none px-6 py-3 md:px-7 md:py-4 rounded-full`}
                 type={type}
@@ -46,7 +49,7 @@ const Search = ({ className, type, id, placeholder, value, onChange }) => {
                 value={value}
                 onChange={onChange}
             />
-            <Icon icon="uil:search" width={resizeIcon} height={resizeIcon} className={`${isChangeColorIcon} mr-10`}/>
+            <Icon icon="uil:search" width={resizeIcon} height={resizeIcon} className={`${isChangeColorIcon} mr-5 sm:mr-10`}/>
         </div>
     );
 }

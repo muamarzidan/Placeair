@@ -53,13 +53,12 @@ export default function ExploreDestinationPage() {
     }, []);
 
     // handler search
-
     const handleSearchDestination = (e) => {
         setSearchDestination(e.target.value);
     };
 
     const filterDestinationByProvince = dataDestination
-        .filter(destination => destination.name.toLowerCase().includes(debouncedSearch.toLowerCase()));
+        .filter(destination => destination.name.toLowerCase().includes(debouncedSearch.toLowerCase())).sort((a, b) => b.viewCount - a.viewCount);
 
     return (
         <>
@@ -67,23 +66,23 @@ export default function ExploreDestinationPage() {
             <main className="w-full h-auto bg-white">
                 <section
                     id="hero"
-                    className="relative flex flex-col items-center justify-center h-[45vh] sm:h-[80vh] !mt-[75px] md:!mt-3 m-3 bg-center bg-cover rounded-xl"
+                    className="flex flex-col items-center justify-center h-auto pt-[180px]"
                 >
-                    <div className="absolute inset-0 bg-black rounded-xl opacity-35"></div>
-                    <div className="relative w-full px-0 lg:px-[70px] xl:px-0">
-                        <h1 id="explore-province-title" className="relative text-4xl sm:text-5xl font-semibold text-center text-white md:text-6xl lg:text-8xl px-[100px] sm:px-[130px] md:px-[100px] lg:px-[66px] xl:px-[140px] 2xl:px-[270px]">
-                            Jelajahi Destinasi Impian di
-                        </h1>
-                        <div className="flex flex-col items-center justify-center h-auto pt-5 md:pt-8">
-                            <Search
-                                className="w-[85%] md:w-[75%] lg:w-[95%] xl:w-[75%] sm:text-lg md:text-xl xl:text-3xl text-[#ffffff] placeholder-[#ffffff]"
-                                type="text"
-                                id="search"
-                                placeholder="Cari destinasi..."
-                                value={searchDestination}
-                                onChange={handleSearchDestination}
-                            />
-                        </div>
+                    <h3 id="explore-province-title" className="relative text-4xl font-semibold text-center text-secondary sm:text-5xl md:text-6xl lg:text-[24px]">
+                        JELAJAHI TEMPAT IMPIAN ANDA
+                    </h3>
+                    <h1 id="explore-province-title" className="relative text-4xl sm:text-5xl font-semibold text-center text-black md:text-6xl lg:text-8xl px-[100px] sm:px-[130px] md:px-[100px] lg:px-[66px] xl:px-[140px] 2xl:px-[10px]">
+                        Temukan Destinasi Sesuai Keinginan Anda
+                    </h1>
+                    <div className="flex flex-col items-center justify-center w-full h-auto pt-5 md:pt-8">
+                        <Search
+                            className="w-[85%] md:w-[75%] lg:w-[95%] xl:w-[75%] sm:text-lg md:text-xl xl:text-3xl text-[#6F706F] placeholder-[#6F706F]"
+                            type="text"
+                            id="search"
+                            placeholder="Cari destinasi..."
+                            value={searchDestination}
+                            onChange={handleSearchDestination}
+                        />
                     </div>
                 </section>
                 <section id="kategori" className="w-full h-auto py-10">

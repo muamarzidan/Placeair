@@ -116,7 +116,7 @@ export default function ExploreDestinationPage() {
                         />
                     </div>
                 </section>
-                <section id="kategori" className="w-full h-auto py-3 sm:py-5 md:py-10">
+                <section id="kategori" className="w-full h-auto pt-3 pb-8 sm:pb-10 sm:pt-5 md:pt-10 md:pb-20">
                     <div className="container flex flex-col w-full h-auto">
                         <div className="flex flex-wrap items-center justify-between w-full h-auto gap-5 pt-5 explore-container-card">
                             {filterMostViewDestination.length > 0 ? (

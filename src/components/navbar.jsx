@@ -10,8 +10,14 @@ const Navbar = () => {
   const [isChangeMenuNav, setIsChangeMenuNav] = useState(
     "text-white border-white border-[1px] bg-[#ffffff2b]"
   );
+  
+  // handler to check if the path is active and uniques path
+  const isPathActive = (path) => {
+    return locationPath === path || (path === "/explore" && locationPath.startsWith("/explore"));
+  };
 
-  useEffect(() => {
+  // handler for change color text and background navbar when resize and scroll
+  useEffect(() => { 
     if (locationPath === "/explore-destination") {
       setIsChangeTeksColor("text-primary");
       setIsChangeMenuNav("text-primary border-2 border-primary bg-[#FFFFFF7F]");
@@ -50,7 +56,7 @@ const Navbar = () => {
       if (window.innerWidth >= 768) {
         if (window.scrollY > 500 && locationPath !== "/explore-destination") {
           setIsChangeTeksColor("text-primary");
-          setIsChangeMenuNav("text-primary border-none bg-[#FFFFFF7F]");
+          setIsChangeMenuNav("text-primary border-[2px] border-primary bg-[#FFFFFF7F]");
         } else {
           setIsChangeTeksColor(locationPath === "/explore-destination" ? "text-primary" : "text-white");
           setIsChangeMenuNav(
@@ -89,33 +95,25 @@ const Navbar = () => {
             >
               <Link
                 to="/"
-                className={`transition-all ${
-                  locationPath === "/" ? "font-semibold" : "font-normal"
-                }`}
+                className={`transition-all ${isPathActive("/") ? "font-semibold" : "font-normal"}`}
               >
                 Home
               </Link>
               <Link
                 to="/explore"
-                className={`transition-all ${
-                  locationPath === "/explore" ? "font-semibold" : "font-normal"
-                }`}
+                className={`transition-all ${isPathActive("/explore") ? "font-semibold" : "font-normal"}`}
               >
                 Explore
               </Link>
               <Link
                 to="/about"
-                className={`transition-all ${
-                  locationPath === "/about" ? "font-semibold" : "font-normal"
-                }`}
+                className={`transition-all ${isPathActive("/about") ? "font-semibold" : "font-normal"}`}
               >
                 About Us
               </Link>
               <Link
                 to="/blog"
-                className={`transition-all ${
-                  locationPath === "/blog" ? "font-semibold" : "font-normal"
-                }`}
+                className={`transition-all ${isPathActive("/blog") ? "font-semibold" : "font-normal"}`}
               >
                 Blog
               </Link>

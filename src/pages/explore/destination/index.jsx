@@ -90,7 +90,7 @@ export default function ExploreDestinationPage() {
                         Temukan Destinasi Sesuai Keinginan Anda
                     </h1>
                     {/* Select category area */}
-                    <ul className="flex w-auto h-auto gap-3 pt-4 text-white sm:gap-5">
+                    <ul className="flex w-auto h-auto gap-3 pt-3 text-white md:pt-8 sm:gap-5">
                         {categories.map((category) => (
                             <li
                                 key={category}
@@ -105,7 +105,7 @@ export default function ExploreDestinationPage() {
                         ))}
                     </ul>
                     {/* Search area */}
-                    <div className="flex flex-col items-center justify-center w-full h-auto pt-5 md:pt-12">
+                    <div className="flex flex-col items-center justify-center w-full h-auto pt-5 md:pt-10">
                         <Search
                             className="w-[85%] md:w-[75%] lg:w-[95%] xl:w-[75%] sm:text-lg md:text-xl xl:text-3xl text-[#6F706F] placeholder-[#6F706F]"
                             type="text"

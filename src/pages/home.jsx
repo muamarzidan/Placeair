@@ -13,6 +13,12 @@ import "../assets/css/pages/home.css";
 export default function HomePage() {
   const [resizeIconBullet, setResizeIconBullet] = useState("16");
 
+  // handle scroll to top page was loaded ( hardcoded :) )
+  useEffect(() => {
+    window.scrollTo(0, 0);
+}, []);
+
+  // handler for resize icon 
   const handleResizeIcon = () => {
     if (window.innerWidth < 480) {
       setResizeIconBullet("12");

@@ -33,14 +33,22 @@ const Navbar = () => {
     };
 
     const handleScroll = () => {
-      if (window.scrollY > 500) {
-        setIsBgChangeNav("bg-white h-auto md:h-[90px]");
+      if (locationPath === "/explore-destination") {
+        if (window.scrollY > 100) {
+          setIsBgChangeNav("bg-white h-auto md:h-[90px]");
+        } else {
+          setIsBgChangeNav("bg-white md:bg-transparent h-auto md:h-[140px]");
+        }
       } else {
-        setIsBgChangeNav("bg-white md:bg-transparent h-auto md:h-[140px]");
+        if (window.scrollY > 500) {
+          setIsBgChangeNav("bg-white h-auto md:h-[90px]");
+        } else {
+          setIsBgChangeNav("bg-white md:bg-transparent h-auto md:h-[140px]");
+        }
       }
       
       if (window.innerWidth >= 768) {
-        if (window.scrollY > 500) {
+        if (window.scrollY > 500 && locationPath !== "/explore-destination") {
           setIsChangeTeksColor("text-primary");
           setIsChangeMenuNav("text-primary border-none bg-[#FFFFFF7F]");
         } else {

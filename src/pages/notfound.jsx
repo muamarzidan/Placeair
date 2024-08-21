@@ -1,8 +1,14 @@
+import { useEffect } from "react";
 import Navbar from "../components/navbar";
 import Footer from "../components/footer";
 
 
 export default function NotFoundPage() {
+  // handle scroll to top page was loaded ( hardcoded :) )
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <>
       <Navbar />

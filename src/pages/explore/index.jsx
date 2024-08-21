@@ -17,6 +17,11 @@ export default function ExplorePage() {
     const [resizeIconLoc, setResizeIconLoc] = useState("24");
     const [categoryType, setCategoryType] = useState("Semua");
 
+    // handle scroll to top page was loaded ( hardcoded :) )
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);    
+
     // handler resize icon
     const handleResizeIcon = () => {
         if (window.innerWidth < 342) {

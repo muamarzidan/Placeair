@@ -10,6 +10,7 @@ import BlogPage from './pages/blog/index.jsx';
 import AboutPage from './pages/about.jsx';
 import ContactPage from './pages/contact.jsx';
 import NotFoundPage from './pages/notfound.jsx';
+import TitleLayout from './layout.jsx';
 import './index.css';
 
 
@@ -17,49 +18,65 @@ const routes = createBrowserRouter([
   {
     path: "/",
     element: (
-      <MainPage />
+      <TitleLayout>
+        <MainPage />
+      </TitleLayout>
     ),
   },
   {
     path: "/explore",
     element: (
-      <ExplorePage />
+      <TitleLayout>
+        <ExplorePage />
+      </TitleLayout>
     ),
   },
   {
     path: "/explore/:province",
     element: (
-      <ExploreDetailProvince />
+      <TitleLayout>
+        <ExploreDetailProvince />
+      </TitleLayout>
     ),
   },
   {
     path: "/explore-destination",
     element: (
-      <ExploreDestinationPage />
+      <TitleLayout>
+        <ExploreDestinationPage />
+      </TitleLayout>
     ),
   },
   {
     path: "/blog",
     element: (
-      <BlogPage />
+      <TitleLayout>
+        <BlogPage />
+      </TitleLayout>
     ),
   },
   {
     path : "/about",
     element: (
-      <AboutPage />
+      <TitleLayout>
+        <AboutPage />
+      </TitleLayout>
     )
   },
   {
     path: "/contact",
     element: (
-      <ContactPage />
+      <TitleLayout>
+        <ContactPage />
+      </TitleLayout>
     )
   },
   {
     path: "*",
     element: (
-      <NotFoundPage />
+      <TitleLayout>
+        <NotFoundPage />
+      </TitleLayout>
     )
   },
 ]);

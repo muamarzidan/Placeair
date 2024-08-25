@@ -1,3 +1,18 @@
+/* Maps section */
+@media only screen and (max-width: 500px) {
+    #maps {
+        height: 200px !important;
+    }
+}
+
+@media only screen and (max-width: 360px) {
+    #maps {
+        height: 170px !important;
+    }
+}
+
+
+
 /* Calculation section */
 @media only screen and (max-width: 368px) {
     .calcu-number {

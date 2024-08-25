@@ -33,7 +33,7 @@ ENHANCE
 
 
 
- UNUSE CODE
+UNUSE CODE
 
 // UNUSE CODE TO HANDLE SEARCH DESTINATION
 // const [searchDestination, setSearchDestination] = useState("");

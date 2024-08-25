@@ -1,0 +1,35 @@
+.animated-circle {
+  animation: spread-pulse 2s infinite;
+  transform-origin: center;
+}
+
+@keyframes spread-pulse {
+  0% {
+    r: 5;
+    opacity: 1;
+  }
+  50% {
+    r: 10;
+    opacity: 0.5;
+  }
+  100% {
+    r: 5;
+    opacity: 1;
+  }
+}
+
+.province-marker {
+  cursor: pointer;
+}
+
+.province-popover,
+.province-label,
+.province-arrow {
+  display: none;
+}
+
+.province-marker:hover .province-popover,
+.province-marker:hover .province-label,
+.province-marker:hover .province-arrow {
+  display: block;
+}

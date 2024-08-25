@@ -5,6 +5,7 @@ import Navbar from "../components/navbar";
 import Footer from "../components/footer";
 import Popular from "../components/cardPopularSlider";
 import NewsletterForm from "../components/NewsletterForm";
+import Maps from "../components/maps";
 import NumCountUp from "../utils/counterUp";
 import imageChoosePlaceir from "../assets/images/thumbnail-choose-placeir.png";
 import "../assets/css/pages/home.css";  
@@ -14,9 +15,9 @@ export default function HomePage() {
   const [resizeIconBullet, setResizeIconBullet] = useState("16");
 
   // handle scroll to top page was loaded ( hardcoded :) )
-  useEffect(() => {
-    window.scrollTo(0, 0);
-}, []);
+  // useEffect(() => {
+  //   window.scrollTo(0, 0);
+  // }, []);
 
   // handler for resize icon 
   const handleResizeIcon = () => {
@@ -49,6 +50,15 @@ export default function HomePage() {
             Jelajahi Pesona Alam  Nusantara yang Menakjubkan
           </h1>
           <p className="relative text-sm sm:text-md md:text-lg xl:text-2xl text-center px-0 sm:px-16 md:px-[50px] lg:px-[100px] xl:px-[220px] 2xl:px-[320px] text-white pt-5">Temukan destinasi menakjubkan di seluruh Nusantara. Rencanakan liburan  Anda sekarang dan temukan petualangan tak terlupakan di setiap sudut negeri.</p>
+          </div>
+        </section>
+        <section id="maps" className="w-full h-[250px] sm:h-[300px] md:h-[400px] lg:h-[520px] xl:h-[630px] 2xl:h-[680px] my-10 md:my-20">
+          <div className="container w-full h-full">
+            <div className="flex flex-col items-center justify-center w-full h-full gap-0 sm:gap-1 md:gap-2">
+              <h4 className="text-sm font-semibold sm:text-md md:text-lg xl:text-3xl text-secondary">TELUSURI</h4>
+              <h3 className="text-xl font-semibold sm:text-2xl md:text-4xl xl:text-6xl">Wilayah dari Peta Indonesia</h3>
+              <Maps />
+            </div>
           </div>
         </section>
         <section id="popular" className="w-full h-auto my-10 md:my-20">

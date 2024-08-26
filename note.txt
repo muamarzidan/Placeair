@@ -1,13 +1,13 @@
 PAGE 
- - HOME(MAPS) + HINT
+ - HOME(MAPS) + HINT    PROSES
  - EXPLORE              DONE
  - EXPLORE DESTINATION  DONE
  - ABOUT 
  - CONTACT US 
- - BLOG           
+ - BLOG                 DONE
  - DETAIL PROVINCE      DONE
  - DETAIL DESTINATION
- - DETAIL BLOG 
+ - DETAIL BLOG          DONE
 
 ENHANCE 
  - FIX BOLD HOME IN NAVBAR WHEN MOBILE          DONE
@@ -22,15 +22,30 @@ ENHANCE
  - RESPONSIVE BLOG                              DONE
  - RESPONSIVE DETAIL PROVINCE                   DONE
  - RESPONSIVE DETAIL DESTINATION
- - RESPONSIVE DETAIL BLOG
+ - RESPONSIVE DETAIL BLOG                       DONE
  - FIX SHOW NAVBAR WHEN MOBILE MORE SMOOTH 
- - ENHANE PATH BLOG DETAIL    
+ - ENHANCE PATH BLOG DETAIL                     DONE   
+ - HAPUS ICON VITE DI TAB
+ - NAVBAR BUG NOTFOUD                           DONE
+ - ADD LINK IN ICON FOOTER                      DONE
 
  LOGIC
  - HANDLE EMAIL                                       DONE
  - HANDLE SEARCH HISTORY                              DONE
  - HANDLE TITLE DI TAB                                DONE
  - HANDLE LOGIC BOLD NAV EXPLORE DI PER SUB EXPLORE   DONE
+ - HANDLE PAGINATION DI BLOG	
+
+
+
+
+
+
+
+
+
+
+
 
 
 

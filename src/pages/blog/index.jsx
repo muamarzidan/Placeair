@@ -18,7 +18,7 @@ export default function BlogPage() {
         window.scrollTo(0, 0);
     }, []);
 
-    // handler search, category and filter destination by most viewCount
+    // handler search, category and filter blog by most viewCount
     const handleSearchBlog = (e) => {
         setSearchBlog(e.target.value);
     };
@@ -27,8 +27,7 @@ export default function BlogPage() {
         .filter((data) => {
             const searchFilter = data.title.toLowerCase().includes(debouncedSearch.toLowerCase());
             return searchFilter;
-        })
-            .sort((a, b) => b.viewCount - a.viewCount);
+        }).sort((a, b) => b.viewCount - a.viewCount);
 
     return (
         <>

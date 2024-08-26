@@ -147,3 +147,31 @@
         width: 125px !important;
     }
 }
+
+
+
+
+/* Detail blog area */
+@media only screen and (max-width: 640px) {
+    .container-thumbnail-blog {
+        height: 300px !important;
+    }
+}
+
+@media only screen and (max-width: 587px) {
+    .container-thumbnail-blog {
+        height: 220px !important;
+    }
+}
+
+@media only screen and (max-width: 456px) {
+    .container-thumbnail-blog {
+        height: 180px !important;
+    }
+}
+
+@media only screen and (max-width: 375px) {
+    .container-thumbnail-blog {
+        height: 160px !important;
+    }
+}

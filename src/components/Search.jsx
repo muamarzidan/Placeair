@@ -30,7 +30,7 @@ const Search = ({ className, type, id, placeholder, value, onChange }) => {
     });
 
     useEffect(() => {
-        if (locationPath === "/explore-destination") {
+        if (locationPath === "/explore-destination" || locationPath === "/blog") {
             setIsChangeColorIcon("!text-[#6F706F]");
             setIsChangeBgSearch("bg-[#F4F4F4]");
         } else {
@@ -40,9 +40,9 @@ const Search = ({ className, type, id, placeholder, value, onChange }) => {
     }, [locationPath]);
 
     return (
-        <div className={`flex items-center w-[85%] md:w-[75%] lg:w-[95%] xl:w-[75%] backdrop-blur-md rounded-full ${isChangeBgSearch}`}>
+        <div className={`flex items-center w-[85%] md:w-[75%] lg:w-[80%] xl:w-[83%] 2xl:w-[83%] backdrop-blur-md rounded-full ${isChangeBgSearch}`}>
             <input
-                className={`${className} flex-1 bg-transparent outline-none px-6 py-3 md:px-7 md:py-4 rounded-full`}
+                className={`${className} flex-1 bg-transparent outline-none px-6 py-3 md:px-10 md:py-5 rounded-full`}
                 type={type}
                 id={id}
                 placeholder={placeholder}

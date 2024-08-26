@@ -13,7 +13,7 @@ const TitleTab = ({ children }) => {
             document.title = pageTitle;
         } else if (routePath.startsWith('/explore')) {
             document.title = `${pageTitle} - Explore`;
-        } else if (routePath === '/blog') {
+        } else if (routePath.startsWith('/blog')) {
             document.title = `${pageTitle} - Blog`;
         } else if (routePath === '/about') {
             document.title = `${pageTitle} - About`;

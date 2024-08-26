@@ -1,4 +1,4 @@
-const FORMSPREE_URL = 'https://formspree.io/f/kepoyahbangggg';
+const FORMSPREE_URL = 'https://formspree.io/f/mnnavwob';
 
 export const postNewsletter = async (email) => {
     try {

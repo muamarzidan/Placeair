@@ -13,7 +13,7 @@ const Navbar = () => {
   
   // handler to check if the path is active and uniques path
   const isPathActive = (path) => {
-    return locationPath === path || (path === "/explore" && locationPath.startsWith("/explore"));
+    return locationPath === path || ( (path === "/explore" && locationPath.startsWith("/explore") || (path === "/blog" && locationPath.startsWith("/blog")) ) );
   };
 
   // handler for change color text and background navbar when resize and scroll

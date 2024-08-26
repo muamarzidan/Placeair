@@ -9,7 +9,7 @@ import dataBlog from "../../api/blog";
 import "../../assets/css/pages/blog.css";
 
 
-export default function ExploreDestinationPage() {
+export default function BlogPage() {
     const [searchBlog, setSearchBlog] = useState("");
     const debouncedSearch = useDebounceSearch(searchBlog, 500);
 

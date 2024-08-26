@@ -7,6 +7,7 @@ import ExplorePage from './pages/explore/index.jsx';
 import ExploreDetailProvince from './pages/explore/[province]/index.jsx';
 import ExploreDestinationPage from './pages/explore/destination/index.jsx';
 import BlogPage from './pages/blog/index.jsx';
+import BlogDetailPage from './pages/blog/[title]/index.jsx';
 import AboutPage from './pages/about.jsx';
 import ContactPage from './pages/contact.jsx';
 import NotFoundPage from './pages/notfound.jsx';
@@ -52,6 +53,14 @@ const routes = createBrowserRouter([
     element: (
       <TitleLayout>
         <BlogPage />
+      </TitleLayout>
+    ),
+  },
+  {
+    path: "/blog/:title",
+    element: (
+      <TitleLayout>
+        <BlogDetailPage />
       </TitleLayout>
     ),
   },

@@ -18,7 +18,7 @@ const Navbar = () => {
 
   // handler for change color text and background navbar when resize and scroll
   useEffect(() => { 
-    if (locationPath === "/explore-destination") {
+    if (locationPath === "/explore-destination" || locationPath === "/blog") {
       setIsChangeTeksColor("text-primary");
       setIsChangeMenuNav("text-primary border-2 border-primary bg-[#FFFFFF7F]");
     } else {
@@ -33,13 +33,13 @@ const Navbar = () => {
         if (window.scrollY > 500) {
           setIsChangeTeksColor("text-primary");
         } else {
-          setIsChangeTeksColor(locationPath === "/explore-destination" ? "text-primary" : "text-white");
+          setIsChangeTeksColor(locationPath === "/explore-destination" || locationPath === "/blog" ? "text-primary" : "text-white");
         }
       }
     };
 
     const handleScroll = () => {
-      if (locationPath === "/explore-destination") {
+      if (locationPath === "/explore-destination" || locationPath === "/blog") {
         if (window.scrollY > 100) {
           setIsBgChangeNav("bg-white h-auto md:h-[90px]");
         } else {
@@ -54,13 +54,13 @@ const Navbar = () => {
       }
       
       if (window.innerWidth >= 768) {
-        if (window.scrollY > 500 && locationPath !== "/explore-destination") {
+        if (window.scrollY > 500 && locationPath !== "/explore-destination" && locationPath !== "/blog") {
           setIsChangeTeksColor("text-primary");
           setIsChangeMenuNav("text-primary border-[2px] border-primary bg-[#FFFFFF7F]");
         } else {
-          setIsChangeTeksColor(locationPath === "/explore-destination" ? "text-primary" : "text-white");
+          setIsChangeTeksColor(locationPath === "/explore-destination" || locationPath === "/blog" ? "text-primary" : "text-white");
           setIsChangeMenuNav(
-            locationPath === "/explore-destination"
+            locationPath === "/explore-destination" || locationPath === "/blog"
               ? "text-primary border-2 border-primary bg-[#FFFFFF7F]"
               : "text-white border-white border-[1px] bg-[#ffffff2b]"
           );

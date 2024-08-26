@@ -1,4 +1,4 @@
-/* Explore page */
+/* Explore area */
 @media only screen and (max-width: 629px) {
     .explore-card-prov {
         width: 270px !important;
@@ -278,14 +278,10 @@
     }
 }
 
-@media only screen and (max-width: 428px) {
-    #explore-button-more {
-        
-    }
-}
 
 
-/* Explore detail province page */
+
+/* Explore detail province area */
 @media only screen and (max-width: 483px) {
     #explore-province-title {
         padding: 0 50px !important;

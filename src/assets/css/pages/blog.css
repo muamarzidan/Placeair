@@ -1,0 +1,149 @@
+@media only screen and (max-width: 10000px) {
+	#blog-desc {
+		display: -webkit-box;
+		-webkit-box-orient: vertical;
+		-webkit-line-clamp: 8;
+		word-wrap: break-word;
+	}
+}
+
+@media only screen and (max-width: 428px) {
+	#blog-desc {
+		display: -webkit-box;
+		-webkit-box-orient: vertical;
+		-webkit-line-clamp: 6;
+		word-wrap: break-word;
+	}
+}
+
+@media only screen and (max-width: 390px) {
+	#blog-desc {
+		display: -webkit-box;
+		-webkit-box-orient: vertical;
+		-webkit-line-clamp: 4;
+		word-wrap: break-word;
+	}
+}
+
+/* Explore page */
+@media only screen and (max-width: 640px) {
+    .explore-card-blog {
+        width: 270px !important;
+    }
+}
+
+@media only screen and (max-width: 608px) {
+    .explore-card-blog {
+        width: 260px !important;
+    }
+}
+
+@media only screen and (max-width: 588px) {
+    .explore-card-blog {
+        width: 250px !important;
+    }
+}
+
+@media only screen and (max-width: 568px) {
+    .explore-card-blog {
+        width: 240px !important;
+    }
+}
+
+@media only screen and (max-width: 548px) {
+    .explore-card-blog {
+        width: 230px !important;
+    }
+}
+
+@media only screen and (max-width: 528px) {
+    .explore-card-blog {
+        width: 220px !important;
+    }
+}
+
+@media only screen and (max-width: 528px) {
+    .explore-card-blog {
+        width: 220px !important;
+    }
+}
+
+@media only screen and (max-width: 508px) {
+    .explore-card-blog {
+        width: 210px !important;
+    }
+}
+
+@media only screen and (max-width: 488px) {
+    .explore-card-blog {
+        width: 200px !important;
+    }
+}
+
+@media only screen and (max-width: 467px) {
+    .explore-container-card {
+        gap: 15px !important;
+    }
+    .explore-card-blog {
+        width: 190px !important;
+    }
+}
+
+@media only screen and (max-width: 444px) {
+    .explore-card-blog {
+        width: 180px !important;
+    }
+}
+
+@media only screen and (max-width: 425px) {
+    .explore-card-blog {
+        width: 170px !important;
+    }
+    .explore-blog-cardImage {
+        height: 65% !important;
+    }
+}
+
+@media only screen and (max-width: 403px) {
+    .explore-card-blog {
+        width: 160px !important;
+    }
+}
+
+@media only screen and (max-width: 388px) {
+    .explore-card-blog {
+        width: 155px !important;
+        padding: 6px !important;
+    }
+    .explore-blog-cardImage {
+        height: 62% !important;
+    }
+}
+
+@media only screen and (max-width: 375px) {
+    .explore-card-blog {
+        width: 150px !important;
+        padding: 6px !important;
+    }
+    .explore-blog-cardImage {
+        height: 62% !important;
+    }
+}
+
+@media only screen and (max-width: 362.5px) {
+    .explore-card-blog {
+        width: 140px !important;
+    }
+}
+
+@media only screen and (max-width: 343px) {
+    .explore-card-blog {
+        width: 130px !important;
+    }
+}
+
+@media only screen and (max-width: 323px) {
+    .explore-card-blog {
+        width: 125px !important;
+    }
+}

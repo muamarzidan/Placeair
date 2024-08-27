@@ -1,16 +1,16 @@
 import trialImg from '/src/assets/images/card-kelingking.webp';
 import sumbarImg from '/src/assets/images/sumbar/thumbnail-sumbar.webp';
-import bangbelImg from '/src/assets/images/thumbnail-bangbel.webp';
-import jabarImg from '/src/assets/images/thumbnail-jabar.webp';
-import jatengImg from '/src/assets/images/thumbnail-jateng.webp';
-import jatimImg from '/src/assets/images/thumbnail-jatim.webp';
-import baliImg from '/src/assets/images/thumbnail-bali.webp';
-import nusbatImg from '/src/assets/images/thumbnail-nusbat.webp';
-import kalselImg from '/src/assets/images/thumbnail-kalsel.webp';
-import sulutImg from '/src/assets/images/thumbnail-sulut.webp';
-import sulselImg from '/src/assets/images/thumbnail-sulsel.webp';
-import malukuImg from '/src/assets/images/thumbnail-maluku.webp';
-import papuaImg from '/src/assets/images/thumbnail-papua.webp';
+import bangbelImg from '/src/assets/images/bangbel/thumbnail-bangbel.webp';
+import jabarImg from '/src/assets/images/jabar/thumbnail-jabar.webp';
+import jatengImg from '/src/assets/images/jateng/thumbnail-jateng.webp';
+import jatimImg from '/src/assets/images/jatim/thumbnail-jatim.webp';
+import baliImg from '/src/assets/images/bali/thumbnail-bali.webp';
+import nusbatImg from '/src/assets/images/nusbat/thumbnail-nusbat.webp';
+import kalselImg from '/src/assets/images/kalsel/thumbnail-kalsel.webp';
+import sulutImg from '/src/assets/images/sulut/thumbnail-sulut.webp';
+import sulselImg from '/src/assets/images/sulsel/thumbnail-sulsel.webp';
+import malukuImg from '/src/assets/images/maluku/thumbnail-maluku.webp';
+import papuaImg from '/src/assets/images/papua/thumbnail-papua.webp';
 
 export default [
     {

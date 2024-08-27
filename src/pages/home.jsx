@@ -7,7 +7,7 @@ import Popular from "../components/cardPopularSlider";
 import NewsletterForm from "../components/NewsletterForm";
 import Maps from "../components/maps";
 import NumCountUp from "../utils/counterUp";
-import imageChoosePlaceir from "../assets/images/thumbnail-choose-placeir.png";
+import bannerChoosePlaceir from "../assets/images/thumbnail-choose-placeir.webp";
 import "../assets/css/pages/home.css";  
 
 
@@ -135,7 +135,7 @@ export default function HomePage() {
             </div>
             {/* Right/bottom side choose area */}
             <div className="flex items-center justify-between w-full h-full gap-2 basis-full md:basis-1/2 md:pl-5 lg:pl-0">
-              <img src={imageChoosePlaceir} alt="choose banner placeir" className="w-full h-full md:h-[85%] lg:h-[80%] xl:h-[95%] object-cover object-center rounded-2xl brightness-[90%] md:brightness-100" />
+              <img src={bannerChoosePlaceir} alt="choose banner placeir" className="w-full h-full md:h-[85%] lg:h-[80%] xl:h-[95%] object-cover object-center rounded-2xl brightness-[90%] md:brightness-100" />
             </div>
           </div>
         </section>

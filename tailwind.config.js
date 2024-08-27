@@ -38,13 +38,13 @@ export default {
         '8xl': '68px',
       },
       backgroundImage: {
-        'hero-home-placeir': "url('assets/images/hero-home-placeir.png')",
+        'hero-home-placeir': "url('assets/images/hero-home-placeir.webp')",
         'hero-explore-placeir': "url('assets/images/hero-explore-placeir.webp')",
-        'hero-about-placeir': "url('assets/images/hero-about-placeir.png')",
+        'hero-about-placeir': "url('assets/images/hero-about-placeir.webp')",
         'explore-maps-placeir': "url('assets/map-indo.svg')",
-        'newsletter-placeir': "url('assets/images/bg-newsletter-placeir.png')",
-        'frame-one-placeir': "url('assets/images/bg-frameOne-placeir.png')",
-        'frame-two-placeir': "url('assets/images/bg-frameTwo-placeir.png')",
+        'newsletter-placeir': "url('assets/images/bg-newsletter-placeir.webp')",
+        'frame-one-placeir': "url('assets/images/bg-frameOne-placeir.webp')",
+        'frame-two-placeir': "url('assets/images/bg-frameTwo-placeir.webp')",
       }
     },
   },

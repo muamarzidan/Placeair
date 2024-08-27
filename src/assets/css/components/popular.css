@@ -31,7 +31,7 @@
 }
 
 .swiper-button-prev.swiper-button-disabled::after {
-  background-image: url("/assets/icons/leftoDisabled.svg") !important;
+  background-image: url("@/assets/icons/leftoDisabled.svg") !important;
   background-repeat: no-repeat !important;
   background-size: 100% 100% !important;
   width: 60px !important;
@@ -40,7 +40,7 @@
 }
 
 .swiper-button-next.swiper-button-disabled::after {
-  background-image: url("/assets/icons/rightoDisabled.svg") !important;
+  background-image: url("@/assets/icons/rightoDisabled.svg") !important;
   background-repeat: no-repeat !important;
   background-size: 100% 100% !important;
   width: 60px !important;
@@ -59,7 +59,7 @@
   border-radius: 100%; */
 
 .swiper-button-prev::after {
-  background-image: url("/assets/icons/lefto.svg") !important;
+  background-image: url("@/assets/icons/lefto.svg") !important;
   background-repeat: no-repeat;
   background-size: 100% 100% !important;
   width: 60px;

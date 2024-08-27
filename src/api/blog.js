@@ -1,9 +1,13 @@
+import trialImgOne from '/src/assets/images/thumbnail-danau-toba-indah.png';
+import trialImgTwo from '/src/assets/images/thumbnail-danau-toba-indah2.png';
+import trialImgTree from '/src/assets/images/thumbnail-danau-toba-indah3.png';
+
 export default [
     {
         id: 1,
-        thumbhnailBlog: "/src/assets/images/thumbnail-danau-toba-indah.png",
-        thumbhnailBlogTwo: "/src/assets/images/thumbnail-danau-toba-indah2.png",
-        thumbhnailBlogTree: "/src/assets/images/thumbnail-danau-toba-indah3.png",
+        thumbhnailBlog: trialImgOne,
+        thumbhnailBlogTwo: trialImgTwo,
+        thumbhnailBlogTree: trialImgTree,
         title: "Keindahan Danau Toba, Surga di Tanah Batak 1",
         description: "Danau Toba, sebuah keajaiban alam di Sumatera Utara, merupakan salah satu danau vulkanik terbesar di dunia. Selain ukurannya yang mengesankan, keindahan alam di sekitarnya serta legenda yang menyelimutinya menjadikan Danau Toba sebagai destinasi yang wajib dikunjungi.",
         descriptionDetailOne: "Danau Toba, sebuah keajaiban alam di Sumatera Utara, merupakan salah satu danau vulkanik terbesar di dunia. Selain ukurannya yang mengesankan, keindahan alam di sekitarnya serta legenda yang menyelimutinya menjadikan Danau Toba sebagai destinasi yang wajib dikunjungi.",
@@ -16,9 +20,9 @@ export default [
     },
     {
         id: 2,
-        thumbhnailBlog: "/src/assets/images/thumbnail-danau-toba-indah.png",
-        thumbhnailBlogTwo: "/src/assets/images/thumbnail-danau-toba-indah2.png",
-        thumbhnailBlogTree: "/src/assets/images/thumbnail-danau-toba-indah3.png",
+        thumbhnailBlog: trialImgOne,
+        thumbhnailBlogTwo: trialImgTwo,
+        thumbhnailBlogTree: trialImgTree,
         title: "Keindahan Danau Toba, Surga di Tanah Batak 2",
         description: "Danau Toba, sebuah keajaiban alam di Sumatera Utara, merupakan salah satu danau vulkanik terbesar di dunia. Selain ukurannya yang mengesankan, keindahan alam di sekitarnya serta legenda yang menyelimutinya menjadikan Danau Toba sebagai destinasi yang wajib dikunjungi. dwdwd wdddw dwd wddwdwdwddwd dwdwdwdwddwd",
         descriptionDetailOne: "Danau Toba, sebuah keajaiban alam di Sumatera Utara, merupakan salah satu danau vulkanik terbesar di dunia. Selain ukurannya yang mengesankan, keindahan alam di sekitarnya serta legenda yang menyelimutinya menjadikan Danau Toba sebagai destinasi yang wajib dikunjungi.",
@@ -31,9 +35,9 @@ export default [
     },
     {
         id: 3,
-        thumbhnailBlog: "/src/assets/images/thumbnail-danau-toba-indah.png",
-        thumbhnailBlogTwo: "/src/assets/images/thumbnail-danau-toba-indah2.png",
-        thumbhnailBlogTree: "/src/assets/images/thumbnail-danau-toba-indah3.png",
+        thumbhnailBlog: trialImgOne,
+        thumbhnailBlogTwo: trialImgTwo,
+        thumbhnailBlogTree: trialImgTree,
         title: "Keindahan Danau Toba, Surga di Tanah Batak 3",
         description: "Danau Toba, sebuah keajaiban alam di Sumatera Utara, merupakan salah satu danau vulkanik terbesar di dunia. Selain ukurannya yang mengesankan, keindahan alam di sekitarnya serta legenda yang menyelimutinya menjadikan Danau Toba sebagai destinasi yang wajib dikunjungi.",
         descriptionDetailOne: "Danau Toba, sebuah keajaiban alam di Sumatera Utara, merupakan salah satu danau vulkanik terbesar di dunia. Selain ukurannya yang mengesankan, keindahan alam di sekitarnya serta legenda yang menyelimutinya menjadikan Danau Toba sebagai destinasi yang wajib dikunjungi.",
@@ -46,9 +50,9 @@ export default [
     },
     {
         id: 4,
-        thumbhnailBlog: "/src/assets/images/thumbnail-danau-toba-indah.png",
-        thumbhnailBlogTwo: "/src/assets/images/thumbnail-danau-toba-indah2.png",
-        thumbhnailBlogTree: "/src/assets/images/thumbnail-danau-toba-indah3.png",
+        thumbhnailBlog: trialImgOne,
+        thumbhnailBlogTwo: trialImgTwo,
+        thumbhnailBlogTree: trialImgTree,
         title: "Keindahan Danau Toba, Surga di Tanah Batak 3",
         description: "Danau Toba, sebuah keajaiban alam di Sumatera Utara, merupakan salah satu danau vulkanik terbesar di dunia. Selain ukurannya yang mengesankan, keindahan alam di sekitarnya serta legenda yang menyelimutinya menjadikan Danau Toba sebagai destinasi yang wajib dikunjungi.",
         descriptionDetailOne: "Danau Toba, sebuah keajaiban alam di Sumatera Utara, merupakan salah satu danau vulkanik terbesar di dunia. Selain ukurannya yang mengesankan, keindahan alam di sekitarnya serta legenda yang menyelimutinya menjadikan Danau Toba sebagai destinasi yang wajib dikunjungi.",

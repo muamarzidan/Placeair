@@ -113,29 +113,29 @@ export default function HomePage() {
                 <div className="flex flex-col w-full h-full gap-2">
                   <div className="flex items-center gap-2 w-fit">
                     <Icon icon="material-symbols:circle" width={resizeIconBullet} height={resizeIconBullet} style={{ color: "#4377ef" }} />
-                    <h5 className="font-semibold text-md sm:text-2xl xl:text-3xl text-thridly">Backsound Musik Tradisional</h5>
+                    <h5 className="font-semibold text-md sm:text-2xl xl:text-3xl text-thridly">Destinasi Lengkap dan Terstruktur</h5>
                   </div>
-                  <p className="text-sm sm:text-xl xl:text-2xl text-fourly">Adanya backsound musik tradisional tiap provinsi untuk meningkatkan pengalaman Anda</p>
+                  <p className="text-sm sm:text-xl xl:text-2xl text-fourly">Menyediakan informasi destinasi-destinasi wisata secara lengkap dan terstruktur.</p>
                 </div>
                 <div className="flex flex-col w-full h-full gap-2">
                   <div className="flex items-center gap-2 w-fit">
                     <Icon icon="material-symbols:circle" width={resizeIconBullet} height={resizeIconBullet} style={{ color: "#4377ef" }} />
-                    <h5 className="font-semibold text-md sm:text-2xl xl:text-3xl text-thridly">Peta Interaktif</h5>
+                    <h5 className="font-semibold text-md sm:text-2xl xl:text-3xl text-thridly">Kemudahan Akses Destinasi</h5>
                   </div>
-                  <p className="text-sm sm:text-xl xl:text-2xl text-fourly">Peta Indonesia yang dapat di klik dan akan menuju ke halaman eksplor destinasi</p>
+                  <p className="text-sm sm:text-xl xl:text-2xl text-fourly">Memberikan kemudahan akses untuk meningkatkan pengalaman pengguna</p>
                 </div>
                 <div className="flex flex-col w-full h-full gap-2">
                   <div className="flex items-center gap-2 w-fit">
                     <Icon icon="material-symbols:circle" width={resizeIconBullet} height={resizeIconBullet} style={{ color: "#4377ef" }} />
-                    <h5 className="font-semibold text-md sm:text-2xl xl:text-3xl text-thridly">Informasi Rute</h5>
+                    <h5 className="font-semibold text-md sm:text-2xl xl:text-3xl text-thridly">Fitur Interaktif</h5>
                   </div>
-                  <p className="text-sm sm:text-xl xl:text-2xl text-fourly">Kami menyediakan fitur informasi rute yang jarang diketahui oleh google maps dan rute ini bisa menjadi jalan pintas anda dalam berwisata</p>
+                  <p className="text-sm sm:text-xl xl:text-2xl text-fourly">Backsound musik untuk halaman provinsi, gambar bergerak, dan informasi rute.</p>
                 </div>
               </div>
             </div>
             {/* Right/bottom side choose area */}
             <div className="flex items-center justify-between w-full h-full gap-2 basis-full md:basis-1/2 md:pl-5 lg:pl-0">
-              <img src={bannerChoosePlaceir} alt="choose banner placeir" className="w-full h-full md:h-[85%] lg:h-[80%] xl:h-[95%] object-cover object-center rounded-2xl brightness-[90%] md:brightness-100" />
+              <img src={bannerChoosePlaceir} alt="choose banner placeir" className="w-full h-full md:h-[85%] lg:h-[80%] xl:h-[95%] object-cover object-center rounded-2xl brightness-[90%] md:brightness-[80%]" />
             </div>
           </div>
         </section>

@@ -1,10 +1,24 @@
+import trialImg from '/src/assets/images/card-kelingking.webp';
+import sumbarImg from '/src/assets/images/sumbar/thumbnail-sumbar.webp';
+import bangbelImg from '/src/assets/images/thumbnail-bangbel.webp';
+import jabarImg from '/src/assets/images/thumbnail-jabar.webp';
+import jatengImg from '/src/assets/images/thumbnail-jateng.webp';
+import jatimImg from '/src/assets/images/thumbnail-jatim.webp';
+import baliImg from '/src/assets/images/thumbnail-bali.webp';
+import nusbatImg from '/src/assets/images/thumbnail-nusbat.webp';
+import kalselImg from '/src/assets/images/thumbnail-kalsel.webp';
+import sulutImg from '/src/assets/images/thumbnail-sulut.webp';
+import sulselImg from '/src/assets/images/thumbnail-sulsel.webp';
+import malukuImg from '/src/assets/images/thumbnail-maluku.webp';
+import papuaImg from '/src/assets/images/thumbnail-papua.webp';
+
 export default [
     {
         id: 1, 
         name: "Ini Bali",
         category: "alam", 
-        thumbnail: "/src/assets/images/card-kelingking.webp",
-        thumbnailProvince: "/src/assets/images/thumbnail-bali.webp",
+        thumbnail: trialImg,
+        thumbnailProvince: baliImg,
         description: "This is a description",
         province: "Bali",
         location: "Nusa Penida, Bali",
@@ -18,8 +32,8 @@ export default [
         id: 2, 
         name: "Ini Jateng",
         category: "alam", 
-        thumbnail: "/src/assets/images/card-kelingking.webp",
-        thumbnailProvince: "./src/assets/images/thumbnail-jateng.webp",
+        thumbnail: trialImg,
+        thumbnailProvince: jatengImg,
         description: "This is a description",
         province: "Jawa Tengah",
         location: "Semarang",
@@ -33,7 +47,8 @@ export default [
         id: 3, 
         name: "Ini Jabar",
         category: "sejarah", 
-        thumbnail: "/src/assets/images/card-kelingking.webp",
+        thumbnail: trialImg,
+        thumbnailProvince: jabarImg,
         description: "This is a description",
         province: "Jawa Barat",
         location: "Rengasdengklok, Kerawang",
@@ -47,7 +62,8 @@ export default [
         id: 4, 
         name: "Ini Maluku",
         category: "sejarah", 
-        thumbnail: "/src/assets/images/card-kelingking.webp",
+        thumbnail: trialImg,
+        thumbnailProvince: malukuImg,
         description: "This is a description",
         province: "Maluku",
         location: "Ambon",
@@ -61,7 +77,8 @@ export default [
         id: 5, 
         name: "Ini Jatim",
         category: "kesenian", 
-        thumbnail: "/src/assets/images/card-kelingking.webp",
+        thumbnail: trialImg,
+        thumbnailProvince: jatimImg,
         description: "This is a description",
         province: "Jawa Timur",
         location: "Malang",
@@ -75,7 +92,8 @@ export default [
         id: 6, 
         name: "Ini NTB",
         category: "kesenian", 
-        thumbnail: "/src/assets/images/card-kelingking.webp",
+        thumbnail: trialImg,
+        thumbnailProvince: nusbatImg,
         description: "This is a description",
         province: "Nusa Tenggara Barat",
         location: "Lombok",
@@ -89,7 +107,8 @@ export default [
         id: 7, 
         name: "Ini Sumbar",
         category: "alam", 
-        thumbnail: "/src/assets/images/card-kelingking.webp",
+        thumbnail: trialImg,
+        thumbnailProvince: sumbarImg,
         description: "This is a description",
         province: "Sumatera Barat",
         location: "Bukit tinggi",
@@ -103,7 +122,8 @@ export default [
         id: 8, 
         name: "Ini Bangbel",
         category: "alam", 
-        thumbnail: "/src/assets/images/card-kelingking.webp",
+        thumbnail: trialImg,
+        thumbnailProvince: bangbelImg,
         description: "This is a description",
         province: "Bangka Belitung",
         location: "Belitung",
@@ -117,7 +137,8 @@ export default [
         id: 9, 
         name: "Ini Kalsel",
         category: "kesenian", 
-        thumbnail: "/src/assets/images/card-kelingking.webp",
+        thumbnail: trialImg,
+        thumbnailProvince: kalselImg,
         description: "This is a description",
         province: "Kalimantan Selatan",
         location: "Banjarmasin",
@@ -131,7 +152,8 @@ export default [
         id: 10, 
         name: "Ini Papua",
         category: "kesenian", 
-        thumbnail: "/src/assets/images/card-kelingking.webp",
+        thumbnail: trialImg,
+        thumbnailProvince: papuaImg,
         description: "This is a description",
         province: "Papua",
         location: "Jayapura",
@@ -145,7 +167,8 @@ export default [
         id: 11, 
         name: "Ini Sulut",
         category: "kesenian", 
-        thumbnail: "/src/assets/images/card-kelingking.webp",
+        thumbnail: trialImg,
+        thumbnailProvince: sulutImg,
         description: "This is a description",
         province: "Sulawesi Utara",
         location: "Manado",
@@ -159,7 +182,8 @@ export default [
         id: 12, 
         name: "Ini Sulsel",
         category: "kesenian", 
-        thumbnail: "/src/assets/images/card-kelingking.webp",
+        thumbnail: trialImg,
+        thumbnailProvince: sulselImg,
         description: "This is a description",
         province: "Sulawesi Selatan",
         location: "Makassar",
@@ -168,50 +192,5 @@ export default [
         rating: 4,
         viewCount: 10,
         createdAt: "2023-11-15 10:21:37.261134+01:00"
-    },
-    {
-        id: 13, 
-        name: "Ini Bali 2",
-        category: "alam", 
-        thumbnail: "/src/assets/images/card-kelingking.webp",
-        thumbnailProvince: "/src/assets/images/thumbnail-bali.webp",
-        description: "This is a description",
-        province: "Bali",
-        location: "Tabanan, Bali",
-        locationLink: "https://maps.app.goo.gl/PHCgoG8gmPksbWiU9",
-        price: 150000,
-        rating: 4.3,
-        viewCount: 1000,
-        createdAt: "2023-11-15 10:21:37.261134+01:00"
-    },
-    {
-        id: 14, 
-        name: "Ini Bali 3",
-        category: "alam", 
-        thumbnail: "/src/assets/images/card-kelingking.webp",
-        thumbnailProvince: "/src/assets/images/thumbnail-bali.webp",
-        description: "This is a description",
-        province: "Bali",
-        location: "Tabanan, Bali",
-        locationLink: "https://maps.app.goo.gl/PHCgoG8gmPksbWiU9",
-        price: 150000,
-        rating: 4.3,
-        viewCount: 1000,
-        createdAt: "2023-11-15 10:21:37.261134+01:00"
-    },
-    {
-        id: 15, 
-        name: "Ini Bali 4",
-        category: "alam", 
-        thumbnail: "/src/assets/images/card-kelingking.webp",
-        thumbnailProvince: "/src/assets/images/thumbnail-bali.webp",
-        description: "This is a description",
-        province: "Bali",
-        location: "Tabanan, Bali",
-        locationLink: "https://maps.app.goo.gl/PHCgoG8gmPksbWiU9",
-        price: 150000,
-        rating: 4.3,
-        viewCount: 4000,
-        createdAt: "2023-11-15 10:21:37.261134+01:00"
-    },
+    }
 ];

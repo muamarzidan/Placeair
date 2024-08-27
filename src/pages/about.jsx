@@ -5,16 +5,16 @@ import Navbar from "../components/navbar";
 import Footer from "../components/footer";
 import NewsletterForm from "../components/NewsletterForm";
 import imageChoosePlaceir from "../assets/images/card-kelingking.webp";
-import "../assets/css/pages/home.css";
+import "../assets/css/pages/about.css";
 
 
 export default function AboutPage() {
     const [resizeIconBullet, setResizeIconBullet] = useState("16");
 
     // handle scroll to top page was loaded ( hardcoded :) )
-    // useEffect(() => {
-    //   window.scrollTo(0, 0);
-    // }, []);
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
 
     // handler for resize icon 
     const handleResizeIcon = () => {

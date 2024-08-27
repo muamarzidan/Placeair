@@ -1,0 +1,12 @@
+/* Team section */
+@media only screen and (max-width: 391px) {
+    .about-name {
+        font-size: 0.7rem !important;
+    }
+}
+
+@media only screen and (max-width: 371px) {
+    .about-name {
+        font-size: 0.6rem !important;
+    }
+}

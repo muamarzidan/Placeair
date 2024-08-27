@@ -25,3 +25,29 @@ export const postNewsletter = async (email) => {
         };
     }
 };
+
+export const postContact = async (formData) => {
+    try {
+        const res = await fetch(FORMSPREE_URL, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(formData),
+        });
+
+        if (res.ok) {
+            return { success: true };
+        } else {
+            return { 
+                success: false, 
+                message: 'Gagal mengirim pesan, mohon coba lagi nanti' 
+            };
+        }
+    } catch (error) {
+        return { 
+            success: false, 
+            message: 'Sepertinya ada kesalahan, mohon coba lagi nanti' 
+        };
+    }
+};

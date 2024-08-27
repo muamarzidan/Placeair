@@ -41,6 +41,7 @@ export default {
         'hero-home-placeir': "url('assets/images/hero-home-placeir.webp')",
         'hero-explore-placeir': "url('assets/images/hero-explore-placeir.webp')",
         'hero-about-placeir': "url('assets/images/hero-about-placeir.webp')",
+        'hero-contact-placeir': "url('assets/images/thumbnail-choose-placeir.webp')",
         'explore-maps-placeir': "url('assets/map-indo.svg')",
         'newsletter-placeir': "url('assets/images/bg-newsletter-placeir.webp')",
         'frame-one-placeir': "url('assets/images/bg-frameOne-placeir.webp')",

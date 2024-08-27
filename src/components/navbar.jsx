@@ -189,14 +189,6 @@ const Navbar = () => {
                   About Us
                 </Link>
                 <Link
-                  to="/faq"
-                  className={`transition-all ${
-                    locationPath === "/faq" ? "font-semibold" : "font-normal"
-                  }`}
-                >
-                  FAQ
-                </Link>
-                <Link
                   to="/blog"
                   className={`transition-all ${
                     locationPath === "/blog" ? "font-semibold" : "font-normal"

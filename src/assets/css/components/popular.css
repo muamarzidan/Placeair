@@ -68,7 +68,7 @@
 }
 
 .swiper-button-next::after {
-  background-image: url("/assets/icons/righto.svg") !important;
+  background-image: url("@/assets/icons/righto.svg");
   background-repeat: no-repeat;
   background-size: 100% 100% !important;
   width: 60px;

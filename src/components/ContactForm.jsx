@@ -120,7 +120,7 @@ export default function ContactForm() {
                 </div>
                 <div className="flex flex-col h-auto gap-6 basis-full sm:basis-1/2">
                     <div id="location-input" className="flex flex-col w-full gap-2">
-                        <label htmlFor="location" className="w-full text-sm font-normal text-left text-fourly sm:text-lg md:text-xl xl:text-3xl">Lokasi</label>
+                        <label htmlFor="location" className="w-full text-sm font-normal text-left text-fourly sm:text-lg md:text-xl xl:text-3xl">Alamat</label>
                         <input
                             type="text"
                             name="location"

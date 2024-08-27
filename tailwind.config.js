@@ -40,6 +40,7 @@ export default {
       backgroundImage: {
         'hero-home-placeir': "url('assets/images/hero-home-placeir.png')",
         'hero-explore-placeir': "url('assets/images/hero-explore-placeir.webp')",
+        'hero-about-placeir': "url('assets/images/hero-about-placeir.png')",
         'explore-maps-placeir': "url('assets/map-indo.svg')",
         'newsletter-placeir': "url('assets/images/bg-newsletter-placeir.png')",
         'frame-one-placeir': "url('assets/images/bg-frameOne-placeir.png')",

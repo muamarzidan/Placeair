@@ -58,9 +58,21 @@ const Footer = () => {
               <ul className="flex flex-col gap-2 sm:gap-4 basis-1/3">
                 <li className="flex justify-between w-full h-auto mb-1 font-semibold text-md sm:text-2xl text-primary">Media Sosial</li>
                 <ul className="flex justify-between w-full h-auto text-2xl font-semibold text-primary">
-                  <li className=""><Icon icon="ri:instagram-fill" width={resizeIcon} height={resizeIcon} style={{color: "#181b68"}} /></li>
-                  <li className=""><Icon icon="ph:twitter-logo-fill" width={resizeIcon} height={resizeIcon} style={{color: "#181b68"}} /></li>
-                  <li className=""><Icon icon="ph:youtube-logo-fill" width={resizeIcon} height={resizeIcon} style={{color: "#181b68"}} /></li>
+                  <li className="">
+                    <Link to="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
+                      <Icon icon="ri:instagram-fill" width={resizeIcon} height={resizeIcon} style={{color: "#181b68"}} />
+                    </Link>
+                  </li>
+                  <li className="">
+                    <Link to="https://x.com/" target="_blank" rel="noopener noreferrer">
+                      <Icon icon="ph:twitter-logo-fill" width={resizeIcon} height={resizeIcon} style={{color: "#181b68"}} />
+                    </Link>
+                  </li>
+                  <li className="">
+                    <Link to="https://www.youtube.com/" target="_blank" rel="noopener noreferrer">
+                      <Icon icon="ph:youtube-logo-fill" width={resizeIcon} height={resizeIcon} style={{color: "#181b68"}} />
+                    </Link>
+                  </li>
                 </ul>
               </ul>
             </div>
@@ -72,35 +84,6 @@ const Footer = () => {
               <p className="text-sm text-gray-500 sm:text-lg">
                 &copy; 2024 Placeir. All right reserved
               </p>
-              <ul className="flex flex-wrap justify-start gap-4 mt-2 text-sm md:mt-8 sm:text-lg sm:mt-0 lg:justify-end">
-                <li>
-                  <a
-                    href="#"
-                    className="text-gray-500 transition hover:opacity-75"
-                  >
-                    {" "}
-                    Privacy Policy{" "}
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    className="text-gray-500 transition hover:opacity-75"
-                  >
-                    {" "}
-                    License{" "}
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    className="text-gray-500 transition hover:opacity-75"
-                  >
-                    {" "}
-                    Term and Condition{" "}
-                  </a>
-                </li>
-              </ul>
             </div>
           </div>
         </div>

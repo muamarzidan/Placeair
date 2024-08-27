@@ -123,7 +123,7 @@ const Navbar = () => {
             </div>
             <div className="items-center hidden md:flex">
               <Link
-                to="/contact"
+                to="/contact" preventScrollReset={true}
                 className="px-[24px] py-[12px] font-semibold text-white rounded-full text-lg bg-primary"
               >
                 Contact Us
@@ -198,7 +198,7 @@ const Navbar = () => {
                 </Link>
                 <div className="flex items-center">
                   <Link
-                    to="/contact"
+                    to="/contact" preventScrollReset={false}
                     className="px-[12px] py-[10px] md:py-[6px] text-lg font-semibold text-white rounded-full w-full text-center bg-primary"
                   >
                     Contact Us

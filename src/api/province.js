@@ -1,7 +1,7 @@
 export default [
     {
         id: 1,
-        thumbnailProvince: "./src/assets/images/thumbnail-sumbar.webp",
+        thumbnailProvince: "/src/assets/images/sumbar/thumbnail-sumbar.webp",
         province: "Sumatera Barat",
         createdAt: "2023-11-15 10:21:37.261134+01:00"
     },

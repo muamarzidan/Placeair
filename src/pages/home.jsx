@@ -82,7 +82,7 @@ export default function HomePage() {
                     <span  className="text-6xl text-center text-white calcu-number sm:text-center sm:text-4xl lg:text-6xl xl:text-7xl">
                       <NumCountUp end={40} duration={2} /> +
                     </span>
-                    <span className="text-lg text-center text-white calcu-desc lg:text-2xl xl:text-3xl">Destinasi tersedia</span>
+                    <span className="text-lg text-center text-white calcu-desc lg:text-2xl xl:text-3xl">Kota tersedia</span>
                   </div>
                 </div>
                 {/* Right side calculation area */}

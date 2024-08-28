@@ -12,6 +12,8 @@ import sulselImg from '/src/assets/images/sulsel/thumbnail-sulsel.webp';
 import malukuImg from '/src/assets/images/maluku/thumbnail-maluku.webp';
 import papuaImg from '/src/assets/images/papua/thumbnail-papua.webp';
 
+import jatengMusic from "/src/assets/music/jateng.mp3"
+
 export default [
     {
         id: 1, 
@@ -35,6 +37,7 @@ export default [
         thumbnail: trialImg,
         thumbnailProvince: jatengImg,
         description: "This is a description",
+        bgMusic: jatengMusic,
         province: "Jawa Tengah",
         location: "Semarang",
         locationLink: "https://maps.app.goo.gl/PHCgoG8gmPksbWiU9",

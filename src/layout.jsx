@@ -2,8 +2,6 @@ import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
-import FloatingButtons from './components/FloatingButton';
-
 
 const TitleTab = ({ children }) => {
     const location = useLocation();
@@ -30,7 +28,6 @@ const TitleTab = ({ children }) => {
     return (
         <div>
             {children}
-            <FloatingButtons />
         </div>
     );
 };

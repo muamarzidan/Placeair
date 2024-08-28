@@ -7,7 +7,7 @@ import Popular from "../components/cardPopularSlider";
 import NewsletterForm from "../components/NewsletterForm";
 import Maps from "../components/maps";
 import NumCountUp from "../utils/counterUp";
-import imageChoosePlaceir from "../assets/images/thumbnail-choose-placeir.png";
+import bannerChoosePlaceir from "../assets/images/thumbnail-choose-placeir.webp";
 import "../assets/css/pages/home.css";  
 
 
@@ -58,6 +58,7 @@ export default function HomePage() {
               <h4 className="text-sm font-semibold sm:text-md md:text-lg xl:text-3xl text-secondary">TELUSURI</h4>
               <h3 className="text-xl font-semibold sm:text-2xl md:text-4xl xl:text-6xl">Wilayah dari Peta Indonesia</h3>
               <Maps />
+              <span className="w-full pt-5 text-fourly text-end ">Hint: Arahkan kursor Anda ke titik untuk melihat wilayah selengkapnya</span>
             </div>
           </div>
         </section>
@@ -79,24 +80,24 @@ export default function HomePage() {
                   </div>
                   <div className="flex flex-col w-full h-full gap-2 mt-5 md:mt-0">
                     <span  className="text-6xl text-center text-white calcu-number sm:text-center sm:text-4xl lg:text-6xl xl:text-7xl">
-                      <NumCountUp end={20} duration={2} /> +
+                      <NumCountUp end={40} duration={2} /> +
                     </span>
-                    <span className="text-lg text-center text-white calcu-desc lg:text-2xl xl:text-3xl">Provinsi tersedia</span>
+                    <span className="text-lg text-center text-white calcu-desc lg:text-2xl xl:text-3xl">Kota tersedia</span>
                   </div>
                 </div>
                 {/* Right side calculation area */}
                 <div className="flex flex-col basis-1/2">
                   <div className="flex flex-col w-full h-full gap-2">
                     <span className="text-6xl text-center text-white calcu-number sm:text-4xl lg:text-6xl xl:text-7xl">
-                      <NumCountUp end={100} duration={2} /> +
+                      <NumCountUp end={30} duration={2} /> +
                     </span>
                     <span className="text-lg text-center text-white calcu-desc lg:text-2xl xl:text-3xl">Destinasi Wisata</span>
                   </div>
                   <div className="flex flex-col w-full h-full gap-2 mt-5 md:mt-0">
                     <span className="text-6xl text-center text-white calcu-number sm:text-4xl lg:text-6xl xl:text-7xl">
-                      <NumCountUp end={200} duration={2} /> +
+                      <NumCountUp end={5} duration={2} /> +
                     </span>
-                    <span className="text-lg text-center text-white calcu-desc lg:text-2xl xl:text-3xl">Provinsi tersedia</span>
+                    <span className="text-lg text-center text-white calcu-desc lg:text-2xl xl:text-3xl">Blog dan Artikel</span>
                   </div>
                 </div>
               </div>
@@ -113,29 +114,29 @@ export default function HomePage() {
                 <div className="flex flex-col w-full h-full gap-2">
                   <div className="flex items-center gap-2 w-fit">
                     <Icon icon="material-symbols:circle" width={resizeIconBullet} height={resizeIconBullet} style={{ color: "#4377ef" }} />
-                    <h5 className="font-semibold text-md sm:text-2xl xl:text-3xl text-thridly">Backsound Musik Tradisional</h5>
+                    <h5 className="font-semibold text-md sm:text-2xl xl:text-3xl text-thridly">Destinasi Lengkap dan Terstruktur</h5>
                   </div>
-                  <p className="text-sm sm:text-xl xl:text-2xl text-fourly">Adanya backsound musik tradisional tiap provinsi untuk meningkatkan pengalaman Anda</p>
+                  <p className="text-sm sm:text-xl xl:text-2xl text-fourly">Menyediakan informasi destinasi-destinasi wisata secara lengkap dan terstruktur.</p>
                 </div>
                 <div className="flex flex-col w-full h-full gap-2">
                   <div className="flex items-center gap-2 w-fit">
                     <Icon icon="material-symbols:circle" width={resizeIconBullet} height={resizeIconBullet} style={{ color: "#4377ef" }} />
-                    <h5 className="font-semibold text-md sm:text-2xl xl:text-3xl text-thridly">Peta Interaktif</h5>
+                    <h5 className="font-semibold text-md sm:text-2xl xl:text-3xl text-thridly">Kemudahan Akses Destinasi</h5>
                   </div>
-                  <p className="text-sm sm:text-xl xl:text-2xl text-fourly">Peta Indonesia yang dapat di klik dan akan menuju ke halaman eksplor destinasi</p>
+                  <p className="text-sm sm:text-xl xl:text-2xl text-fourly">Memberikan kemudahan akses untuk meningkatkan pengalaman pengguna</p>
                 </div>
                 <div className="flex flex-col w-full h-full gap-2">
                   <div className="flex items-center gap-2 w-fit">
                     <Icon icon="material-symbols:circle" width={resizeIconBullet} height={resizeIconBullet} style={{ color: "#4377ef" }} />
-                    <h5 className="font-semibold text-md sm:text-2xl xl:text-3xl text-thridly">Informasi Rute</h5>
+                    <h5 className="font-semibold text-md sm:text-2xl xl:text-3xl text-thridly">Fitur Interaktif</h5>
                   </div>
-                  <p className="text-sm sm:text-xl xl:text-2xl text-fourly">Kami menyediakan fitur informasi rute yang jarang diketahui oleh google maps dan rute ini bisa menjadi jalan pintas anda dalam berwisata</p>
+                  <p className="text-sm sm:text-xl xl:text-2xl text-fourly">Backsound musik untuk halaman provinsi, gambar bergerak, dan informasi rute.</p>
                 </div>
               </div>
             </div>
             {/* Right/bottom side choose area */}
             <div className="flex items-center justify-between w-full h-full gap-2 basis-full md:basis-1/2 md:pl-5 lg:pl-0">
-              <img src={imageChoosePlaceir} alt="choose banner placeir" className="w-full h-full md:h-[85%] lg:h-[80%] xl:h-[95%] object-cover object-center rounded-2xl brightness-[90%] md:brightness-100" />
+              <img src={bannerChoosePlaceir} alt="choose banner placeir" className="w-full h-full md:h-[85%] lg:h-[80%] xl:h-[95%] object-cover object-center rounded-2xl brightness-[90%] md:brightness-[80%]" />
             </div>
           </div>
         </section>
@@ -152,6 +153,6 @@ export default function HomePage() {
         </section>
       </main>
       <Footer />
-    </>
+  </>
   );
 }

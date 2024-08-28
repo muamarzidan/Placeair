@@ -5,10 +5,11 @@ import { postNewsletter } from '../api/formSpree';
 import { emailValidation } from '../utils/emailValidation';
 import "../assets/css/components/newsletter.css";
 
+
 export default function NewsletterForm() {
     const [email, setEmail] = useState('');
 
-    const handleSubmit = async () => {
+    const handleNewstSubmit = async () => {
         const validationError = emailValidation(email);
         if (validationError) {
             Swal.fire({
@@ -63,7 +64,7 @@ export default function NewsletterForm() {
                 onChange={(e) => setEmail(e.target.value)}
                 className="w-full h-auto p-1 text-sm border-none rounded-full outline-none lg:p-2 lg:text-lg text-thridly"
             />
-            <button onClick={handleSubmit} className="w-auto h-auto px-5 py-1 text-sm text-white rounded-full lg:px-8 sm:text-md lg:text-lg bg-primary">
+            <button onClick={handleNewstSubmit} className="w-auto h-auto px-5 py-1 text-sm text-white rounded-full lg:px-8 sm:text-md lg:text-lg bg-primary">
                 Kirim
             </button>
         </div>

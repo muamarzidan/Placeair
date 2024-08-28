@@ -2,6 +2,8 @@ import { useState, useEffect } from "react";
 import { useLocation, Link } from "react-router-dom";
 import { Icon } from "@iconify-icon/react";
 
+import iconCloseNav from "../assets/icons/icon-close-humburger.svg"
+
 
 const Navbar = () => {
     const locationPath = useLocation().pathname;
@@ -145,7 +147,7 @@ const Navbar = () => {
           </div>
           {/* Open menu with hamburger area */}
           <div
-            className={`fixed inset-y-0 right-0 bg-white transition-transform transform ${
+            className={`fixed inset-y-0 right-0 bg-white transition-transform duration-[250ms] transform ${
               isMenuOpen ? "translate-x-0" : "translate-x-full"
             } w-[65%] md:hidden`}
           >
@@ -153,13 +155,12 @@ const Navbar = () => {
               <div className="flex justify-end">
                 <button
                   onClick={() => setIsMenuOpen(false)}
-                  className="flex items-center p-2 rounded-full focus:outline-none bg-primary"
+                  className="flex items-center p-2"
                 >
-                  <Icon
-                    icon="uis:multiply"
-                    width="27"
-                    height="26"
-                    style={{ color: "#ffffff" }}
+                  <img
+                    src={iconCloseNav}
+                    width="40"
+                    height="40"
                   />
                 </button>
               </div>
@@ -189,14 +190,6 @@ const Navbar = () => {
                   About Us
                 </Link>
                 <Link
-                  to="/faq"
-                  className={`transition-all ${
-                    locationPath === "/faq" ? "font-semibold" : "font-normal"
-                  }`}
-                >
-                  FAQ
-                </Link>
-                <Link
                   to="/blog"
                   className={`transition-all ${
                     locationPath === "/blog" ? "font-semibold" : "font-normal"
@@ -206,7 +199,7 @@ const Navbar = () => {
                 </Link>
                 <div className="flex items-center">
                   <Link
-                    to="/contact"
+                    to="/contact" preventScrollReset={false}
                     className="px-[12px] py-[10px] md:py-[6px] text-lg font-semibold text-white rounded-full w-full text-center bg-primary"
                   >
                     Contact Us

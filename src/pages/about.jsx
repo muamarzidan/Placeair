@@ -1,9 +1,10 @@
 import { useState, useEffect } from "react"
 import { Icon } from "@iconify-icon/react";
 
+import NewsletterForm from "../components/NewsletterForm";
+import FloatingButton from "../components/FloatingButton";
 import Navbar from "../components/navbar";
 import Footer from "../components/footer";
-import NewsletterForm from "../components/NewsletterForm";
 import imageAboutPlaceir from "../assets/images/banner-about-placeir.webp";
 import "../assets/css/pages/about.css";
 
@@ -159,6 +160,7 @@ export default function AboutPage() {
                 </section>
             </main>
             <Footer />
+            <FloatingButton />
         </>
     );
 }

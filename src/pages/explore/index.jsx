@@ -2,11 +2,11 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { Icon } from "@iconify-icon/react";
 
+import formatPrice from "../../utils/rupiahFormatter";
+import FloatingButton from "../../components/FloatingButton";
 import Navbar from "../../components/navbar";
 import Footer from "../../components/footer";
-import dataDestination from "../../api/destionation";
-import dataProvince from "../../api/province";
-import formatPrice from "../../utils/rupiahFormatter";
+import dataAll from "../../api/detailDestination";
 import "../../assets/css/pages/explore.css";
 
 
@@ -16,7 +16,9 @@ export default function ExplorePage() {
     const [resizeIconStar, setResizeIconStar] = useState("16");
     const [resizeIconLoc, setResizeIconLoc] = useState("24");
     const [categoryType, setCategoryType] = useState("Semua");
-
+    const [allProvince, setAllProvince] = useState([]);
+    const [allDestinations, setAllDestinations] = useState([]);
+    
     // handle scroll to top page was loaded ( hardcoded :) )
     useEffect(() => {
         window.scrollTo(0, 0);
@@ -57,13 +59,22 @@ export default function ExplorePage() {
         setCategoryType(category);
     };
 
-    const filterMostViewDestination = dataDestination
-    .filter((data) => {
-        const categoryFilter =
-            categoryType === "Semua" ||
-            data.category.toLowerCase() === categoryType.toLowerCase();
-        return categoryFilter
-    }).sort((a, b) => b.viewCount - a.viewCount).slice(0, 6);
+    useEffect(() => {
+        const mergedDestinations = dataAll.map(item => ({
+            province: item.province,
+            thumbnailProvince: item.thumbnailProvince,
+        }));
+        setAllProvince(mergedDestinations);
+    }, []);
+    
+    useEffect(() => {
+        const mergedDestinations = dataAll.flatMap(province => province.destinations);
+        const filter = mergedDestinations.filter((data) => {
+            const categoryFilter = categoryType === "Semua" || data.category.toLowerCase() === categoryType.toLowerCase();
+            return categoryFilter
+        }).sort((a, b) => b.viewCount - a.viewCount).slice(0, 6);
+        setAllDestinations(filter);
+    }, [categoryType]);
 
     return (
         <>
@@ -95,7 +106,7 @@ export default function ExplorePage() {
                         </h3>
                         {/* Province data area */}
                         <div className="flex flex-wrap items-center justify-between w-full h-auto gap-5 pt-5 explore-container-card xl:pt-5 xl:gap-5 md:justify-between">
-                            {dataProvince.map((data, index) => (
+                            {allProvince.map((data, index) => (
                                 <Link to={`/explore/${data.province}`} key={index}>
                                     <div className="explore-card-prov relative w-[500px] h-[500px] max-w-[280px] max-h-[320px] sm:max-w-[290px] sm:max-h-[320px] md:max-w-[315px] md:max-h-[350px] xl:max-w-[400px] xl:max-h-[430px] 2xl:max-w-[430px] 2xl:max-h-[460px] rounded-[20px] xl:rounded-[30px] overflow-hidden">
                                         <div
@@ -142,8 +153,8 @@ export default function ExplorePage() {
                         </ul>
                         {/* Popular destination area */}
                         <div className="flex flex-wrap items-center justify-between w-full h-auto gap-5 pt-10 explore-container-card">
-                            {filterMostViewDestination.length > 0 ? (
-                                filterMostViewDestination.map((data, index) => (
+                            {allDestinations.length > 0 ? (
+                                allDestinations.map((data, index) => (
                                     <div
                                         key={index}
                                         className="explore-card-des w-[500px] h-[500px] max-w-[279px] max-h-[320px] sm:max-w-[290px] sm:max-h-[320px] md:max-w-[315px] md:max-h-[350px] xl:max-w-[400px] xl:max-h-[430px] 2xl:max-w-[430px] 2xl:max-h-[460px] flex flex-col justify-between p-2 sm:p-3 rounded-[11px] sm:rounded-3xl border-[1px] border-gray-300"
@@ -187,9 +198,11 @@ export default function ExplorePage() {
                                             <span className="card-des-price font-bold text-md sm:text-2xl md:text-[20px] lg:text-[22px] xl:text-[26px] text-[#171717]">
                                                 {formatPrice(data.price)}
                                             </span>
-                                            <button className="card-des-button px-5 py-2 sm:py-2 text-sm font-normal text-white rounded-full md:font-semibold sm:px-8 md:px-8 md:py-[10px] sm:text-md md:text-lg bg-primary">
-                                                Lihat
-                                            </button>
+                                            <Link to={`/explore-destination/${data.province}/${data.name}`}>
+                                                <button className="card-des-button px-5 py-2 sm:py-2 text-sm font-normal text-white rounded-full md:font-semibold sm:px-8 md:px-8 md:py-[10px] sm:text-md md:text-lg bg-primary">
+                                                    Lihat
+                                                </button>
+                                            </Link>
                                         </div>
                                     </div>
                                 ))
@@ -202,7 +215,7 @@ export default function ExplorePage() {
                             )}
                         </div>
                         {/* handler to show more destination if the destination is available when user searching */}
-                        {filterMostViewDestination.length > 0 && (
+                        {allDestinations.length > 0 && (
                             <div className="flex justify-center w-full h-auto mt-5 sm:mt-10">
                                 <Link to="/explore-destination">
                                     <button id="explore-button-more" className="px-5 py-2 text-sm font-semibold border-2 border-solid rounded-full md:text-2xl lg:text-3xl sm:px-7 text-primary border-primary">
@@ -215,6 +228,7 @@ export default function ExplorePage() {
                 </section>
             </main>
             <Footer />
+            <FloatingButton />
         </>
     );
 }

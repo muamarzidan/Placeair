@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 
+import FloatingButton from "../components/FloatingButton";
 import Navbar from "../components/navbar";
 import Footer from "../components/footer";
 import ContactForm from "../components/ContactForm";
@@ -35,6 +36,7 @@ export default function ContactPage() {
                 </section>
             </main>
             <Footer />
+            <FloatingButton />
         </>
     );
 }

@@ -1,10 +1,11 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
+import useDebounceSearch from "../../hooks/debounce";
+import FloatingButton from "../../components/FloatingButton";
 import Navbar from "../../components/navbar";
 import Footer from "../../components/footer";
 import Search from "../../components/Search";
-import useDebounceSearch from "../../hooks/debounce";
 import dataBlog from "../../api/blog";
 import "../../assets/css/pages/blog.css";
 
@@ -95,6 +96,7 @@ export default function BlogPage() {
                 </section>
             </main>
             <Footer />
+            <FloatingButton />
         </>
     );
 }

@@ -1,8 +1,11 @@
 GENERAL
- - TEST ALL LINK IN PRODUCTION
- - TEST IMAGE IN PRODUCTION                DONE
+ - TEST ALL LINK IN PRODUCTION              DONE
+ - TEST IMAGE IN PRODUCTION                 DONE
  - ADD MUSIC IN EACH PROVINCE
  - ADD ANIMATION IMAGE FOR EACH PROVINCE
+ - SAMAIN RATING GOOGLE
+ - VIDEO PROSES
+ - WAWANCARA
 
 PAGE 
  - HOME(MAPS) + HINT       PROSES
@@ -12,8 +15,9 @@ PAGE
  - CONTACT US              DONE
  - BLOG                    DONE
  - DETAIL PROVINCE         DONE
- - DETAIL DESTINATION
+ - DETAIL DESTINATION      DONE
  - DETAIL BLOG             DONE
+
 
 ENHANCE 
  - FIX BOLD HOME IN NAVBAR WHEN MOBILE          DONE
@@ -27,9 +31,9 @@ ENHANCE
  - RESPONSIVE CONTACT US                        DONE
  - RESPONSIVE BLOG                              DONE
  - RESPONSIVE DETAIL PROVINCE                   DONE
- - RESPONSIVE DETAIL DESTINATION
+ - RESPONSIVE DETAIL DESTINATION                DONE
  - RESPONSIVE DETAIL BLOG                       DONE
- - FIX SHOW NAVBAR WHEN MOBILE MORE SMOOTH 
+ - FIX SHOW NAVBAR WHEN MOBILE MORE SMOOTH      DONE
  - ENHANCE PATH BLOG DETAIL                     DONE   
  - HAPUS ICON VITE DI TAB                       DONE
  - NAVBAR BUG NOTFOUD                           DONE
@@ -41,6 +45,9 @@ ENHANCE
  - ENHANC WHY CHOOSE US NUMBER                  DONE 
  - NEW ABOUT US VISI MISI                       DONE
  - FLOATING BUTTON SCROLL AND MUSIC             DONE
+ - ADD FLOATING BUTTON                          DONE
+ - SOUND PLAY	                                DONE
+
 
  LOGIC
  - HANDLE EMAIL                                         DONE
@@ -48,10 +55,12 @@ ENHANCE
  - HANDLE TITLE DI TAB                                  DONE
  - HANDLE LOGIC BOLD NAV EXPLORE DI PER SUB EXPLORE     DONE
  - HANDLE PAGINATION DI BLOG                            
- - HANDLE POSITION BANNER IN IN DETAIL ALL PROVINCE  
+ - HANDLE POSITION BANNER IN IN DETAIL ALL PROVINCE      
  - HANDLE CONTACT SEND TO FROMSPREE                     DONE  
  - HANDLE LOGIC CONTACT US  	                        DONE
  - HANDLE 2 FLOATING BUTTON                             DONE
+ - HANDLE PRICE DETAL DEST                              DONE
+ - BLOG PAGINATION                              
 
 
 

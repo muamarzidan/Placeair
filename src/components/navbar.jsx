@@ -16,14 +16,15 @@ const Navbar = () => {
     
     // handler to check if the path is active and uniques path
     const isPathActive = (path) => {
-      return locationPath === path || ( (path === "/explore" && locationPath.startsWith("/explore") || (path === "/blog" && locationPath.startsWith("/blog")) ) );
+      return locationPath === path || ( (path === "/explore" && locationPath.startsWith("/explore") || (path === "/blog" && locationPath.startsWith("/blog")) || (path === "/explore-desination" && locationPath.startsWith("/explore-destination"))));
     };
 
+    const isExploreDestination = locationPath.startsWith("/explore-destination");
     const isBlogPath = locationPath.startsWith("/blog");
     
     // handler for change color text and background navbar when resize and scroll
     useEffect(() => { 
-      if (locationPath === "/explore-destination" || locationPath === "/404" || isBlogPath) {
+      if (isExploreDestination || locationPath === "/404" || isBlogPath) {
         setIsChangeTeksColor("text-primary");
         setIsChangeMenuNav("text-primary border-2 border-primary bg-[#FFFFFF7F]");
       } else {
@@ -38,13 +39,13 @@ const Navbar = () => {
           if (window.scrollY > 500) {
             setIsChangeTeksColor("text-primary");
           } else {
-            setIsChangeTeksColor(locationPath === "/explore-destination" || isBlogPath || locationPath === "/404" ? "text-primary" : "text-white");
+            setIsChangeTeksColor(isExploreDestination || isBlogPath || locationPath === "/404" ? "text-primary" : "text-white");
           }
         }
       };
 
       const handleScroll = () => {
-        if (locationPath === "/explore-destination" || isBlogPath || locationPath === "/404") {
+        if (isExploreDestination || isBlogPath || locationPath === "/404") {
           if (window.scrollY > 100) {
             setIsBgChangeNav("bg-white h-auto md:h-[90px]");
           } else {
@@ -59,13 +60,13 @@ const Navbar = () => {
         }
         
         if (window.innerWidth >= 768) {
-          if (window.scrollY > 500 && locationPath !== "/explore-destination" && !isBlogPath && locationPath !== "/404") {
+          if (window.scrollY > 500 && !isExploreDestination && !isBlogPath && locationPath !== "/404") {
             setIsChangeTeksColor("text-primary");
             setIsChangeMenuNav("text-primary border-[2px] border-primary bg-[#FFFFFF7F]");
           } else {
-            setIsChangeTeksColor(locationPath === "/explore-destination" || isBlogPath || locationPath === "/404" ? "text-primary" : "text-white");
+            setIsChangeTeksColor(isExploreDestination || isBlogPath || locationPath === "/404" ? "text-primary" : "text-white");
             setIsChangeMenuNav(
-              locationPath === "/explore-destination" || isBlogPath || locationPath === "/404"
+                isExploreDestination || isBlogPath || locationPath === "/404"
                 ? "text-primary border-2 border-primary bg-[#FFFFFF7F]"
                 : "text-white border-white border-[1px] bg-[#ffffff2b]"
             );
@@ -84,7 +85,7 @@ const Navbar = () => {
         window.removeEventListener("resize", handleResize);
         window.removeEventListener("scroll", handleScroll);
       };
-    }, [locationPath, isBlogPath]);
+    }, [locationPath, isBlogPath, isExploreDestination]);
 
   return (
     <>
@@ -99,12 +100,14 @@ const Navbar = () => {
               className={`w-[418px] h-[55px] justify hidden items-center justify-evenly md:flex font-semibold text-xl rounded-full ${isChangeMenuNav}`}
             >
               <Link
+                preventScrollReset={false} 
                 to="/"
                 className={`transition-all ${isPathActive("/") ? "font-semibold" : "font-normal"}`}
               >
                 Home
               </Link>
               <Link
+                preventScrollReset={false} 
                 to="/explore"
                 className={`transition-all ${isPathActive("/explore") ? "font-semibold" : "font-normal"}`}
               >

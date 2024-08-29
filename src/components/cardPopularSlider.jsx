@@ -8,13 +8,14 @@ import { Pagination, Navigation } from "swiper/modules";
 import { Icon } from "@iconify-icon/react";
 
 import formatPrice from "../utils/rupiahFormatter";
-import dataDestination from "../api/destionation";
+import dataAll from "../api/detailDestination";
 import "../assets/css/components/popular.css";
 
 
 const PopularCardSwiper = () => {
   const [resizeIconStar, setResizeIconStar] = useState("16");
   const [resizeIconLoc, setResizeIconLoc] = useState("24");
+  // const [dataDestination, setDataDestination] = useState([]);
 
   // handler resize icon
   const handleResizeIcon = () => {
@@ -40,7 +41,8 @@ const PopularCardSwiper = () => {
   }, []);
 
   // handler filter by viewcount
-  const filterDestinationByViewCount = dataDestination.sort((a, b) => b.viewCount - a.viewCount);
+  const mergedDestinations = dataAll.flatMap(province => province.destinations).sort((a, b) => b.viewCount - a.viewCount).slice(0, 6);
+    
 
   return (
     <>
@@ -97,7 +99,7 @@ const PopularCardSwiper = () => {
             }}
             modules={[Pagination, Navigation]}
           >
-            {filterDestinationByViewCount.map((data, index) => (
+            {mergedDestinations.map((data, index) => (
               <SwiperSlide
                 key={index}
                 className="flex items-center justify-center sm:block sm:items-start sm:justify-start"
@@ -143,9 +145,9 @@ const PopularCardSwiper = () => {
                     <span className="font-bold text-lg sm:text-[16px] md:text-[26px] text-[#171717]">
                       {formatPrice(data.price)}
                     </span>
-                    <button className="px-4 py-2 text-sm font-normal text-white rounded-full md:font-semibold sm:px-8 md:px-10 md:py-[10px] sm:text-md md:text-lg bg-primary">
+                    <Link to={`/explore-destination/${data.province}/${data.name}`} className="px-4 py-2 text-sm font-normal text-white rounded-full md:font-semibold sm:px-8 md:px-10 md:py-[10px] sm:text-md md:text-lg bg-primary">
                       Lihat
-                    </button>
+                    </Link>
                   </div>
                 </div>
               </SwiperSlide>

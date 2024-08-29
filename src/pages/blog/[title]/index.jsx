@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 
+import FloatingButton from "../../../components/FloatingButton";
 import Navbar from "../../../components/navbar";
 import Footer from "../../../components/footer";
 import dataBlog from "../../../api/blog";
@@ -74,6 +75,7 @@ export default function DetailBlogPage() {
                 </section>
             </main>
             <Footer />
+            <FloatingButton />
         </>
     );
 }

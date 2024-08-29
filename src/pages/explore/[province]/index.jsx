@@ -60,6 +60,17 @@ export default function ExploreProvincePage() {
         };
     }, []);
 
+    const scrollToTop = () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+        stopMusic();
+    };
+
+    const handleSearchDestination = (event) => {
+        setSearchDestination(event.target.value);
+        if (!isPlaying) {
+            stopMusic();
+        }
+    };
 
     useEffect(() => {
         const mergedDestinations = dataAll.map(item => ({
@@ -74,6 +85,7 @@ export default function ExploreProvincePage() {
             );
             setMakeBaseThumbnail(foundProvince.thumbnailProvince);
             setBgMusic(foundProvince.bgMusic);
+            setIsPlaying(true);
         }
         setSelectedProvince(mergedDestinations);
 
@@ -85,6 +97,35 @@ export default function ExploreProvincePage() {
             }
         };
     }, [province]);
+
+    useEffect(() => {
+        const currentAudioRef = audioRef.current;
+
+        const handleAudioPlay = () => {
+            setIsPlaying(true);
+        };
+
+        const handleAudioPause = () => {
+            setIsPlaying(false);
+        };
+
+        if (currentAudioRef) {
+            currentAudioRef.addEventListener('play', handleAudioPlay);
+            currentAudioRef.addEventListener('pause', handleAudioPause);
+            
+            currentAudioRef.play().catch(error => {
+                console.error("Error playing audio : ", error);
+                setIsPlaying(false);
+            });
+        }
+
+        return () => {
+            if (currentAudioRef) {
+                currentAudioRef.removeEventListener('play', handleAudioPlay);
+                currentAudioRef.removeEventListener('pause', handleAudioPause);
+            }
+        };
+    }, [bgMusic]);
 
     const togglePlayPause = () => {
         if (isPlaying) {
@@ -105,18 +146,6 @@ export default function ExploreProvincePage() {
         }
     };
 
-    const scrollToTop = () => {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-        stopMusic();
-    };
-
-    const handleSearchDestination = (event) => {
-        setSearchDestination(event.target.value);
-        if (!isPlaying) {
-            stopMusic();
-        }
-    };
-
     useEffect(() => {
         const foundProvince = dataAll.find((item) => item.province.toLowerCase() === province.toLowerCase());
         setSelectedProvince(foundProvince);
@@ -129,9 +158,10 @@ export default function ExploreProvincePage() {
                 .filter(destination => destination.name.toLowerCase().includes(debouncedSearch.toLowerCase()))
                 .sort((a, b) => b.viewCount - a.viewCount);
             setAllDestinations(filtered);
-            console.log(filtered);
         }
     }, [selectedProvince, debouncedSearch, province]);
+
+    console.log(isPlaying)
 
     return (
         <>

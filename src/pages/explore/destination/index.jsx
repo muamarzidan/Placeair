@@ -2,11 +2,12 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Icon } from "@iconify-icon/react";
 
+import useDebounceSearch from "../../../hooks/debounce";
+import formatPrice from "../../../utils/rupiahFormatter";
+import FloatingButton from "../../../components/FloatingButton";
 import Navbar from "../../../components/navbar";
 import Footer from "../../../components/footer";
 import Search from "../../../components/Search";
-import useDebounceSearch from "../../../hooks/debounce";
-import formatPrice from "../../../utils/rupiahFormatter";
 import dataAll from "../../../api/detailDestination";
 import "../../../assets/css/pages/explore.css";
 
@@ -184,6 +185,7 @@ export default function ExploreDestinationPage() {
                 </section>
             </main>
             <Footer />
+            <FloatingButton />
         </>
     );
 }

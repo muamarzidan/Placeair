@@ -61,8 +61,8 @@ const FloatingButtons = ({ togglePlayPause, isPlaying }) => {
 };
 
 FloatingButtons.propTypes = {
-    togglePlayPause: PropTypes.func.isRequired,
-    isPlaying: PropTypes.bool.isRequired,
+    togglePlayPause: PropTypes.func,
+    isPlaying: PropTypes.bool,
 };
 
 export default FloatingButtons;

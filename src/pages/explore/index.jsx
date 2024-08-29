@@ -2,10 +2,11 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { Icon } from "@iconify-icon/react";
 
+import formatPrice from "../../utils/rupiahFormatter";
+import FloatingButton from "../../components/FloatingButton";
 import Navbar from "../../components/navbar";
 import Footer from "../../components/footer";
 import dataAll from "../../api/detailDestination";
-import formatPrice from "../../utils/rupiahFormatter";
 import "../../assets/css/pages/explore.css";
 
 
@@ -227,6 +228,7 @@ export default function ExplorePage() {
                 </section>
             </main>
             <Footer />
+            <FloatingButton />
         </>
     );
 }

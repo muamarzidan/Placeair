@@ -85,7 +85,7 @@ const Navbar = () => {
         window.removeEventListener("resize", handleResize);
         window.removeEventListener("scroll", handleScroll);
       };
-    }, [locationPath, isBlogPath]);
+    }, [locationPath, isBlogPath, isExploreDestination]);
 
   return (
     <>
@@ -100,12 +100,14 @@ const Navbar = () => {
               className={`w-[418px] h-[55px] justify hidden items-center justify-evenly md:flex font-semibold text-xl rounded-full ${isChangeMenuNav}`}
             >
               <Link
+                preventScrollReset={false} 
                 to="/"
                 className={`transition-all ${isPathActive("/") ? "font-semibold" : "font-normal"}`}
               >
                 Home
               </Link>
               <Link
+                preventScrollReset={false} 
                 to="/explore"
                 className={`transition-all ${isPathActive("/explore") ? "font-semibold" : "font-normal"}`}
               >

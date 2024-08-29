@@ -2,6 +2,8 @@ import { useState, useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
 import { Icon } from "@iconify-icon/react";
 
+import formatPrice from "../../../../../utils/rupiahFormatter";
+import FloatingButton from "../../../../../components/FloatingButton";
 import dataAll from "../../../../../api/detailDestination";
 import Navbar from "../../../../../components/navbar";
 import Footer from "../../../../../components/footer";
@@ -109,7 +111,7 @@ export default function DetailDestinationPage() {
                                     <span className="text-md sm:text-xl md:text-2xl lg:text-2xl xl:text-4xl">{destination.rating}</span>
                                 </div>
                             </div>
-                            <Link to={destination.location} target="_blank" rel="noopener noreferrer" className="flex items-center w-full gap-3">
+                            <Link to={destination.locationLink} target="_blank" rel="noopener noreferrer" className="flex items-center w-full gap-3">
                                 <Icon
                                     icon="fluent:location-16-filled"
                                     style={{ color: "#4c82fe" }}
@@ -133,11 +135,11 @@ export default function DetailDestinationPage() {
                                             .filter(price => price.name === "WNI")
                                             .map(price => (
                                                 <span key={price.id} className="w-full text-center">
-                                                    {price.price > 0 ? `Rp ${price.price}` : "Gratis"}
+                                                    {price.price > 0 ? formatPrice(price.price) : "Gratis"}
                                                 </span>
                                             ))
                                     ) : (
-                                        <span className="w-full text-center">Maaf, Kami belum bisa beri informasi harga</span>
+                                        <span className="w-full font-semibold text-md sm:text-2xl md:text-[24px] text-secondary text-center">Maaf, Kami belum bisa beri informasi harga</span>
                                     )}
                                 </ul>
                             </div>
@@ -149,11 +151,11 @@ export default function DetailDestinationPage() {
                                             .filter(price => price.name === "WNA")
                                             .map(price => (
                                                 <span key={price.id} className="w-full text-center">
-                                                    {price.price > 0 ? `Rp ${price.price}` : "Gratis"}
+                                                    {price.price > 0 ? formatPrice(price.price) : "Gratis"}
                                                 </span>
                                             ))
                                     ) : (
-                                        <span className="w-full text-center">Maaf, Kami belum bisa beri informasi harga</span>
+                                        <span className="w-full font-semibold text-md sm:text-2xl md:text-[24px] text-secondary text-center">Maaf, Kami belum bisa beri informasi harga</span>
                                     )}
                                 </ul>
                             </div>
@@ -172,8 +174,8 @@ export default function DetailDestinationPage() {
                                     ></iframe>
                                 </div>
                             ) : (
-                                <p className="text-4xl font-semibold text-center text-secondary">
-                                    Peta tidak ditemukan
+                                <p className="w-full font-semibold text-md sm:text-2xl md:text-[24px] text-secondary text-center">
+                                    Kami belum bisa menyediakan peta
                                 </p>
                             )}
                             {/* Detail rute area */}
@@ -191,7 +193,7 @@ export default function DetailDestinationPage() {
                                         </div>
                                     ))
                                 ) : (
-                                    <p className="text-4xl font-semibold text-center text-secondary">Mohon maaf informasi detail tentang rute destinasi ini belum tersedia</p>
+                                    <p className="w-full font-semibold text-md sm:text-2xl md:text-[24px] text-secondary text-center">Mohon maaf informasi detail tentang rute destinasi ini belum tersedia</p>
                                 )}
                             </div>
                         </div>
@@ -199,6 +201,7 @@ export default function DetailDestinationPage() {
                 </section>
             </main>
             <Footer />
+            <FloatingButton />
         </>
     );
 }

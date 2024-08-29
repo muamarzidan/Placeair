@@ -1,12 +1,13 @@
 import { useState, useEffect } from "react"
 import { Icon } from "@iconify-icon/react";
 
-import Navbar from "../components/navbar";
-import Footer from "../components/footer";
+import NumCountUp from "../utils/counterUp";
+import FloatingButton from "../components/FloatingButton";
 import Popular from "../components/cardPopularSlider";
 import NewsletterForm from "../components/NewsletterForm";
 import Maps from "../components/maps";
-import NumCountUp from "../utils/counterUp";
+import Navbar from "../components/navbar";
+import Footer from "../components/footer";
 import bannerChoosePlaceir from "../assets/images/thumbnail-choose-placeir.webp";
 import "../assets/css/pages/home.css";  
 
@@ -153,6 +154,7 @@ export default function HomePage() {
         </section>
       </main>
       <Footer />
+      <FloatingButton />
   </>
   );
 }

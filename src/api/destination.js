@@ -2,7 +2,6 @@ import trialImg from '/src/assets/images/card-kelingking.webp';
 import sumbarImg from '/src/assets/images/sumbar/thumbnail-sumbar.webp';
 import bangbelImg from '/src/assets/images/bangbel/thumbnail-bangbel.webp';
 import jabarImg from '/src/assets/images/jabar/thumbnail-jabar.webp';
-import jatengImg from '/src/assets/images/jateng/thumbnail-jateng.webp';
 import jatimImg from '/src/assets/images/jatim/thumbnail-jatim.webp';
 import baliImg from '/src/assets/images/bali/thumbnail-bali.webp';
 import nusbatImg from '/src/assets/images/nusbat/thumbnail-nusbat.webp';
@@ -12,7 +11,12 @@ import sulselImg from '/src/assets/images/sulsel/thumbnail-sulsel.webp';
 import malukuImg from '/src/assets/images/maluku/thumbnail-maluku.webp';
 import papuaImg from '/src/assets/images/papua/thumbnail-papua.webp';
 
-import jatengMusic from "/src/assets/music/jateng.mp3"
+// Privinsi Jawa Tengah
+import jatengImg from '/src/assets/images/jateng/thumbnail-jateng.webp';
+import gMerbabuImgOne from '/src/assets/images/jateng/destination/gMerbabu/thumbnail-jateng-one.webp';
+import gMerbabuImgTwo from '/src/assets/images/jateng/destination/gMerbabu/thumbnail-jateng-two.webp';
+import gMerbabuImgTree from '/src/assets/images/jateng/destination/gMerbabu/thumbnail-jateng-tree.webp';
+import jatengMusic from "/src/assets/music/jateng.mp3";
 
 export default [
     {
@@ -32,11 +36,13 @@ export default [
     },
     {
         id: 2, 
-        name: "Ini Jateng",
+        name: "Gunung Merbabu",
         category: "alam", 
-        thumbnail: trialImg,
+        thumbnail: gMerbabuImgOne,
+        thumbnailTwo: gMerbabuImgTwo,
+        thumbnailtree: gMerbabuImgTree,
         thumbnailProvince: jatengImg,
-        description: "This is a description",
+        description: "Gunung Merbabu adalah gunung berapi dengan ketinggian sekitar 3.145 mdpl. Gunung ini terkenal karena keindahan alamnya, terutama padang savana luas dan pemandangan puncak yang mempesona. Jalur pendakian menuju puncak Merbabu menawarkan pemandangan spektakuler dari berbagai vegetasi, mulai dari hutan tropis, padang rumput, hingga bunga edelweiss yang tumbuh subur di ketinggian.",
         bgMusic: jatengMusic,
         province: "Jawa Tengah",
         location: "Semarang",

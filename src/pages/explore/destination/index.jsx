@@ -7,7 +7,7 @@ import Footer from "../../../components/footer";
 import Search from "../../../components/Search";
 import useDebounceSearch from "../../../hooks/debounce";
 import formatPrice from "../../../utils/rupiahFormatter";
-import dataDestination from "../../../api/destionation";
+import dataAll from "../../../api/detailDestination";
 import "../../../assets/css/pages/explore.css";
 
 
@@ -18,6 +18,7 @@ export default function ExploreDestinationPage() {
     const [resizeIconLoc, setResizeIconLoc] = useState("24");
     const [categoryType, setCategoryType] = useState("Semua");
     const [searchDestination, setSearchDestination] = useState("");
+    const [allDestinations, setAllDestinations] = useState([]);
     const debouncedSearch = useDebounceSearch(searchDestination, 500);
 
     // handle scroll to top page was loaded ( hardcoded :) )
@@ -64,16 +65,15 @@ export default function ExploreDestinationPage() {
         setCategoryType(category);
     };
 
-    const filterMostViewDestination = dataDestination
-        .filter((data) => {
-            const categoryFilter =
-                categoryType === "Semua" ||
-                data.category.toLowerCase() === categoryType.toLowerCase();
-            const searchFilter =
-                data.name.toLowerCase().includes(debouncedSearch.toLowerCase());
+    useEffect(() => {
+        const mergedDestinations = dataAll.flatMap(province => province.destinations);
+        const filter = mergedDestinations.filter((data) => {
+            const categoryFilter = categoryType === "Semua" || data.category.toLowerCase() === categoryType.toLowerCase();
+            const searchFilter = data.name.toLowerCase().includes(debouncedSearch.toLowerCase());
             return categoryFilter && searchFilter;
-        })
-        .sort((a, b) => b.viewCount - a.viewCount);
+        }).sort((a, b) => b.viewCount - a.viewCount);
+        setAllDestinations(filter);
+    }, [categoryType, debouncedSearch]);
 
     return (
         <>
@@ -119,8 +119,8 @@ export default function ExploreDestinationPage() {
                 <section id="kategori" className="w-full h-auto pt-3 pb-8 sm:pb-10 sm:pt-5 md:pt-10 md:pb-20">
                     <div className="container flex flex-col w-full h-auto">
                         <div className="flex flex-wrap items-center justify-between w-full h-auto gap-5 pt-5 explore-container-card">
-                            {filterMostViewDestination.length > 0 ? (
-                                filterMostViewDestination.map((data, index) => (
+                            {allDestinations.length > 0 ? (
+                                allDestinations.map((data, index) => (
                                     <div
                                         key={index}
                                         className="explore-card-des w-[500px] h-[500px] max-w-[279px] max-h-[320px] sm:max-w-[290px] sm:max-h-[320px] md:max-w-[315px] md:max-h-[350px] xl:max-w-[400px] xl:max-h-[430px] 2xl:max-w-[430px] 2xl:max-h-[460px] flex flex-col justify-between p-2 sm:p-3 rounded-[11px] sm:rounded-3xl border-[1px] border-gray-300"
@@ -164,9 +164,11 @@ export default function ExploreDestinationPage() {
                                             <span className="card-des-price font-bold text-md sm:text-2xl md:text-[20px] lg:text-[22px] xl:text-[26px] text-[#171717]">
                                                 {formatPrice(data.price)}
                                             </span>
-                                            <button className="card-des-button px-5 py-2 sm:py-2 text-sm font-normal text-white rounded-full md:font-semibold sm:px-8 md:px-8 md:py-[10px] sm:text-md md:text-lg bg-primary">
-                                                Lihat
-                                            </button>
+                                            <Link to={`/explore-destination/${data.province}/${data.name}`}>
+                                                <button className="card-des-button px-5 py-2 sm:py-2 text-sm font-normal text-white rounded-full md:font-semibold sm:px-8 md:px-8 md:py-[10px] sm:text-md md:text-lg bg-primary">
+                                                    Lihat
+                                                </button>
+                                            </Link>
                                         </div>
                                     </div>
                                 ))

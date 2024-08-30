@@ -2,19 +2,32 @@
 import baliImg from '/src/assets/images/bali/thumbnail-bali.webp';
 import jatengImg from '/src/assets/images/jateng/thumbnail-jateng.webp';
 
-// Privinsi Jawa Tengah
+// Provinsi Jawa Tengah
 import gMerbabuImgOne from '/src/assets/images/jateng/destination/gMerbabu/thumbnail-jateng-one.webp';
 import gMerbabuImgTwo from '/src/assets/images/jateng/destination/gMerbabu/thumbnail-jateng-two.webp';
 import gMerbabuImgTree from '/src/assets/images/jateng/destination/gMerbabu/thumbnail-jateng-tree.webp';
 
+// Music
+import sumbarMusic from "/src/assets/music/sumbar.mp3";
+import bangbelMusic from "/src/assets/music/bangbel.mp3";
+import jabarMusic from "/src/assets/music/jabar.mp3";
 import jatengMusic from "/src/assets/music/jateng.mp3";
+import jatimMusic from "/src/assets/music/jatim.mp3";
+import baliMusic from "/src/assets/music/bali.mp3";
+import ntbMusic from "/src/assets/music/ntb.mp3";
+import kalselMusic from "/src/assets/music/kalsel.mp3";
+import sulutMusic from "/src/assets/music/sulut.mp3";
+import sulselMusic from "/src/assets/music/sulsel.mp3";
+import malukuMusic from "/src/assets/music/maluku.mp3";
+import papuaMusic from "/src/assets/music/papua.mp3";
+
 
 export default [
     {
         id: 1,
-        province: "Bali",
+        province: "Sumatera Barat",
         thumbnailProvince: baliImg,
-        bgMusic: jatengMusic,
+        bgMusic: sumbarMusic,
         destinations: [
             {
                 id: 1,
@@ -25,7 +38,7 @@ export default [
                 thumbnail: gMerbabuImgOne,
                 thumbnailTwo: gMerbabuImgTwo,
                 thumbnailTree: gMerbabuImgTree,
-                province: "Bali",
+                province: "Sumatera Barat",
                 location: "Semarang",
                 locationMaps: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d253497.1393726255!2d107.47834459527094!3d-6.903421164625082!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68e6398252477f%3A0x146a1f93d3e815b2!2sBandung%2C%20Kota%20Bandung%2C%20Jawa%20Barat!5e0!3m2!1sid!2sid!4v1724919943704!5m2!1sid!2sid",
                 locationLink: "https://maps.app.goo.gl/PHCgoG8gmPksbWiU9",
@@ -95,9 +108,9 @@ export default [
     },
     {
         id: 2, 
-        province: "Jawa Tengah",
+        province: "Bangka Belitung",
         thumbnailProvince: jatengImg,
-        bgMusic: jatengMusic,
+        bgMusic: bangbelMusic,
         destinations: [
             {
                 id: 2,
@@ -108,7 +121,7 @@ export default [
                 thumbnail: gMerbabuImgOne,
                 thumbnailTwo: gMerbabuImgTwo,
                 thumbnailTree: gMerbabuImgTree,
-                province: "Jawa Tengah",
+                province: "Bangka Belitung",
                 location: "Semarang",
                 viewCount: 1000,
                 locationLink: "https://maps.app.goo.gl/PHCgoG8gmPksbWiU9",
@@ -123,7 +136,7 @@ export default [
         id: 3,
         province: "Jawa Barat",
         thumbnailProvince: jatengImg,
-        bgMusic: jatengMusic,
+        bgMusic: jabarMusic,
         destinations: [
             {
                 id: 3,
@@ -147,7 +160,7 @@ export default [
     },
     {
         id: 4,
-        province: "Maluku",
+        province: "Jawa Tengah",
         thumbnailProvince: jatengImg,
         bgMusic: jatengMusic,
         destinations: [
@@ -160,7 +173,7 @@ export default [
                 thumbnail: gMerbabuImgOne,
                 thumbnailTwo: gMerbabuImgTwo,
                 thumbnailTree: gMerbabuImgTree,
-                province: "Maluku",
+                province: "Jawa Tengah",
                 location: "Semarang",
                 viewCount: 4000,
                 locationLink: "https://maps.app.goo.gl/PHCgoG8gmPksbWiU9",
@@ -175,7 +188,7 @@ export default [
         id: 5,
         province: "Jawa Timur",
         thumbnailProvince: jatengImg,
-        bgMusic: jatengMusic,
+        bgMusic: jatimMusic,
         destinations: [
             {
                 id: 6,
@@ -199,9 +212,35 @@ export default [
     },
     {
         id: 6,
+        province: "Bali",
+        thumbnailProvince: jatengImg,
+        bgMusic: baliMusic,
+        destinations: [
+            {
+                id: 6,
+                thumbnailProvince: jatengImg,
+                name: "Gunung NTB",
+                category: "kesenian", 
+                description: "Gunung Merbabu adalah gunung berapi dengan ketinggian sekitar 3.145 mdpl.",
+                thumbnail: gMerbabuImgOne,
+                thumbnailTwo: gMerbabuImgTwo,
+                thumbnailTree: gMerbabuImgTree,
+                province: "Bali",
+                location: "Semarang",
+                viewCount: 4000,
+                locationLink: "https://maps.app.goo.gl/PHCgoG8gmPksbWiU9",
+                price: 300000,
+                rating: 4.8,
+                createdAt: "2023-11-15 10:21:37.261134+01:00"
+            }
+        ],
+        createdAt: "2023-11-15 10:21:37.261134+01:00"
+    },
+    {
+        id: 7,
         province: "Nusa Tenggara Barat",
         thumbnailProvince: jatengImg,
-        bgMusic: jatengMusic,
+        bgMusic: ntbMusic,
         destinations: [
             {
                 id: 6,
@@ -223,4 +262,134 @@ export default [
         ],
         createdAt: "2023-11-15 10:21:37.261134+01:00"
     },
+    {
+        id: 8,
+        province: "Kalimantan Selatan",
+        thumbnailProvince: jatengImg,
+        bgMusic: kalselMusic,
+        destinations: [
+            {
+                id: 6,
+                thumbnailProvince: jatengImg,
+                name: "Gunung NTB",
+                category: "kesenian", 
+                description: "Gunung Merbabu adalah gunung berapi dengan ketinggian sekitar 3.145 mdpl.",
+                thumbnail: gMerbabuImgOne,
+                thumbnailTwo: gMerbabuImgTwo,
+                thumbnailTree: gMerbabuImgTree,
+                province: "Kalimantan Selatan",
+                location: "Semarang",
+                viewCount: 4000,
+                locationLink: "https://maps.app.goo.gl/PHCgoG8gmPksbWiU9",
+                price: 300000,
+                rating: 4.8,
+                createdAt: "2023-11-15 10:21:37.261134+01:00"
+            }
+        ],
+        createdAt: "2023-11-15 10:21:37.261134+01:00"
+    },
+    {
+        id: 9,
+        province: "Sulawesi Utara",
+        thumbnailProvince: jatengImg,
+        bgMusic: sulutMusic,
+        destinations: [
+            {
+                id: 6,
+                thumbnailProvince: jatengImg,
+                name: "Gunung NTB",
+                category: "kesenian", 
+                description: "Gunung Merbabu adalah gunung berapi dengan ketinggian sekitar 3.145 mdpl.",
+                thumbnail: gMerbabuImgOne,
+                thumbnailTwo: gMerbabuImgTwo,
+                thumbnailTree: gMerbabuImgTree,
+                province: "Sulawesi Utara",
+                location: "Semarang",
+                viewCount: 4000,
+                locationLink: "https://maps.app.goo.gl/PHCgoG8gmPksbWiU9",
+                price: 300000,
+                rating: 4.8,
+                createdAt: "2023-11-15 10:21:37.261134+01:00"
+            }
+        ],
+        createdAt: "2023-11-15 10:21:37.261134+01:00"
+    },
+    {
+        id: 10,
+        province: "Sulawesi Selatan",
+        thumbnailProvince: jatengImg,
+        bgMusic: sulselMusic,
+        destinations: [
+            {
+                id: 6,
+                thumbnailProvince: jatengImg,
+                name: "Gunung NTB",
+                category: "kesenian", 
+                description: "Gunung Merbabu adalah gunung berapi dengan ketinggian sekitar 3.145 mdpl.",
+                thumbnail: gMerbabuImgOne,
+                thumbnailTwo: gMerbabuImgTwo,
+                thumbnailTree: gMerbabuImgTree,
+                province: "Sulawesi Selatan",
+                location: "Semarang",
+                viewCount: 4000,
+                locationLink: "https://maps.app.goo.gl/PHCgoG8gmPksbWiU9",
+                price: 300000,
+                rating: 4.8,
+                createdAt: "2023-11-15 10:21:37.261134+01:00"
+            }
+        ],
+        createdAt: "2023-11-15 10:21:37.261134+01:00"
+    },
+    {
+        id: 11,
+        province: "Maluku",
+        thumbnailProvince: jatengImg,
+        bgMusic: malukuMusic,
+        destinations: [
+            {
+                id: 6,
+                thumbnailProvince: jatengImg,
+                name: "Gunung NTB",
+                category: "kesenian", 
+                description: "Gunung Merbabu adalah gunung berapi dengan ketinggian sekitar 3.145 mdpl.",
+                thumbnail: gMerbabuImgOne,
+                thumbnailTwo: gMerbabuImgTwo,
+                thumbnailTree: gMerbabuImgTree,
+                province: "Maluku",
+                location: "Semarang",
+                viewCount: 4000,
+                locationLink: "https://maps.app.goo.gl/PHCgoG8gmPksbWiU9",
+                price: 300000,
+                rating: 4.8,
+                createdAt: "2023-11-15 10:21:37.261134+01:00"
+            }
+        ],
+        createdAt: "2023-11-15 10:21:37.261134+01:00"
+    },
+    {
+        id: 12,
+        province: "Papua",
+        thumbnailProvince: jatengImg,
+        bgMusic: papuaMusic,
+        destinations: [
+            {
+                id: 6,
+                thumbnailProvince: jatengImg,
+                name: "Gunung NTB",
+                category: "kesenian", 
+                description: "Gunung Merbabu adalah gunung berapi dengan ketinggian sekitar 3.145 mdpl.",
+                thumbnail: gMerbabuImgOne,
+                thumbnailTwo: gMerbabuImgTwo,
+                thumbnailTree: gMerbabuImgTree,
+                province: "Papua",
+                location: "Semarang",
+                viewCount: 4000,
+                locationLink: "https://maps.app.goo.gl/PHCgoG8gmPksbWiU9",
+                price: 300000,
+                rating: 4.8,
+                createdAt: "2023-11-15 10:21:37.261134+01:00"
+            }
+        ],
+        createdAt: "2023-11-15 10:21:37.261134+01:00"
+    }
 ];

@@ -13,8 +13,8 @@ import "../../assets/css/pages/blog.css";
 
 export default function BlogPage() {
     const [searchBlog, setSearchBlog] = useState("");
-    const debouncedSearch = useDebounceSearch(searchBlog, 500);
     const [currentPage, setCurrentPage] = useState(1);
+    const debouncedSearch = useDebounceSearch(searchBlog, 500);
     const blogsPerPage = 6;
 
     const totalPages = Math.ceil(dataBlog.length / blogsPerPage);

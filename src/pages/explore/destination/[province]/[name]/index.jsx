@@ -139,7 +139,7 @@ export default function DetailDestinationPage() {
                                                 </span>
                                             ))
                                     ) : (
-                                        <span className="w-full font-semibold text-md sm:text-2xl md:text-[24px] text-secondary text-center">Maaf, Kami belum bisa beri informasi harga</span>
+                                        <span className="w-full font-semibold text-md sm:text-2xl md:text-[24px] text-secondary text-center">Maaf, Kami belum bisa menampilkan informasi harga</span>
                                     )}
                                 </ul>
                             </div>
@@ -155,7 +155,7 @@ export default function DetailDestinationPage() {
                                                 </span>
                                             ))
                                     ) : (
-                                        <span className="w-full font-semibold text-md sm:text-2xl md:text-[24px] text-secondary text-center">Maaf, Kami belum bisa beri informasi harga</span>
+                                        <span className="w-full font-semibold text-md sm:text-2xl md:text-[24px] text-secondary text-center">Maaf, Kami belum bisa menampilkan informasi harga</span>
                                     )}
                                 </ul>
                             </div>

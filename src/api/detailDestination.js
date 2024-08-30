@@ -49,6 +49,54 @@ import kawahIjenOne from '/src/assets/images/jatim/destination/thumbnail-dest-ka
 import kawahIjenTwo from '/src/assets/images/jatim/destination/thumbnail-dest-kawahIjen-2.webp';
 import kawahIjenTree from '/src/assets/images/jatim/destination/thumbnail-dest-kawahIjen-3.webp';
 
+// Provinsi Bali
+import provinsiBali from '/src/assets/images/bali/thumbnail-bali.webp';
+import airterjunSekumpulOne from '/src/assets/images/bali/destination/thumbnail-dest-airterjunSekumpul.webp';
+import airterjunSekumpulTwo from '/src/assets/images/bali/destination/thumbnail-dest-airterjunSekumpul-2.webp';
+import airterjunSekumpulTree from '/src/assets/images/bali/destination/thumbnail-dest-airterjunSekumpul-3.webp';
+import danauBegudulOne from '/src/assets/images/bali/destination/thumbnail-dest-danauBedugul.webp';
+import danauBegudulTwo from '/src/assets/images/bali/destination/thumbnail-dest-danauBedugul-2.webp';
+import danauBegudulTree from '/src/assets/images/bali/destination/thumbnail-dest-danauBedugul-3.webp';
+import tariKecakOne from '/src/assets/images/bali/destination/thumbnail-dest-tariKecakUluwatu.webp';
+import tariKecakTwo from '/src/assets/images/bali/destination/thumbnail-dest-tariKecakUluwatu-2.webp';
+import tariKecakTree from '/src/assets/images/bali/destination/thumbnail-dest-tariKecakUluwatu-3.webp';
+
+// Provinsi Sulawesi Utara
+import provinsiSulut from '/src/assets/images/sulut/thumbnail-sulut.webp';
+import bunakenOne from '/src/assets/images/sulut/destination/thumbnail-dest-bunaken.webp';
+import bunakenTwo from '/src/assets/images/sulut/destination/thumbnail-dest-bunaken-2.webp';
+import bunakenTree from '/src/assets/images/sulut/destination/thumbnail-dest-bunaken-3.webp';
+import danauLinowTomohonOne from '/src/assets/images/sulut/destination/thumbnail-dest-danauLinowtomohon.webp';
+import danauLinowTomohonTwo from '/src/assets/images/sulut/destination/thumbnail-dest-danauLinowtomohon-2.webp';
+import danauLinowTomohonTree from '/src/assets/images/sulut/destination/thumbnail-dest-danauLinowtomohon-3.webp';
+import pantaiPatokanOne from '/src/assets/images/sulut/destination/thumbnail-dest-pantaiPatokan.webp';
+import pantaiPatokanTwo from '/src/assets/images/sulut/destination/thumbnail-dest-pantaiPatokan-2.webp';
+import pantaiPatokanTree from '/src/assets/images/sulut/destination/thumbnail-dest-pantaiPatokan-3.webp';
+
+// Provinsi Papua
+import provinsiPapua from '/src/assets/images/papua/thumbnail-papua.webp';
+import danauSentaiOne from '/src/assets/images/papua/destination/thumbnail-dest-danauSentani.webp';
+import danauSentaiTwo from '/src/assets/images/papua/destination/thumbnail-dest-danauSentani-2.webp';
+import danauSentaiTree from '/src/assets/images/papua/destination/thumbnail-dest-danauSentani-3.webp';
+import rajaAmpatOne from '/src/assets/images/papua/destination/thumbnail-dest-rajaAmat.webp';
+import rajaAmpatTwo from '/src/assets/images/papua/destination/thumbnail-dest-rajaAmat-2.webp';
+import rajaAmpatTree from '/src/assets/images/papua/destination/thumbnail-dest-rajaAmat-3.webp';
+import tamanNasiLorenztOne from '/src/assets/images/papua/destination/thumbnail-dest-tamanNasLorenzt.webp';
+import tamanNasiLorenztTwo from '/src/assets/images/papua/destination/thumbnail-dest-tamanNasLorenzt-2.webp';
+import tamanNasiLorenztTree from '/src/assets/images/papua/destination/thumbnail-dest-tamanNasLorenzt-3.webp'; 
+
+// Provinsi Jawa Barat
+import provinsiJabar from '/src/assets/images/jabar/thumbnail-jabar.webp';
+import kawahPutih from '/src/assets/images/jabar/destination/thumbnail-dest-kawahPutih.webp';
+import kawahPutihTwo from '/src/assets/images/jabar/destination/thumbnail-dest-kawahPutih-2.webp';
+import kawahPutihTree from '/src/assets/images/jabar/destination/thumbnail-dest-kawahPutih-3.webp';
+import museumGeologi from '/src/assets/images/jabar/destination/thumbnail-dest-museumGeologi.webp';
+import museumGeologiTwo from '/src/assets/images/jabar/destination/thumbnail-dest-museumGeologi-2.webp';
+import museumGeologiTree from '/src/assets/images/jabar/destination/thumbnail-dest-museumGeologi-3.webp';
+import saungAngklung from '/src/assets/images/jabar/destination/thumbnail-dest-saungAngklung.webp';
+import saungAngklungTwo from '/src/assets/images/jabar/destination/thumbnail-dest-saungAngklung-2.webp';
+import saungAngklungTree from '/src/assets/images/jabar/destination/thumbnail-dest-saungAngklung-3.webp';
+
 
 
 // Music
@@ -277,26 +325,102 @@ export default [
     {
         id: 3,
         province: "Jawa Barat",
-        thumbnailProvince: provinsiJateng,
+        thumbnailProvince: provinsiJabar,
         bgMusic: jabarMusic,
         destinations: [
             {
-                id: 3,
-                thumbnailProvince: provinsiJateng,
-                name: "Gunung Ciremai",
-                category: "kesenian", 
-                description: "Gunung Merbabu adalah gunung berapi dengan ketinggian sekitar 3.145 mdpl.",
-                thumbnail: gunungMerbabuOne,
-                thumbnailTwo: gunungMerbabuTwo,
-                thumbnailTree: gunungMerbabuTree,
+                id: 30,
+                thumbnailProvince: provinsiJabar,
+                name: "Kawah Putih",
+                category: "alam", 
+                description: "Kawah Putih merupakan obyek wisata keluarga yang ada di Jawa Barat. Kamu bisa melihat secara langsung keindahan kawah yang spektakuler tentunya bakal jadi pengalaman yang tak terlupakan. Berjarak sekitar 50 kilometer dari selatan Kota Bandung, Kawah Putih merupakan danau yang terletak di kawah gunung berapi yang tidak aktif. Danau ini terkenal akan warnanya yang putih kehijauan.",
+                thumbnail: kawahPutih,
+                thumbnailTwo: kawahPutihTwo,
+                thumbnailTree: kawahPutihTree,
                 province: "Jawa Barat",
-                location: "Semarang",
-                viewCount: 4000,
-                locationLink: "https://maps.app.goo.gl/PHCgoG8gmPksbWiU9",
-                price: 300000,
-                rating: 4.8,
+                location: "Bandung",
+                locationMaps: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1979.3260578657305!2d107.40213965!3d-7.16615405!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e688c1383dc510f%3A0xfab41bb8e4a3a83e!2sKawah%20Putih!5e0!3m2!1sid!2sid!4v1725036912312!5m2!1sid!2sid",
+                locationLink: "https://maps.app.goo.gl/yoyNBSbNrgsg4X3R8",
+                rute: null,
+                price: 30000,
+                priceDetail: [
+                    {
+                        id: 1,
+                        name: "WNA",
+                        price: 74000
+                    },
+                    {
+                        id: 2,
+                        name: "WNI",
+                        price: 30000
+                    }
+                ],
+                viewCount: 3001,
+                rating: 4.5,
                 createdAt: "2023-11-15 10:21:37.261134+01:00"
-            }
+            },
+            {
+                id: 31,
+                thumbnailProvince: provinsiJabar,
+                name: "Museum Geologi",
+                category: "sejarah", 
+                description: "Sebagai monumen bersejarah, museum ini berada di bawah perlindungan pemerintah dan merupakan peninggalan sejarah nasional. Di museum ini, tersimpan dan mengelola berbagai materi geologi, seperti fosil, batuan, dan mineral. Semua materi tersebut dikumpulkan selama kerja lapangan di Indonesia sejak tahun 1850.",
+                thumbnail: museumGeologi,
+                thumbnailTwo: museumGeologiTwo,
+                thumbnailTree: museumGeologiTree,
+                province: "Jawa Barat",
+                location: "Bandung",
+                locationMaps: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.9154386587297!2d107.6188750101864!3d-6.900716193069794!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68e64ccaafebbd%3A0x9e53739bff7334f6!2sMuseum%20Geologi%20Bandung!5e0!3m2!1sid!2sid!4v1725038218058!5m2!1sid!2sid",
+                locationLink: "https://maps.app.goo.gl/g2twydtGzJRucEiT9",
+                rute: null,
+                price: 2000,
+                priceDetail: [
+                    {
+                        id: 1,
+                        name: "WNA",
+                        price: 10000
+                    },
+                    {
+                        id: 2,
+                        name: "WNI",
+                        price: 2000
+                    }
+                ],
+                viewCount: 3002,
+                rating: 4.7,
+                createdAt: "2023-11-15 10:21:37.261134+01:00"
+            },
+            {
+                id: 32,
+                thumbnailProvince: provinsiJabar,
+                name: "Saung Angklung",
+                category: "kesenian", 
+                description: "Dalam persembunyiannya yang hijau di tengah kesibukan Kota Bandung, Saung Angklung Udjo telah menjadi magnet bagi wisatawan mancanegara yang mencari pengalaman budaya Nusantara yang tak terlupakan.",
+                thumbnail: saungAngklung,
+                thumbnailTwo: saungAngklungTwo,
+                thumbnailTree: saungAngklungTree,
+                province: "Jawa Barat",
+                location: "Bandung",
+                locationMaps: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15843.762707847656!2d107.654685!3d-6.897699!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68e7904f868405%3A0xefbc33f025ba4c9c!2sSaung%20Angklung%20Udjo!5e0!3m2!1sid!2sid!4v1725037178273!5m2!1sid!2sid",
+                locationLink: "https://maps.app.goo.gl/sDECzYCyAFwmSY2R9",
+                rute: null,
+                price: 15000,
+                priceDetail: [
+                    {
+                        id: 1,
+                        name: "WNA",
+                        price: 106000
+                    },
+                    {
+                        id: 2,
+                        name: "WNI",
+                        price: 67000
+                    }
+                ],
+                viewCount: 3003,
+                rating: 4.7,
+                createdAt: "2023-11-15 10:21:37.261134+01:00"
+            },
         ],
         createdAt: "2023-11-15 10:21:37.261134+01:00"
     },
@@ -532,28 +656,104 @@ export default [
         ],
         createdAt: "2023-11-15 10:21:37.261134+01:00"
     },
-    // Provinsi Bali
+    // Provinsi Bali done
     {
         id: 6,
         province: "Bali",
-        thumbnailProvince: provinsiJateng,
+        thumbnailProvince: provinsiBali,
         bgMusic: baliMusic,
         destinations: [
             {
-                id: 6,
-                thumbnailProvince: provinsiJateng,
-                name: "Gunung NTB",
-                category: "kesenian", 
-                description: "Gunung Merbabu adalah gunung berapi dengan ketinggian sekitar 3.145 mdpl.",
-                thumbnail: gunungMerbabuOne,
-                thumbnailTwo: gunungMerbabuTwo,
-                thumbnailTree: gunungMerbabuTree,
+                id: 60,
+                thumbnailProvince: provinsiBali,
+                name: "Air Terjun Sekumpul",
+                category: "alam", 
+                description: "Air Terjun Sekumpul berlokasi di Desa Sekumpul, Kecamatan Sawan, Kabupaten Buleleng, Bal Utarai, Bali. Obyek wisata tersebut sebenarnya cukup jauh dari Bandara Ngurah Rai di Denpasar. Kira-kira sekitar 94,2 kilometer atau setidaknya menghabiskan waktu tiga jam untuk sampai ke sana.",
+                thumbnail: airterjunSekumpulOne,
+                thumbnailTwo: airterjunSekumpulTwo,
+                thumbnailTree: airterjunSekumpulTree,
                 province: "Bali",
-                location: "Semarang",
-                viewCount: 4000,
-                locationLink: "https://maps.app.goo.gl/PHCgoG8gmPksbWiU9",
-                price: 300000,
-                rating: 4.8,
+                location: "Buleleng",
+                locationMaps: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15797.000801074972!2d115.1825825!3d-8.1775308!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd18f2016762a37%3A0x18e8b8bb069da935!2sSekumpul%20waterfall!5e0!3m2!1sid!2sid!4v1725029039867!5m2!1sid!2sid",
+                locationLink: "https://maps.app.goo.gl/eytuFK99kbSz7B1D7",
+                rute: null,
+                price: 10000,
+                priceDetail :[
+                    {
+                        id: 1,
+                        name: "WNA",
+                        price: 20000
+                    },
+                    {
+                        id: 2,
+                        name: "WNI",
+                        price: 10000
+                    }
+                ],
+                viewCount: 6001,
+                rating: 4.1,
+                createdAt: "2023-11-15 10:21:37.261134+01:00"
+            },
+            {
+                id: 61,
+                thumbnailProvince: provinsiBali,
+                name: "Tari Kecak Uluwatu",
+                category: "kesenian", 
+                description: "Uluwatu Kecak Dance atau oleh wisatawan domestik lebih dikenal dengan nama Tari Kecak Uluwatu adalah sebuah perkumpulan kelompok seni masyarakat Desa Pecatu, Denpasar-Bali. Desa paling ujung selatan dari pulau Bali ini merupakan sebuah desa yang sangat terkenal dengan objek wisata andalan yaitu Pura Uluwatu, desa ini juga terkenal dengan tempat dimana banyak hotel & fasilitas wisata berada. Lokasi yang sangat strategis dengan keindahan alam yang luar biasa membuat desa ini dipilih oleh para investor untuk menanamkan modal usahanya, contohlah Bulgari Hotels & Resorts, Bali, Alila Villas Uluwatu, The Istana, Tirtha Bali, The Edge, The Khayangan estate dan masih banyak lagi hotel maupun wedding venue yang dapat and temui di desa satu ini.",
+                thumbnail: tariKecakOne,
+                thumbnailTwo: tariKecakTwo,
+                thumbnailTree: tariKecakTree,
+                province: "Bali",
+                location: "Badung",
+                locationMaps: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3942.5254392342695!2d115.0854093!3d-8.8305729!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd2500503808f13%3A0x34326abe297b8d24!2sTari%20Kecak%20%26%20Api%20Uluwatu!5e0!3m2!1sid!2sid!4v1725029416138!5m2!1sid!2sid",
+                locationLink: "https://maps.app.goo.gl/rZF9toSSw3wLiHAP9",
+                rute: null,
+                price: 150000,
+                priceDetail :[
+                    {
+                        id: 1,
+                        name: "WNA",
+                        price: 150000
+                    },
+                    {
+                        id: 2,
+                        name: "WNI",
+                        price: 150000
+                    }
+                ],
+                viewCount: 6002,
+                rating: 4.6,
+                createdAt: "2023-11-15 10:21:37.261134+01:00"
+            },
+            {
+                id: 62,
+                thumbnailProvince: provinsiBali,
+                name: "Danau Bedugul",
+                category: "alam", 
+                description: "Danau Bratan (aksara Bali: ᬤᬦᬸᬩ᭄ᬭᬢᬦ᭄) adalah sebuah danau yang terletak di kawasan Bedugul, Desa Candikuning, Kecamatan Baturiti, Kabupaten Tabanan, Bali. Danau yang terletak paling timur di antara dua danau lainnya yaitu Danau Tamblingan dan Danau Buyan, yang merupakan gugusan danau kembar di dalam sebuah kaldera besar, Danau Bratan terbilang cukup istimewa. Berada di jalur jalan provinsi yang menghubungkan Denpasar-Singaraja serta letaknya yang dekat dengan Kebun Raya Eka Karya menjadikan tempat ini menjadi salah satu andalan wisata pulau Bali. Disamping mudah dijangkau Danau Bratan juga menyediakan beragam pesona dan akomodasi yang memadai.",
+                thumbnail: danauBegudulOne,
+                thumbnailTwo: danauBegudulTwo,
+                thumbnailTree: danauBegudulTree,
+                province: "Bali",
+                location: "Tabanan",
+                locationMaps: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15793.182481044068!2d115.1751772!3d-8.273346850000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd18968c2459d53%3A0xbe028c1761c867ac!2sDanau%20Beratan!5e0!3m2!1sid!2sid!4v1725029553568!5m2!1sid!2sid",
+                locationLink: "https://maps.app.goo.gl/P4a22gSGLN7bhgSZ6",
+                rute: null,
+                price: 50000,
+                priceDetail :[
+                    {
+                        id: 1,
+                        name: "WNA",
+                        price: 75000
+                    },
+                    {
+                        id: 2,
+                        name: "WNI",
+                        price: 50000
+                    }
+                ],
+                viewCount: 6003,
+                rating: 4.7,
                 createdAt: "2023-11-15 10:21:37.261134+01:00"
             }
         ],
@@ -613,28 +813,104 @@ export default [
         ],
         createdAt: "2023-11-15 10:21:37.261134+01:00"
     },
-    // Sulawesi Utara
+    // Sulawesi Utara done
     {
         id: 9,
         province: "Sulawesi Utara",
-        thumbnailProvince: provinsiJateng,
+        thumbnailProvince: provinsiSulut,
         bgMusic: sulutMusic,
         destinations: [
             {
-                id: 6,
-                thumbnailProvince: provinsiJateng,
-                name: "Gunung NTB",
-                category: "kesenian", 
-                description: "Gunung Merbabu adalah gunung berapi dengan ketinggian sekitar 3.145 mdpl.",
-                thumbnail: gunungMerbabuOne,
-                thumbnailTwo: gunungMerbabuTwo,
-                thumbnailTree: gunungMerbabuTree,
+                id: 90,
+                thumbnailProvince: provinsiSulut,
+                name: "Taman Nasional Bunaken",
+                category: "alam", 
+                description: "Taman Nasional Bunaken adalah taman laut yang terletak di Sulawesi Utara, Indonesia. Taman ini terletak di Segitiga Terumbu Karang yang menjadi habitat bagi 390 spesies terumbu karang[2] dan juga berbagai spesies ikan, moluska, reptil, dan mamalia laut. Taman Nasional Bunaken merupakan perwakilan ekosistem laut Indonesia, meliputi padang rumput laut, terumbu karang, dan ekosistem pantai. Taman nasional ini didirikan pada tahun 1991 dan meliputi wilayah seluas 890.65 km². 97% dari taman nasional ini merupakan habitat laut, sementara 3% sisanya merupakan daratan, meliputi lima pulau: Bunaken, Manado Tua, Mantehage, Naen, dan Siladen.",
+                thumbnail: bunakenOne,
+                thumbnailTwo: bunakenTwo,
+                thumbnailTree: bunakenTree,
                 province: "Sulawesi Utara",
-                location: "Semarang",
-                viewCount: 4000,
-                locationLink: "https://maps.app.goo.gl/PHCgoG8gmPksbWiU9",
-                price: 300000,
-                rating: 4.8,
+                location: "Manado",
+                locationMaps: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.224995671744!2d124.76617399999999!3d1.6193013!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2d7873db0880843f%3A0x606df49ef663eff7!2sTaman%20Nasional%20Bunaken!5e0!3m2!1sid!2sid!4v1725030101029!5m2!1sid!2sid",
+                locationLink: "https://maps.app.goo.gl/vrUCsRpLGdZMyz7w8",
+                rute: null,
+                price: 5000,
+                priceDetail: [
+                    {
+                        id: 1,
+                        name: "WNA",
+                        price: 150000
+                    },
+                    {
+                        id: 2,
+                        name: "WNI",
+                        price: 5000
+                    }
+                ],
+                viewCount: 9001,
+                rating: 4.6,
+                createdAt: "2023-11-15 10:21:37.261134+01:00"
+            },
+            {
+                id: 91,
+                thumbnailProvince: provinsiSulut,
+                name: "Danau Linow Tomohon",
+                category: "alam", 
+                description: "Danau Linouw adalah sebuah danau vulkanik yang terletak di kota Tomohon, Sulawesi Utara, Indonesia. Beberapa lubang hidrotermal memuntahkan gas panas dari tepi dan kedalaman danau. Komposisi kimiawi yang berubah dari danau berarti warnanya sering berubah warna, mulai dari merah, hijau tua, dan bahkan biru gelap.",
+                thumbnail: danauLinowTomohonOne,
+                thumbnailTwo: danauLinowTomohonTwo,
+                thumbnailTree: danauLinowTomohonTree,
+                province: "Sulawesi Utara",
+                location: "Tomohon",
+                locationMaps: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15955.347761461338!2d124.8263889!3d1.27083325!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x32876af0f84c2b1f%3A0xd9a9eb5e61927946!2sDanau%20Linow!5e0!3m2!1sid!2sid!4v1725030348600!5m2!1sid!2sid",
+                locationLink: "https://maps.app.goo.gl/eBuGz1TwWNA93RXJ8",
+                rute: null,
+                price: 15000,
+                priceDetail: [
+                    {
+                        id: 1,
+                        name: "WNA",
+                        price: 25000
+                    },
+                    {
+                        id: 2,
+                        name: "WNI",
+                        price: 15000
+                    }
+                ],
+                viewCount: 9002,
+                rating: 4.7,
+                createdAt: "2023-11-15 10:21:37.261134+01:00"
+            },
+            {
+                id: 92,
+                thumbnailProvince: provinsiSulut,
+                name: "Pantai Patokan",
+                category: "alam", 
+                description: "Pantai Patokan seperti berada di dalam sebuah palung Berlokasi tepat di Nuangan, Kabupaten Bolaang Mongondow Timur, Sulawesi Utara, Pantai Patokan yang terbilang baru dikenal langsung meraih popularitas berkat keindahan yang dimilikinya. Unggahan wisatawan di media sosial membuktikan hal tersebut. Tebing-tebing kokoh pengapit pantai berpasir putih yang terhampar bak permadani, membuat Pantai Patokan seperti berada di dalam sebuah palung jika dilihat dari atas. Deburan ombak yang dipecah dinding tebing membuat suasana menjadi meriah sekaligus alami.",
+                thumbnail: pantaiPatokanOne,
+                thumbnailTwo: pantaiPatokanTwo,
+                thumbnailTree: pantaiPatokanTree,
+                province: "Sulawesi Utara",
+                location: "Bolaang Mongondow",
+                locationMaps: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.585932552083!2d124.5655572!3d0.6184005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x32808332f592cd97%3A0xc1b1bf360d06b820!2sPantai%20Jiko%20%2F%20Patokan!5e0!3m2!1sid!2sid!4v1725031199755!5m2!1sid!2sid",
+                locationLink: "https://maps.app.goo.gl/MuX1y5H6fQbfSPxx8",
+                rute: null,
+                price: 35000,
+                priceDetail: [
+                    {
+                        id: 1,
+                        name: "WNA",
+                        price: 35000
+                    },
+                    {
+                        id: 2,
+                        name: "WNI",
+                        price: 35000
+                    }
+                ],
+                viewCount: 9003,
+                rating: 4.6,
                 createdAt: "2023-11-15 10:21:37.261134+01:00"
             }
         ],
@@ -694,28 +970,104 @@ export default [
         ],
         createdAt: "2023-11-15 10:21:37.261134+01:00"
     },
-    // Papua
+    // Papua done
     {
         id: 12,
         province: "Papua",
-        thumbnailProvince: provinsiJateng,
+        thumbnailProvince: provinsiPapua,
         bgMusic: papuaMusic,
         destinations: [
             {
-                id: 6,
-                thumbnailProvince: provinsiJateng,
-                name: "Gunung NTB",
-                category: "kesenian", 
-                description: "Gunung Merbabu adalah gunung berapi dengan ketinggian sekitar 3.145 mdpl.",
-                thumbnail: gunungMerbabuOne,
-                thumbnailTwo: gunungMerbabuTwo,
-                thumbnailTree: gunungMerbabuTree,
+                id: 120,
+                thumbnailProvince: provinsiPapua,
+                name: "Danau Sentani",
+                category: "alam", 
+                description: "Danau Sentani adalah danau yang terletak di Pulau Papua, Indonesia. Danau Sentani berada di bawah lereng Pegunungan Cagar Alam Cyclops yang memiliki luas sekitar 245.000 hektar. Danau ini terbentang antara Kabupaten Jayapura dan Kota Jayapura, Provinsi Papua, Indonesia. Danau Sentani yang memiliki luas sekitar 9.360 hektar dan berada pada ketinggian 75 mdpl. Danau Sentani merupakan danau terluas di Papua. Di danau ini juga terdapat 21 buah pulau kecil menghiasi danau yang indah ini. Arti kata Sentani berarti di sini kami tinggal dengan damai",
+                thumbnail: danauSentaiOne,
+                thumbnailTwo: danauSentaiTwo,
+                thumbnailTree: danauSentaiTree,
                 province: "Papua",
-                location: "Semarang",
-                viewCount: 4000,
-                locationLink: "https://maps.app.goo.gl/PHCgoG8gmPksbWiU9",
-                price: 300000,
-                rating: 4.8,
+                location: "Jayapura",
+                locationMaps: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d127540.09957134185!2d140.50874725000003!3d-2.6261341999999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x686cf33c72660fbf%3A0x7e5c1e7d20d930d7!2sDanau%20Sentani!5e0!3m2!1sid!2sid!4v1725031342939!5m2!1sid!2sid",
+                locationLink: "https://maps.app.goo.gl/dXzXTgdJDT5FpsUq6",
+                rute: null,
+                price: 10000,
+                priceDetail : [
+                    {
+                        id: 1,
+                        name: "WNA",
+                        price: 10000
+                    },
+                    {
+                        id: 2,
+                        name: "WNI",
+                        price: 10000
+                    }
+                ],
+                viewCount: 12001,
+                rating: 4.5,
+                createdAt: "2023-11-15 10:21:37.261134+01:00"
+            },
+            {
+                id: 121,
+                thumbnailProvince: provinsiPapua,
+                name: "Raja Ampat",
+                category: "alam", 
+                description: "Menurut cerita mitos masyarakat asli Raja Ampat, pada suatu hari seorang wanita menemukan tujuh telur, empat diantaranya berubah menjadi pangeran dan tiga sisanya menjadi seorang wanita, hantu, dan sebuah batu. Keempat pangeran tadi berpisah lalu masing-masing berkuasa di Waigeo (Wawiyai), Salawati (Samate), Misool Barat (Waigama) dan Misool Timur (Lilinta). Sedangkan kerajaan di Salawati selatan di Sailolof didirikan oleh fun Mo, seorang suku Moi yang juga berasal dari telur burung baikole, menikah dengan putri raja Waigeo, Pinfun Libit. Dilihat dari sisi sejarah, Kepulauan Raja Ampat di abad ke-15 merupakan bagian dari kekuasaan Kesultanan Tidore, sebuah kerajaan besar yang berpusat di Kepulauan Maluku setelah sebelumnya wilayah ini berhubungan dengan Kesultanan Bacan. Setelah ekspansi melalui hubungannya dengan Gurabesi, Sultan Tidore menjalankan pemerintahan dan memungut upeti dari wilayah ini melalui raja-raja lokal yang berkuasa di Waigeo, Salawati, Misool, dan Waigama. Sedangkan Sailolof yang pendirinya tidak memiliki hubungan darah dengan kerajaan lain juga memiliki hubungan yang sama dengan Tidore.",
+                thumbnail: rajaAmpatOne,
+                thumbnailTwo: rajaAmpatTwo,
+                thumbnailTree: rajaAmpatTree,
+                province: "Papua",
+                location: "Sorong",
+                locationMaps: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2042455.5935102184!2d130.50521755!3d-1.0320467500000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2d5c3eaaccb47097%3A0x7851bd844c4cdf44!2sKabupaten%20Raja%20Ampat!5e0!3m2!1sid!2sid!4v1725031244775!5m2!1sid!2sid",
+                locationLink: "https://maps.app.goo.gl/xRg3izgZmReekupd7",
+                rute: null,
+                price: 500000,
+                priceDetail : [
+                    {
+                        id: 1,
+                        name: "WNA",
+                        price: 1000000
+                    },
+                    {
+                        id: 2,
+                        name: "WNI",
+                        price: 500000
+                    }
+                ],
+                viewCount: 12002,
+                rating: 4.4,
+                createdAt: "2023-11-15 10:21:37.261134+01:00"
+            },
+            {
+                id: 122,
+                thumbnailProvince: provinsiPapua,
+                name: "Taman Lorentz",
+                category: "alam", 
+                description: "Taman Nasional Lorentz merupakan perwakilan dari ekosistem terlengkap untuk keanekaragaman hayati di Asia Pasifik. Kawasan ini juga merupakan salah satu di antara tiga kawasan di dunia yang mempunyai gletser di daerah tropis.",
+                thumbnail: tamanNasiLorenztOne,
+                thumbnailTwo: tamanNasiLorenztTwo,
+                thumbnailTree: tamanNasiLorenztTree,
+                province: "Papua",
+                location: "Yakapis",
+                locationMaps: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15907.199500917122!2d137.9726829!3d-4.6297633!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x683ada72cad8bf5b%3A0xe5acb2b81cad387f!2sTaman%20Nasional%20Lorentz!5e0!3m2!1sid!2sid!4v1725036412652!5m2!1sid!2sid",
+                locationLink: "https://maps.app.goo.gl/XGRyuuR29Y2fcffw6",
+                rute: null,
+                price: 0,
+                priceDetail : [
+                    {
+                        id: 1,
+                        name: "WNA",
+                        price: 0
+                    },
+                    {
+                        id: 2,
+                        name: "WNI",
+                        price: 0
+                    }
+                ],
+                viewCount: 12002,
+                rating: 4.4,
                 createdAt: "2023-11-15 10:21:37.261134+01:00"
             }
         ],

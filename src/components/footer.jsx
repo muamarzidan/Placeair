@@ -27,7 +27,7 @@ const Footer = () => {
   return (
     <>
       <footer className="bg-[#f4f4f4] w-full h-auto">
-        <div className="container flex flex-col w-full h-auto gap-5 pb-5 pt-7 sm:pb-8 sm:pt-14">
+        <div className="container flex flex-col w-full h-auto gap-5 pb-6 pt-7 sm:pb-7 sm:pt-14">
           {/* Top main side footer area */}
           <div className="flex flex-wrap w-full h-auto gap-8 md:gap-0">
             {/* Child left/top side choose area */}

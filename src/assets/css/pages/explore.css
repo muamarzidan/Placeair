@@ -101,6 +101,17 @@
     }
 }
 
+@media only screen and (max-width: 370px) {
+    #category-button {
+        padding: 7px 12px !important;
+        border-radius: 50px !important;
+    }
+    #explore-category-button{
+        padding: 7px 12px !important;
+        border-radius: 50px !important; 
+    }
+}
+
 @media only screen and (max-width: 362.5px) {
     .explore-card-prov {
         width: 140px !important;
@@ -108,7 +119,7 @@
     }
 }
 
-@media only screen and (max-width: 342px) {
+@media only screen and (max-width: 342.5px) {
     .explore-card-prov {
         width: 130px !important;
         height: 170px !important;
@@ -260,7 +271,7 @@
     }
 }
 
-@media only screen and (max-width: 342px) {
+@media only screen and (max-width: 342.5px) {
     .explore-card-des {
         width: 130px !important;
         height: 170px !important;

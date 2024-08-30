@@ -59,7 +59,7 @@ export default function HomePage() {
               <h4 className="text-sm font-semibold sm:text-md md:text-lg xl:text-3xl text-secondary">TELUSURI</h4>
               <h3 className="text-xl font-semibold sm:text-2xl md:text-4xl xl:text-6xl">Wilayah dari Peta Indonesia</h3>
               <Maps />
-              <span className="w-full pt-5 text-fourly text-end ">Hint: Arahkan kursor Anda ke titik untuk melihat wilayah selengkapnya</span>
+              <span id="hint-maps" className="w-full pt-5 text-xs sm:text-md lg:text-lg text-fourly text-end">Hint: Arahkan kursor Anda ke titik untuk melihat wilayah selengkapnya</span>
             </div>
           </div>
         </section>

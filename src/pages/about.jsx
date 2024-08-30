@@ -5,6 +5,9 @@ import NewsletterForm from "../components/NewsletterForm";
 import FloatingButton from "../components/FloatingButton";
 import Navbar from "../components/navbar";
 import Footer from "../components/footer";
+import amarTeamPlaceir from "../assets/images/profile/profile-amar-placeir.png";
+import fadiaTeamPlaceir from "../assets/images/profile/profile-fadia-placeir.png";
+import mellaTeamPlaceir from "../assets/images/profile/profile-mella-placeir.png";
 import imageAboutPlaceir from "../assets/images/banner-about-placeir.webp";
 import "../assets/css/pages/about.css";
 
@@ -28,6 +31,7 @@ export default function AboutPage() {
         }
     };
 
+    // handler scroll to bottom with about id
     const handleScrollToAbout = (sectionId) => {
         const section = document.getElementById(sectionId);
         if (section) {
@@ -38,7 +42,7 @@ export default function AboutPage() {
     useEffect(() => {
         handleResizeIcon();
         window.addEventListener('resize', handleResizeIcon);
-        // Always cleanup event listener on component unmount
+        // Always cleanup event listener on component unmount or to prevent memory leak
         return () => {
             window.removeEventListener('resize', handleResizeIcon);
         };
@@ -96,15 +100,15 @@ export default function AboutPage() {
                             <h1 className="text-2xl font-semibold sm:text-3xl md:text-4xl xl:text-6xl">Tim di Balik Placeir</h1>
                             <div className="flex items-center justify-center w-full h-auto gap-0 sm:gap-7 lg:gap-14 !mt-3 sm:!mt-8">
                                 <div className="flex flex-col items-center w-full h-full max-w-[242px] max-h-[232px] gap-2">
-                                    <img src="https://img.ws.mms.shopee.co.id/830bf9cb3ae0398c6e543c0b71d67534" alt="team member" className="w-full h-full max-w-[90px] max-h-[90px] sm:max-w-[142px] sm:max-h-[142px] lg:max-w-[232px] lg:max-h-[232px] rounded-full   " />
+                                    <img src={amarTeamPlaceir} alt="profile team placeir" className="w-full h-full max-w-[90px] max-h-[90px] sm:max-w-[142px] sm:max-h-[142px] lg:max-w-[232px] lg:max-h-[232px] rounded-full   " />
                                     <span className="text-sm font-semibold about-name sm:text-xl lg:text-3xl">Muamar Zidan T.A</span>
                                 </div>
                                 <div className="flex flex-col items-center w-full h-full max-w-[242px] max-h-[232px] gap-2">
-                                    <img src="https://img.ws.mms.shopee.co.id/830bf9cb3ae0398c6e543c0b71d67534" alt="team member" className="w-full h-full max-w-[90px] max-h-[90px] sm:max-w-[142px] sm:max-h-[142px] lg:max-w-[232px] lg:max-h-[232px] rounded-full" />
+                                    <img src={fadiaTeamPlaceir} alt="profile team placeir" className="w-full h-full max-w-[90px] max-h-[90px] sm:max-w-[142px] sm:max-h-[142px] lg:max-w-[232px] lg:max-h-[232px] rounded-full" />
                                     <span className="text-sm font-semibold about-name sm:text-xl lg:text-3xl">Fadia Rizqa Yunanto</span>
                                 </div>
                                 <div className="flex flex-col items-center w-full h-full max-w-[242px] max-h-[232px] gap-2">
-                                    <img src="https://img.ws.mms.shopee.co.id/830bf9cb3ae0398c6e543c0b71d67534" alt="team member" className="w-full h-full max-w-[90px] max-h-[90px] sm:max-w-[142px] sm:max-h-[142px] lg:max-w-[232px] lg:max-h-[232px] rounded-full" />
+                                    <img src={mellaTeamPlaceir} alt="profile team placeir" className="w-full h-full max-w-[90px] max-h-[90px] sm:max-w-[142px] sm:max-h-[142px] lg:max-w-[232px] lg:max-h-[232px] rounded-full" />
                                     <span className="text-sm font-semibold about-name sm:text-xl lg:text-3xl">Mellafesa Rofida</span>
                                 </div>
                             </div>

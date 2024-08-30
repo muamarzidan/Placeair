@@ -19,6 +19,7 @@ const Navbar = () => {
       return locationPath === path || ( (path === "/explore" && locationPath.startsWith("/explore") || (path === "/blog" && locationPath.startsWith("/blog")) || (path === "/explore-desination" && locationPath.startsWith("/explore-destination"))));
     };
 
+    // handler to check if the path is explore destination and blog to change color text and background navbar
     const isExploreDestination = locationPath.startsWith("/explore-destination");
     const isBlogPath = locationPath.startsWith("/blog");
     
@@ -142,7 +143,7 @@ const Navbar = () => {
                 <Icon
                   icon="charm:menu-hamburger"
                   width="26"
-                  height="24"
+                  height="25"
                   style={{ color: "#ffffff" }}
                 />
               </button>
@@ -154,7 +155,7 @@ const Navbar = () => {
               isMenuOpen ? "translate-x-0" : "translate-x-full"
             } w-[65%] md:hidden`}
           >
-            <div className="px-6 pt-4">
+            <div className="px-5 pt-3">
               <div className="flex justify-end">
                 <button
                   onClick={() => setIsMenuOpen(false)}
@@ -170,33 +171,25 @@ const Navbar = () => {
               <div className="flex flex-col w-full h-auto pt-2 space-y-4 text-xl">
                 <Link
                   to="/"
-                  className={`transition-all ${
-                    locationPath === "/" ? "font-semibold" : "font-normal"
-                  }`}
+                  className={`transition-all ${isPathActive("/") ? "font-semibold" : "font-normal"}`}
                 >
                   Home
                 </Link>
                 <Link
                   to="/explore"
-                  className={`transition-all ${
-                    locationPath === "/explore" ? "font-semibold" : "font-normal"
-                  }`}
+                  className={`transition-all ${isPathActive("/explore") ? "font-semibold" : "font-normal"}`}
                 >
                   Explore
                 </Link>
                 <Link
                   to="/about"
-                  className={`transition-all ${
-                    locationPath === "/about" ? "font-semibold" : "font-normal"
-                  }`}
+                  className={`transition-all ${isPathActive("/about") ? "font-semibold" : "font-normal"}`}
                 >
                   About Us
                 </Link>
                 <Link
                   to="/blog"
-                  className={`transition-all ${
-                    locationPath === "/blog" ? "font-semibold" : "font-normal"
-                  }`}
+                  className={`transition-all ${isPathActive("/blog") ? "font-semibold" : "font-normal"}`}
                 >
                   Blog
                 </Link>

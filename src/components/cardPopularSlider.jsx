@@ -104,7 +104,7 @@ const PopularCardSwiper = () => {
                 key={index}
                 className="flex items-center justify-center sm:block sm:items-start sm:justify-start"
               >
-                <div className="card-popular w-[250px] h-[306px] sm:w-[300px] sm:h-[356px] md:w-[350px] md:h-[406px] lg:w-full lg:h-[456px] max-w-[400px] max-h-[456px] flex flex-col justify-between p-3 rounded-xl md:rounded-3xl border-[1px] border-gray-300">
+                <div className="card-popular w-[250px] h-[306px] sm:w-[300px] sm:h-[356px] md:w-[350px] md:h-[406px] lg:w-full lg:h-[456px] max-w-[400px] max-h-[436px] flex flex-col justify-between p-3 rounded-xl md:rounded-3xl border-[1px] border-gray-300">
                   {/* image area */}
                   <div
                     className="card-image-popular w-[227px] h-[180px] sm:w-[277px] sm:h-[220px] md:w-[327px] md:h-[230px] lg:w-full lg:h-full !max-w-[377px] !max-h-[280px] p-3 rounded-lg md:rounded-xl"
@@ -141,7 +141,7 @@ const PopularCardSwiper = () => {
                     </span>
                   </Link>
                   {/* price and button area */}
-                  <div className="flex items-center justify-between w-full sm:!mt-4">
+                  <div className="flex items-center justify-between w-full mt-0 sm:!mt-2">
                     <span className="font-bold text-lg sm:text-[16px] md:text-[26px] text-[#171717]">
                       {formatPrice(data.price)}
                     </span>

@@ -10,6 +10,7 @@ import Search from "../../components/Search";
 import dataBlog from "../../api/blog";
 import "../../assets/css/pages/blog.css";
 
+
 export default function BlogPage() {
     const [searchBlog, setSearchBlog] = useState("");
     const debouncedSearch = useDebounceSearch(searchBlog, 500);

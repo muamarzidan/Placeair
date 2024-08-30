@@ -54,11 +54,12 @@ export default function ExplorePage() {
         };
     }, []);
 
-    // handler select & show destination with calculate most view destination
+    // handler select destination by category
     const handleCategoryClick = (category) => {
         setCategoryType(category);
     };
 
+    // handler to get key province and thumbnail province from api
     useEffect(() => {
         const mergedDestinations = dataAll.map(item => ({
             province: item.province,
@@ -66,7 +67,8 @@ export default function ExplorePage() {
         }));
         setAllProvince(mergedDestinations);
     }, []);
-    
+
+    // handler to get destination by category
     useEffect(() => {
         const mergedDestinations = dataAll.flatMap(province => province.destinations);
         const filter = mergedDestinations.filter((data) => {

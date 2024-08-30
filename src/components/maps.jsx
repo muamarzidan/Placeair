@@ -57,7 +57,7 @@ const IndonesiaMap = () => {
                     </feMerge>
                 </filter>
             </defs>
-            <g className="province-marker" onClick={() => window.location.href = '/explore'}>
+            <g className="province-marker" onClick={() => window.location.href = '/explore/Jawa%20Tengah'}>
                 <circle
                     cx="320"
                     cy="270"
@@ -84,7 +84,7 @@ const IndonesiaMap = () => {
                     fill="#000000"
                     className="province-label"
                     >
-                    Bangka Belitung
+                    Jawa Tengah
                 </text>
                 <polygon
                     points="-5,0 5,0 0,10"

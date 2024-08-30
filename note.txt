@@ -7,6 +7,7 @@ GENERAL
  - VIDEO PROSES
  - WAWANCARA
 
+
 PAGE 
  - HOME(MAPS) + HINT       PROSES
  - EXPLORE                 DONE
@@ -47,6 +48,11 @@ ENHANCE
  - FLOATING BUTTON SCROLL AND MUSIC             DONE
  - ADD FLOATING BUTTON                          DONE
  - SOUND PLAY	                                DONE
+ - ADD GAP IN CARD DEST /EXPLORE, /PROVINCE, / ALL DES     DONE                          
+ - RESIZE MT KATEGORY KEDESTINASI DI /EXPLORE   DONE
+ - RESIZE CATEGORY ALL DESTIONANTION            DONE
+ - BUG AUTO WRAP /explore-destination 342PX     DONE
+ - BUG CAED PROVINCE /explore 342PX             DONE
 
 
  LOGIC
@@ -54,8 +60,9 @@ ENHANCE
  - HANDLE SEARCH HISTORY                                DONE
  - HANDLE TITLE DI TAB                                  DONE
  - HANDLE LOGIC BOLD NAV EXPLORE DI PER SUB EXPLORE     DONE
- - HANDLE PAGINATION DI BLOG                            
+ - HANDLE PAGINATION DI BLOG                            DONE                   
  - HANDLE POSITION BANNER IN IN DETAIL ALL PROVINCE      
+ - HANDLE LINK COMPONENT MAPS                           DONE
  - HANDLE CONTACT SEND TO FROMSPREE                     DONE  
  - HANDLE LOGIC CONTACT US  	                        DONE
  - HANDLE 2 FLOATING BUTTON                             DONE

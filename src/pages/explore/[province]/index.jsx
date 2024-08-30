@@ -221,8 +221,8 @@ export default function ExploreProvincePage() {
                                                         {data.rating}
                                                     </span>
                                                 </div>
-                                            </div>
-                                            <span className="card-des-title w-fit text-[#171717] font-bold text-md sm:text-xl lg:text-2xl xl:text-3xl">
+                                            </div> 
+                                            <span className="card-des-title w-fit text-[#171717] font-bold text-md sm:text-xl lg:text-2xl xl:text-3xl pt-0 sm:pt-2">
                                                 {data.name}
                                             </span>
                                             {/* Icon and link location area */}
@@ -236,7 +236,7 @@ export default function ExploreProvincePage() {
                                                 <span className="text-sm card-loc-des sm:text-md xl:text-xl">{data.location}</span>
                                             </Link>
                                             {/* Price and button area */}
-                                            <div className="flex items-center justify-between w-full">
+                                            <div className="flex items-center justify-between w-full pt-0 sm:pt-2">
                                                 <span className="card-des-price font-bold text-md sm:text-2xl md:text-[20px] lg:text-[22px] xl:text-[26px] text-[#171717]">
                                                     {formatPrice(data.price)}
                                                 </span>

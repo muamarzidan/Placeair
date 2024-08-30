@@ -97,7 +97,7 @@ export default function ExplorePage() {
                     </div>
                 </section>
                 <section id="kategori" className="w-full h-auto py-14">
-                    <div className="container flex flex-col w-full h-auto gap-2 sm:gap-4">
+                    <div className="container flex flex-col w-full h-auto gap-2 sm:gap-3">
                         <h4 className="font-semibold text-sm sm:text-xl md:text-[24px] text-secondary text-left sm:text-center">
                             KATEGORI
                         </h4>
@@ -140,6 +140,7 @@ export default function ExplorePage() {
                         <ul className="flex w-auto h-auto gap-3 pt-4 text-white sm:gap-5">
                             {categories.map((category) => (
                                 <li
+                                    id="category-button"
                                     key={category}
                                     className={`px-4 sm:px-6 py-2 font-semibold rounded-full cursor-pointer text-sm sm:text-lg md:text-xl lg:text-3xl ${categoryType === category
                                             ? "bg-primary text-white"
@@ -152,7 +153,7 @@ export default function ExplorePage() {
                             ))}
                         </ul>
                         {/* Popular destination area */}
-                        <div className="flex flex-wrap items-center justify-between w-full h-auto gap-5 pt-10 explore-container-card">
+                        <div className="flex flex-wrap items-center justify-between w-full h-auto gap-5 pt-7 sm:pt-10 explore-container-card">
                             {allDestinations.length > 0 ? (
                                 allDestinations.map((data, index) => (
                                     <div
@@ -180,7 +181,7 @@ export default function ExplorePage() {
                                             </span>
                                         </div>
                                         </div>
-                                        <span className="card-des-title w-fit text-[#171717] font-bold text-md sm:text-xl lg:text-2xl xl:text-3xl">
+                                        <span className="card-des-title w-fit text-[#171717] font-bold text-md sm:text-xl lg:text-2xl xl:text-3xl pt-0 sm:pt-2">
                                             {data.name}
                                         </span>
                                         {/* Icon and link location area */}
@@ -194,7 +195,7 @@ export default function ExplorePage() {
                                             <span className="text-sm card-loc-des sm:text-md xl:text-xl"> {data.location}</span>
                                         </Link>
                                         {/* Price and button area */}
-                                        <div className="flex items-center justify-between w-full">
+                                        <div className="flex items-center justify-between w-full pt-0 sm:pt-3">
                                             <span className="card-des-price font-bold text-md sm:text-2xl md:text-[20px] lg:text-[22px] xl:text-[26px] text-[#171717]">
                                                 {formatPrice(data.price)}
                                             </span>

@@ -33,3 +33,12 @@
 .province-marker:hover .province-arrow {
   display: block;
 }
+
+
+@media only screen and (max-width: 1024px) {
+  .province-popover,
+  .province-label,
+  .province-arrow {
+    display: block;
+  }
+}

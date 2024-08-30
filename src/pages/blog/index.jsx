@@ -1,5 +1,6 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
+import { Icon } from "@iconify-icon/react";
 
 import useDebounceSearch from "../../hooks/debounce";
 import FloatingButton from "../../components/FloatingButton";
@@ -9,26 +10,60 @@ import Search from "../../components/Search";
 import dataBlog from "../../api/blog";
 import "../../assets/css/pages/blog.css";
 
-
 export default function BlogPage() {
     const [searchBlog, setSearchBlog] = useState("");
     const debouncedSearch = useDebounceSearch(searchBlog, 500);
+    const [currentPage, setCurrentPage] = useState(1);
+    const blogsPerPage = 6;
 
-    // handle scroll to top page was loaded ( hardcoded :) )
-    useEffect(() => {
-        window.scrollTo(0, 0);
-    }, []);
-
-    // handler search, category and filter blog by most viewCount
-    const handleSearchBlog = (e) => {
-        setSearchBlog(e.target.value);
-    };
+    const totalPages = Math.ceil(dataBlog.length / blogsPerPage);
 
     const filterMostViewBlog = dataBlog
         .filter((data) => {
             const searchFilter = data.title.toLowerCase().includes(debouncedSearch.toLowerCase());
             return searchFilter;
         }).sort((a, b) => b.viewCount - a.viewCount);
+
+    const currentBlogs = filterMostViewBlog.slice(
+        (currentPage - 1) * blogsPerPage, currentPage * blogsPerPage
+    );
+
+    const handlePageChange = (page) => {
+        setCurrentPage(page);
+    };
+
+    const renderPagination = () => {
+        const pages = [];
+        const maxPagesToShow = 3;
+        const startPage = Math.max(currentPage - Math.floor(maxPagesToShow / 2), 1);
+        const endPage = Math.min(startPage + maxPagesToShow - 1, totalPages);
+
+        for (let i = startPage; i <= endPage; i++) {
+            pages.push(
+                <button
+                    key={i}
+                    onClick={() => handlePageChange(i)}
+                    className={`text-sm sm:text-md px-4 py-2 rounded-lg ${
+                        i === currentPage ? 'bg-primary text-white font-semibold' : 'bg-[#F4F4F4] font-semibold text-[#717171]'
+                    }`}
+                >
+                    {i}
+                </button>
+            );
+        }
+
+        return (
+            <div className="flex items-center gap-2 sm:gap-3">
+                {currentPage > 1 && (
+                    <Icon icon="iconamoon:arrow-left-2-light" onClick={() => handlePageChange(currentPage - 1)} width={28} height={28} className="font-semibold rounded text-primary" />
+                )}
+                {pages}
+                {currentPage < totalPages && (
+                    <Icon onClick={() => handlePageChange(currentPage + 1)} icon="iconamoon:arrow-right-2-light" width={28} height={28} className="font-semibold rounded text-primary" />
+                )}
+            </div>
+        );
+    };
 
     return (
         <>
@@ -52,15 +87,15 @@ export default function BlogPage() {
                             id="search"
                             placeholder="Cari blog dan artikel..."
                             value={searchBlog}
-                            onChange={handleSearchBlog}
+                            onChange={(e) => setSearchBlog(e.target.value)}
                         />
                     </div>
                 </section>
                 <section id="kategori" className="w-full h-auto pt-3 pb-8 sm:pb-10 sm:pt-5 md:pt-5 md:pb-20">
                     <div className="container flex flex-col w-full h-auto">
                         <div className="flex flex-wrap items-start justify-between w-full h-auto gap-5 pt-5 explore-container-card">
-                            {filterMostViewBlog.length > 0 ? (
-                                filterMostViewBlog.map((data, index) => (
+                            {currentBlogs.length > 0 ? (
+                                currentBlogs.map((data, index) => (
                                     <Link
                                         to={`/blog/${data.title}`}
                                         key={index}
@@ -91,6 +126,10 @@ export default function BlogPage() {
                                     </h4>
                                 </div>
                             )}
+                        </div>
+                        {/* Pagination area */}
+                        <div className="flex justify-center mt-8">
+                            {renderPagination()}
                         </div>
                     </div>
                 </section>

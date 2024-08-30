@@ -57,9 +57,10 @@ const IndonesiaMap = () => {
                     </feMerge>
                 </filter>
             </defs>
-            <g className="province-marker" onClick={() => window.location.href = '/explore/Jawa%20Tengah'}>
+            
+            <g className="province-marker" onClick={() => window.location.href = '/explore'}>
                 <circle
-                    cx="320"
+                    cx="312"
                     cy="270"
                     r="5"
                     fill="#FF0000"
@@ -67,7 +68,7 @@ const IndonesiaMap = () => {
                     style={{ cursor: 'pointer' }}
                 />
                 <rect
-                    x="250"
+                    x="230"
                     y="200"
                     width="150"
                     height="50"
@@ -78,8 +79,332 @@ const IndonesiaMap = () => {
                     className="province-popover"
                 />
                 <text
-                    x="325"
+                    x="305"
                     y="230"
+                    textAnchor="middle"
+                    fill="#000000"
+                    className="province-label"
+                    >
+                    Bangka Belitung
+                </text>
+                <polygon
+                    points="-5,0 5,0 0,10"
+                    transform="translate(312, 250)"
+                    fill="#FFFFFF"
+                    className="province-arrow"
+                />
+            </g>
+            <g className="province-marker" onClick={() => window.location.href = '/explore'}>
+                <circle
+                    cx="1250"
+                    cy="300"
+                    r="5"
+                    fill="#FF0000"
+                    className="animated-circle"
+                    style={{ cursor: 'pointer' }}
+                />
+                <rect
+                    x="1170"
+                    y="230"
+                    width="150"
+                    height="50"
+                    rx="5"
+                    ry="5"
+                    fill="#FFFFFF"
+                    filter="url(#dropShadow)"
+                    className="province-popover"
+                />
+                <text
+                    x="1245"
+                    y="260"
+                    textAnchor="middle"
+                    fill="#000000"
+                    className="province-label"
+                    >
+                    Papua
+                </text>
+                <polygon
+                    points="-5,0 5,0 0,10"
+                    transform="translate(1250, 280)"
+                    fill="#FFFFFF"
+                    className="province-arrow"
+                />
+            </g>
+            <g className="province-marker" onClick={() => window.location.href = '/explore'}>
+                <circle
+                    cx="994"
+                    cy="300"
+                    r="5"
+                    fill="#FF0000"
+                    className="animated-circle"
+                    style={{ cursor: 'pointer' }}
+                />
+                <rect
+                    x="922"
+                    y="230"
+                    width="150"
+                    height="50"
+                    rx="5"
+                    ry="5"
+                    fill="#FFFFFF"
+                    filter="url(#dropShadow)"
+                    className="province-popover"
+                />
+                <text
+                    x="996"
+                    y="264"
+                    textAnchor="middle"
+                    fill="#000000"
+                    className="province-label"
+                    >
+                    Maluku
+                </text>
+                <polygon
+                    points="-5,0 5,0 0,10"
+                    transform="translate(994, 280)"
+                    fill="#FFFFFF"
+                    className="province-arrow"
+                />
+            </g>
+            <g className="province-marker" onClick={() => window.location.href = '/explore'}>
+                <circle
+                    cx="840"
+                    cy="190"
+                    r="5"
+                    fill="#FF0000"
+                    className="animated-circle"
+                    style={{ cursor: 'pointer' }}
+                />
+                <rect
+                    x="765"
+                    y="115"
+                    width="150"
+                    height="50"
+                    rx="5"
+                    ry="5"
+                    fill="#FFFFFF"
+                    filter="url(#dropShadow)"
+                    className="province-popover"
+                />
+                <text
+                    x="840"
+                    y="146"
+                    textAnchor="middle"
+                    fill="#000000"
+                    className="province-label"
+                    >
+                    Sulawesi Utara
+                </text>
+                <polygon
+                    points="-5,0 5,0 0,10"
+                    transform="translate(840, 165)"
+                    fill="#FFFFFF"
+                    className="province-arrow"
+                />
+            </g>
+            <g className="province-marker" onClick={() => window.location.href = '/explore'}>
+                <circle
+                    cx="715"
+                    cy="350"
+                    r="5"
+                    fill="#FF0000"
+                    className="animated-circle"
+                    style={{ cursor: 'pointer' }}
+                />
+                <rect
+                    x="640"
+                    y="280"
+                    width="150"
+                    height="50"
+                    rx="5"
+                    ry="5"
+                    fill="#FFFFFF"
+                    filter="url(#dropShadow)"
+                    className="province-popover"
+                />
+                <text
+                    x="716"
+                    y="312"
+                    textAnchor="middle"
+                    fill="#000000"
+                    className="province-label"
+                    >
+                    Sulawesi Selatan
+                </text>
+                <polygon
+                    points="-5,0 5,0 0,10"
+                    transform="translate(715, 330)"
+                    fill="#FFFFFF"
+                    className="province-arrow"
+                />
+            </g>
+            <g className="province-marker" onClick={() => window.location.href = '/explore'}>
+                <circle
+                    cx="580"
+                    cy="305"
+                    r="5"
+                    fill="#FF0000"
+                    className="animated-circle"
+                    style={{ cursor: 'pointer' }}
+                />
+                <rect
+                    x="505"
+                    y="230"
+                    width="150"
+                    height="50"
+                    rx="5"
+                    ry="5"
+                    fill="#FFFFFF"
+                    filter="url(#dropShadow)"
+                    className="province-popover"
+                />
+                <text
+                    x="580"
+                    y="264"
+                    textAnchor="middle"
+                    fill="#000000"
+                    className="province-label"
+                    >
+                    Kalimantan Selatan
+                </text>
+                <polygon
+                    points="-5,0 5,0 0,10"
+                    transform="translate(580, 280)"
+                    fill="#FFFFFF"
+                    className="province-arrow"
+                />
+            </g>
+            <g className="province-marker" onClick={() => window.location.href = '/explore'}>
+                <circle
+                    cx="635"
+                    cy="460"
+                    r="5"
+                    fill="#FF0000"
+                    className="animated-circle"
+                    style={{ cursor: 'pointer' }}
+                />
+                <rect
+                    x="560"
+                    y="385"
+                    width="150"
+                    height="50"
+                    rx="5"
+                    ry="5"
+                    fill="#FFFFFF"
+                    filter="url(#dropShadow)"
+                    className="province-popover"
+                />
+                <text
+                    x="632"
+                    y="417"
+                    textAnchor="middle"
+                    fill="#000000"
+                    className="province-label"
+                    >
+                    NTB
+                </text>
+                <polygon
+                    points="-5,0 5,0 0,10"
+                    transform="translate(635, 435)"
+                    fill="#FFFFFF"
+                    className="province-arrow"
+                />
+            </g>
+            <g className="province-marker" onClick={() => window.location.href = '/explore'}>
+                <circle
+                    cx="577"
+                    cy="452"
+                    r="5"
+                    fill="#FF0000"
+                    className="animated-circle"
+                    style={{ cursor: 'pointer' }}
+                />
+                <rect
+                    x="500"
+                    y="380"
+                    width="150"
+                    height="50"
+                    rx="5"
+                    ry="5"
+                    fill="#FFFFFF"
+                    filter="url(#dropShadow)"
+                    className="province-popover"
+                />
+                <text
+                    x="575"
+                    y="412"
+                    textAnchor="middle"
+                    fill="#000000"
+                    className="province-label"
+                    >
+                    Bali
+                </text>
+                <polygon
+                    points="-5,0 5,0 0,10"
+                    transform="translate(578, 430)"
+                    fill="#FFFFFF"
+                    className="province-arrow"
+                />
+            </g>
+            <g className="province-marker" onClick={() => window.location.href = '/explore'}>
+                <circle
+                    cx="500"
+                    cy="430"
+                    r="5"
+                    fill="#FF0000"
+                    className="animated-circle"
+                    style={{ cursor: 'pointer' }}
+                />
+                <rect
+                    x="427"
+                    y="360"
+                    width="150"
+                    height="50"
+                    rx="5"
+                    ry="5"
+                    fill="#FFFFFF"
+                    filter="url(#dropShadow)"
+                    className="province-popover"
+                />
+                <text
+                    x="504"
+                    y="394"
+                    textAnchor="middle"
+                    fill="#000000"
+                    className="province-label"
+                    >
+                    Jawa Timur
+                </text>
+                <polygon
+                    points="-5,0 5,0 0,10"
+                    transform="translate(500, 410)"
+                    fill="#FFFFFF"
+                    className="province-arrow"
+                />
+            </g>
+            <g className="province-marker" onClick={() => window.location.href = '/explore'}>
+                <circle
+                    cx="420"
+                    cy="420"
+                    r="5"
+                    fill="#FF0000"
+                    className="animated-circle"
+                    style={{ cursor: 'pointer' }}
+                />
+                <rect
+                    x="343"
+                    y="348"
+                    width="150"
+                    height="50"
+                    rx="5"
+                    ry="5"
+                    fill="#FFFFFF"
+                    filter="url(#dropShadow)"
+                    className="province-popover"
+                />
+                <text
+                    x="418"
+                    y="380"
                     textAnchor="middle"
                     fill="#000000"
                     className="province-label"
@@ -88,7 +413,79 @@ const IndonesiaMap = () => {
                 </text>
                 <polygon
                     points="-5,0 5,0 0,10"
-                    transform="translate(320, 250)"
+                    transform="translate(420, 398)"
+                    fill="#FFFFFF"
+                    className="province-arrow"
+                />
+            </g>
+            <g className="province-marker" onClick={() => window.location.href = '/explore'}>
+                <circle
+                    cx="369"
+                    cy="410"
+                    r="5"
+                    fill="#FF0000"
+                    className="animated-circle"
+                    style={{ cursor: 'pointer' }}
+                />
+                <rect
+                    x="293"
+                    y="338"
+                    width="150"
+                    height="50"
+                    rx="5"
+                    ry="5"
+                    fill="#FFFFFF"
+                    filter="url(#dropShadow)"
+                    className="province-popover"
+                />
+                <text
+                    x="366"
+                    y="370"
+                    textAnchor="middle"
+                    fill="#000000"
+                    className="province-label"
+                    >
+                    Jawa Barat
+                </text>
+                <polygon
+                    points="-5,0 5,0 0,10"
+                    transform="translate(370, 388)"
+                    fill="#FFFFFF"
+                    className="province-arrow"
+                />
+            </g>
+            <g className="province-marker" onClick={() => window.location.href = '/explore'}>
+                <circle
+                    cx="105"
+                    cy="130"
+                    r="5"
+                    fill="#FF0000"
+                    className="animated-circle"
+                    style={{ cursor: 'pointer' }}
+                />
+                <rect
+                    x="29"
+                    y="58"
+                    width="150"
+                    height="50"
+                    rx="5"
+                    ry="5"
+                    fill="#FFFFFF"
+                    filter="url(#dropShadow)"
+                    className="province-popover"
+                />
+                <text
+                    x="102"
+                    y="90"
+                    textAnchor="middle"
+                    fill="#000000"
+                    className="province-label"
+                    >
+                    Sumatera Utara
+                </text>
+                <polygon
+                    points="-5,0 5,0 0,10"
+                    transform="translate(104, 108)"
                     fill="#FFFFFF"
                     className="province-arrow"
                 />

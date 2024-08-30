@@ -1,11 +1,27 @@
-// import trialImg from '/src/assets/images/card-kelingking.webp';
-import baliImg from '/src/assets/images/bali/thumbnail-bali.webp';
-import jatengImg from '/src/assets/images/jateng/thumbnail-jateng.webp';
-
 // Provinsi Jawa Tengah
+import jatengImg from '/src/assets/images/jateng/thumbnail-jateng.webp';
 import gMerbabuImgOne from '/src/assets/images/jateng/destination/gMerbabu/thumbnail-jateng-one.webp';
 import gMerbabuImgTwo from '/src/assets/images/jateng/destination/gMerbabu/thumbnail-jateng-two.webp';
 import gMerbabuImgTree from '/src/assets/images/jateng/destination/gMerbabu/thumbnail-jateng-tree.webp';
+
+
+
+// Provinsi Sumatra Barat
+import provinsiSumbar from '/src/assets/images/sumbar/thumbnail-sumbar.webp';
+import jamGadangOne from '/src/assets/images/sumbar/destination/thumbnail-dest-jamgadang.webp';
+import jamGadangTwo from '/src/assets/images/sumbar/destination/thumbnail-dest-jamgadang-2.webp';
+import jamGadangTree from '/src/assets/images/sumbar/destination/thumbnail-dest-jamgadang-3.webp';
+import harauOne from '/src/assets/images/sumbar/destination/thumbnail-dest-harau.webp';
+import harauTwo from '/src/assets/images/sumbar/destination/thumbnail-dest-harau-2.webp';
+import harauTree from '/src/assets/images/sumbar/destination/thumbnail-dest-harau-3.webp';
+import nirwanaOne from '/src/assets/images/sumbar/destination/thumbnail-dest-nirwana.webp';
+import nirwanaTwo from '/src/assets/images/sumbar/destination/thumbnail-dest-nirwana-2.webp';
+import nirwanaTree from '/src/assets/images/sumbar/destination/thumbnail-dest-nirwana-3.webp';
+// import seribuGadangOne from '/src/assets/images/sumbar/destination/thumbnail-dest-seribuGadang.webp';
+// import seribuGadangTwo from '/src/assets/images/sumbar/destination/thumbnail-dest-seribuGadang-2.webp';
+// import seribuGadangTree from '/src/assets/images/sumbar/destination/thumbnail-dest-seribuGadang-3.webp';
+
+
 
 // Music
 import sumbarMusic from "/src/assets/music/sumbar.mp3";
@@ -23,59 +39,65 @@ import papuaMusic from "/src/assets/music/papua.mp3";
 
 
 export default [
+    // Provinsi Sumatera Barat
     {
         id: 1,
         province: "Sumatera Barat",
-        thumbnailProvince: baliImg,
+        thumbnailProvince: provinsiSumbar,
         bgMusic: sumbarMusic,
         destinations: [
             {
-                id: 1,
-                thumbnailProvince: baliImg,
-                name: "Gunung Agung",
-                category: "alam", 
-                description: "Gunung Merbabu adalah gunung berapi dengan ketinggian sekitar 3.145 mdpl. Gunung ini terkenal karena keindahan alamnya, terutama padang savana luas dan pemandangan puncak yang mempesona. Jalur pendakian menuju puncak Merbabu menawarkan pemandangan spektakuler dari berbagai vegetasi, mulai dari hutan tropis, padang rumput, hingga bunga edelweiss yang tumbuh subur di ketinggian.",
-                thumbnail: gMerbabuImgOne,
-                thumbnailTwo: gMerbabuImgTwo,
-                thumbnailTree: gMerbabuImgTree,
+                id: 10,
+                thumbnailProvince: provinsiSumbar,
+                name: "Jam Gadang",
+                category: "kesenian", 
+                description: "Jam Gadang adalah ikon Kota Bukittinggi yang terkenal dengan menara jam berarsitektur khas Minangkabau. Dibangun pada tahun 1926, menara ini memiliki ketinggian sekitar 26 meter dengan kubah yang bentuknya menyerupai atap rumah gadang. Jam ini unik karena hanya memiliki angka romawi 'IIII' untuk angka empat, berbeda dari jam biasanya. Setiap tahunnya, Jam Gadang menjadi pusat perayaan dan acara kebudayaan di Bukittinggi, menjadi daya tarik utama bagi wisatawan domestik dan mancanegara.",
+                thumbnail: jamGadangOne,
+                thumbnailTwo: jamGadangTwo,
+                thumbnailTree: jamGadangTree,
                 province: "Sumatera Barat",
-                location: "Semarang",
-                locationMaps: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d253497.1393726255!2d107.47834459527094!3d-6.903421164625082!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68e6398252477f%3A0x146a1f93d3e815b2!2sBandung%2C%20Kota%20Bandung%2C%20Jawa%20Barat!5e0!3m2!1sid!2sid!4v1724919943704!5m2!1sid!2sid",
-                locationLink: "https://maps.app.goo.gl/PHCgoG8gmPksbWiU9",
-                rute: [
-                    {
-                        id: 1,
-                        name: "Jalur Selo",
-                        description: "Pada jalur ini terdapat padang sabana yang terhampar luas dan pemandangan yang indah. Anda juga bisa berkemah di sabana tersebut."
-                    },
-                    {
-                        id: 2,
-                        name: "Jalur Suwanting",
-                        description: "Melalui jalur ini, Anda akan menjangkau puncak Merbabu dari sisi barat. Ciri khas dari rute ini adalah Anda harus melewati medan di tengah hutan lamtoro yang cukup panjang."
-                    },
-                    {
-                        id: 3,
-                        name: "Jalur Wekas",
-                        description: "Jalur wekas adalah jalur pendakian melalui sisi utara Merbabu. Jalur ini menjadi favorit pendakian karena memiliki tempat kemah yang luas di pos II dengan sumber air yang melimpah."
-                    },
-                    {   
-                        id: 4,
-                        name: "Jalur Cunthel",
-                        description: "Pendaki akan melewati Pos Pemancar di tengah perjalanan, lalu menghadapi tanjakan terjal setelah bergabung dengan jalur Wekas dan Thekelan."
-                    },
-                    {
-                        id: 5,
-                        name: "Jalur Thekelan",
-                        description: "Di jalur ini, pendaki akan menemukan Watu Gubug, sebuah batu yang konon menjadi gerbang menuju dimensi lain. Jalur ini kemudian bergabung dengan Wekas dan Chuntel, di mana pendaki harus melewati tanjakan terjal dan rute ekstrem menuju puncak, termasuk Ondorante."
-                    }
-                ],
-                viewCount: 1000,
-                price: 300000,
+                location: "Bukittinggi",
+                locationMaps: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31918.090002095385!2d100.3528384539807!3d-0.306454380193766!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2fd538bd1ff164a7%3A0xcea33881870dc19!2sJam%20Gadang%20Bukittinggi!5e0!3m2!1sid!2sid!4v1725023720284!5m2!1sid!2sid",
+                locationLink: "https://maps.app.goo.gl/PHTzfzYLBsbigN4Z6",
+                rute: null,
+                viewCount: 1001,
+                price: 10000,
                 priceDetail: [
                     {
                         id: 1,
                         name: "WNA",
-                        price: 50000
+                        price: 10000
+                    },
+                    {
+                        id: 2,
+                        name: "WNI",
+                        price: 10000
+                    },
+                ],
+                rating: 4.7,
+                createdAt: "2023-11-15 10:21:37.261134+01:00"
+            },
+            {
+                id: 11,
+                thumbnailProvince: provinsiSumbar,
+                name: "Lembah Harau",
+                category: "alam", 
+                description: "Lembah Harau terletak di Kabupaten Lima Puluh Kota dan dikenal sebagai salah satu lembah terindah di Sumatera Barat. Dikelilingi oleh tebing-tebing granit setinggi 100 hingga 300 meter, lembah ini menawarkan pemandangan alam yang memukau serta air terjun yang mengalir jernih. Selain panorama alam, Lembah Harau juga menjadi tempat favorit untuk kegiatan panjat tebing. Udara sejuk dan suasana tenang membuatnya ideal untuk melepas penat dan menikmati keindahan alam.",
+                thumbnail: harauOne,
+                thumbnailTwo: harauTwo,
+                thumbnailTree: harauTree,
+                province: "Sumatera Barat",
+                location: "Lima Puluh Kota",
+                viewCount: 1002,
+                locationMaps: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31918.50003340592!2d100.6411010435936!3d-0.0978316936769927!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e2ab31922ab0fdf%3A0x581641322ca49a0e!2sLembah%20Harau!5e0!3m2!1sid!2sid!4v1725024165210!5m2!1sid!2sid",
+                locationLink: "https://maps.app.goo.gl/XaQuBF1mjWbSFy6A7",
+                rute: null,
+                price: 20000,
+                priceDetail: [
+                    {
+                        id: 1,
+                        name: "WNA",
+                        price: 40000
                     },
                     {
                         id: 2,
@@ -83,29 +105,44 @@ export default [
                         price: 20000
                     },
                 ],
-                rating: 4.8,
+                rating: 4.7,
                 createdAt: "2023-11-15 10:21:37.261134+01:00"
             },
             {
-                id: 11,
-                thumbnailProvince: baliImg,
-                name: "Gunung Agung 2",
+                id: 12,
+                thumbnailProvince: provinsiSumbar,
+                name: "Pantai Nirwana",
                 category: "alam", 
-                description: "Gunung Agung adalah gunung berapi dengan ketinggian sekitar 3.145 mdpl.",
-                thumbnail: gMerbabuImgOne,
-                thumbnailTwo: gMerbabuImgTwo,
-                thumbnailTree: gMerbabuImgTree,
-                province: "Bali",
-                location: "Semarang",
-                viewCount: 1000,
-                locationLink: "https://maps.app.goo.gl/PHCgoG8gmPksbWiU9",
-                price: 300000,
-                rating: 4.8,
+                description: "Pantai Nirwana terletak di Kota Padang, Sumatera Barat, dan terkenal dengan pasir putihnya yang lembut serta air laut yang jernih. Pemandangan matahari terbenam di pantai ini sangat memukau, dengan langit yang berwarna keemasan dan siluet perahu nelayan yang melintas. Pantai ini juga cocok untuk aktivitas snorkeling karena terumbu karang yang masih terjaga. Selain itu, lokasi pantai yang dekat dengan pusat kota membuatnya mudah diakses oleh wisatawan.",
+                thumbnail: nirwanaOne,
+                thumbnailTwo: nirwanaTwo,
+                thumbnailTree: nirwanaTree,
+                province: "Sumatera Barat",
+                location: "Padang",
+                locationMaps: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31918.50003340592!2d100.6411010435936!3d-0.0978316936769927!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e2ab31922ab0fdf%3A0x581641322ca49a0e!2sLembah%20Harau!5e0!3m2!1sid!2sid!4v1725024165210!5m2!1sid!2sid",
+                locationLink: "https://maps.app.goo.gl/XaQuBF1mjWbSFy6A7",
+                rute: null,
+                viewCount: 1003,
+                price: 5000,
+                priceDetail: [
+                    {
+                        id: 1,
+                        name: "WNA",
+                        price: 5000
+                    },
+                    {
+                        id: 2,
+                        name: "WNI",
+                        price: 5000
+                    },
+                ],
+                rating: 4.1,
                 createdAt: "2023-11-15 10:21:37.261134+01:00"
             },
         ],
         createdAt: "2023-11-15 10:21:37.261134+01:00"
     },
+    // Provinsi Bangka Belitung
     {
         id: 2, 
         province: "Bangka Belitung",
@@ -132,6 +169,7 @@ export default [
         ],
         createdAt: "2023-11-15 10:21:37.261134+01:00"
     },
+    // Provinsi Jawa Barat
     {
         id: 3,
         province: "Jawa Barat",
@@ -158,6 +196,7 @@ export default [
         ],
         createdAt: "2023-11-15 10:21:37.261134+01:00"
     },
+    // Provinsi Jawa Tengah
     {
         id: 4,
         province: "Jawa Tengah",
@@ -184,6 +223,7 @@ export default [
         ],
         createdAt: "2023-11-15 10:21:37.261134+01:00"
     },
+    // Provinsi Jawa Timur
     {
         id: 5,
         province: "Jawa Timur",
@@ -201,7 +241,7 @@ export default [
                 thumbnailTree: gMerbabuImgTree,
                 province: "Jawa Timur",
                 location: "Semarang",
-                viewCount: 4000,
+                viewCount: 5001,
                 locationLink: "https://maps.app.goo.gl/PHCgoG8gmPksbWiU9",
                 price: 300000,
                 rating: 4.8,
@@ -210,6 +250,7 @@ export default [
         ],
         createdAt: "2023-11-15 10:21:37.261134+01:00"
     },
+    // Provinsi Bali
     {
         id: 6,
         province: "Bali",
@@ -236,6 +277,7 @@ export default [
         ],
         createdAt: "2023-11-15 10:21:37.261134+01:00"
     },
+    // Nusa Tenggara Barat
     {
         id: 7,
         province: "Nusa Tenggara Barat",
@@ -262,6 +304,7 @@ export default [
         ],
         createdAt: "2023-11-15 10:21:37.261134+01:00"
     },
+    // Kalimantan Selatan
     {
         id: 8,
         province: "Kalimantan Selatan",
@@ -288,6 +331,7 @@ export default [
         ],
         createdAt: "2023-11-15 10:21:37.261134+01:00"
     },
+    // Sulawesi Utara
     {
         id: 9,
         province: "Sulawesi Utara",
@@ -314,6 +358,7 @@ export default [
         ],
         createdAt: "2023-11-15 10:21:37.261134+01:00"
     },
+    // Sulawesi Selatan
     {
         id: 10,
         province: "Sulawesi Selatan",
@@ -340,6 +385,7 @@ export default [
         ],
         createdAt: "2023-11-15 10:21:37.261134+01:00"
     },
+    // Maluku
     {
         id: 11,
         province: "Maluku",
@@ -366,6 +412,7 @@ export default [
         ],
         createdAt: "2023-11-15 10:21:37.261134+01:00"
     },
+    // Papua
     {
         id: 12,
         province: "Papua",

@@ -23,7 +23,12 @@ export default function ExploreProvincePage() {
     const [bgMusic, setBgMusic] = useState(null);
     const [isPlaying, setIsPlaying] = useState(false);
     const audioRef = useRef(null);
-
+    
+    const scrollToTop = () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+        stopMusic();
+    };
+    
     // handle scroll to top page was loaded ( hardcoded :) )
     useEffect(() => {
         window.scrollTo(0, 0);
@@ -60,10 +65,6 @@ export default function ExploreProvincePage() {
         };
     }, []);
 
-    const scrollToTop = () => {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-        stopMusic();
-    };
 
     const handleSearchDestination = (event) => {
         setSearchDestination(event.target.value);
@@ -113,6 +114,8 @@ export default function ExploreProvincePage() {
             currentAudioRef.addEventListener('play', handleAudioPlay);
             currentAudioRef.addEventListener('pause', handleAudioPause);
             
+            currentAudioRef.volume = 0.5;
+            
             currentAudioRef.play().catch(error => {
                 console.error("Error playing audio : ", error);
                 setIsPlaying(false);
@@ -160,8 +163,6 @@ export default function ExploreProvincePage() {
             setAllDestinations(filtered);
         }
     }, [selectedProvince, debouncedSearch, province]);
-
-    console.log(isPlaying)
 
     return (
         <>
@@ -267,7 +268,7 @@ export default function ExploreProvincePage() {
                 </section>
             </main>
             {bgMusic && (
-                <audio ref={audioRef} src={bgMusic} loop autoPlay />
+                <audio ref={audioRef} src={bgMusic} loop autoPlay  />
             )}
             <FloatingButtons scrollToTop={scrollToTop} togglePlayPause={togglePlayPause} isPlaying={isPlaying} />
             <Footer />

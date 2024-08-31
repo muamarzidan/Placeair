@@ -33,7 +33,7 @@ const Footer = () => {
             {/* Child left/top side choose area */}
             <div className="flex basis-full flex-col md:basis-[55%] lg:basis-[60%] xl:basis-[70%]">
               <h3 className="text-2xl font-semibold md:text-5xl text-primary">Placeir</h3>
-              <p className="text-sm sm:text-lg pr-20 sm:pr-[100px] lg:pr-[350px] text-fourly">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint Velit officia.</p>
+              <p className="text-sm sm:text-lg pr-20 sm:pr-[100px] lg:pr-[350px] text-fourly">Temukan surga tersembunyi, liburan impian, dan rasakan keindahan Indonesia yang sesungguhnya. Hanya   dengan Placeir.</p>
             </div>
             {/* Child right/bottom side choose area */}
             <div className="flex basis-full md:basis-[45%] lg:basis-[40%] xl:basis-[30%]">

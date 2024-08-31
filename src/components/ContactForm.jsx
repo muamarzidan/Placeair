@@ -33,7 +33,7 @@ export default function ContactForm() {
                 title: 'Gagal',
                 text: validationError,
                 allowOutsideClick: false,
-                confirmButtonText: 'Coba lagi',
+                confirmButtonText: 'Mohon coba lagi',
                 confirmButtonColor: '#AC1207',
                 customClass: {
                     confirmButton: 'sweetalert-button',

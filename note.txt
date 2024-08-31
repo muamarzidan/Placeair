@@ -2,17 +2,17 @@ GENERAL
  - TEST ALL LINK IN PRODUCTION              DONE
  - TEST IMAGE IN PRODUCTION                 DONE
  - ADD MUSIC IN EACH PROVINCE               DONE
- - ADD ANIMATION IMAGE FOR EACH PROVINCE    
+ - ADD ANIMATION IMAGE FOR EACH PROVINCE    DONE
  - FIX BLOG DATA                            DONE
  - FIX DESTINATION AND PROVINCE DATA        DONE
  - SAMAIN RATING GOOGLE                     DONE
  - SEDIAN HARGA DESTINASI                   DONE           
- - VIDEO PROSES
- - WAWANCARA
+ - VIDEO PROSES                             DONE
+ - WAWANCARA                                DONE
 
 
 PAGE 
- - HOME(MAPS) + HINT       PROSES
+ - HOME(MAPS) + HINT       DONE
  - EXPLORE                 DONE
  - EXPLORE DESTINATION     DONE
  - ABOUT                   DONE
@@ -78,4 +78,4 @@ ENHANCE
  - HANDLE 2 FLOATING BUTTON                             DONE
  - HANDLE PRICE DETAL DEST                              DONE
  - BLOG PAGINATION                                      DONE
- - ENHANCE PLAY MUSIK WITH 50% MUSIC                       
+ - ENHANCE PLAY MUSIK WITH 50% MUSIC                    DONE             

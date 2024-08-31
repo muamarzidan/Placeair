@@ -315,7 +315,7 @@ export default [
                 thumbnailTree: puriAgungTree,
                 province: "Bangka Belitung",
                 location: "Sungai Liat",
-                locationMaps: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3985.8740904647416!2d106.35028427496891!3d-2.5478740974304372!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e3d4513bce66569%3A0xb60b7ec414d881df!2sDanau%20Kaolin!5e0!3m2!1sid!2sid!4v1725028158454!5m2!1sid!2sid",
+                locationMaps: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3987.6257892740764!2d106.18141857496691!3d-1.8995635980831378!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e228d687ea9df91%3A0x4de25e33093ce685!2sPadepokan%20Puri%20Tri%20Agung!5e0!3m2!1sid!2sid!4v1725116112515!5m2!1sid!2sid",
                 locationLink: "https://maps.app.goo.gl/E9cK3nPw1jYmu7459",
                 rute: null,
                 price: 0,

@@ -168,7 +168,7 @@ const IndonesiaMap = () => {
                     className="province-arrow"
                 />
             </g>
-            {/* Sulawesi Utara */}
+            {/* Sulawesi Barat */}
             <g className="province-marker" onClick={() => window.location.href = '/explore/Sulawesi%20Utara'}>
                 <circle
                     cx="840"
@@ -465,7 +465,7 @@ const IndonesiaMap = () => {
                 />
             </g>
             {/* Sumatra Utara */}
-            <g className="province-marker" onClick={() => window.location.href = '/explore/Sumatera%20Utara'}>
+            <g className="province-marker" onClick={() => window.location.href = '/explore/Sumatera%20Barat'}>
                 <circle
                     cx="125"
                     cy="210"

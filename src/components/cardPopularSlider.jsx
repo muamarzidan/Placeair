@@ -143,7 +143,7 @@ const PopularCardSwiper = () => {
                   {/* price and button area */}
                   <div className="flex items-center justify-between w-full mt-0 sm:!mt-2">
                     <span className="font-bold text-lg sm:text-[16px] md:text-[26px] text-[#171717]">
-                      {formatPrice(data.price)}
+                      {data.price > 0 ? formatPrice(data.price) : "Gratis"}
                     </span>
                     <Link to={`/explore-destination/${data.province}/${data.name}`} className="px-4 py-2 text-sm font-normal text-white rounded-full md:font-semibold sm:px-8 md:px-10 md:py-[10px] sm:text-md md:text-lg bg-primary">
                       Lihat

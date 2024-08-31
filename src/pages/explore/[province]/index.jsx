@@ -238,7 +238,7 @@ export default function ExploreProvincePage() {
                                             {/* Price and button area */}
                                             <div className="flex items-center justify-between w-full pt-0 sm:pt-2">
                                                 <span className="card-des-price font-bold text-md sm:text-2xl md:text-[20px] lg:text-[22px] xl:text-[26px] text-[#171717]">
-                                                    {formatPrice(data.price)}
+                                                    {data.price > 0 ? formatPrice(data.price) : "Gratis"}
                                                 </span>
                                                 <Link to={`/explore-destination/${data.province}/${data.name}`}>
                                                     <button className="card-des-button px-5 py-2 sm:py-2 text-sm font-normal text-white rounded-full md:font-semibold sm:px-8 md:px-8 md:py-[10px] sm:text-md md:text-lg bg-primary">

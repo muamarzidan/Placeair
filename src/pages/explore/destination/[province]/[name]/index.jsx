@@ -193,7 +193,7 @@ export default function DetailDestinationPage() {
                                         </div>
                                     ))
                                 ) : (
-                                    <p className="w-full font-semibold text-md sm:text-2xl md:text-[24px] text-secondary text-center">Mohon maaf informasi detail tentang rute destinasi ini belum tersedia</p>
+                                    <p className="w-full font-semibold text-md sm:text-2xl md:text-[24px] text-secondary text-center">Maaf, Kami belum bisa menyediakan informasi detail rute pada destinasi {destination.name}</p>
                                 )}
                             </div>
                         </div>

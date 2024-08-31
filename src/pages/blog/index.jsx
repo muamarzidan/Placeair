@@ -103,12 +103,12 @@ export default function BlogPage() {
                                         className="explore-card-blog w-full h-full sm:max-w-[280px] md:max-w-[355px] lg:max-w-[310px] xl:max-w-[400px] xl:max-h-[700px] flex flex-col justify-between gap-2 sm:gap-4 p-2 sm:p-3 rounded-[12px] sm:rounded-3xl border-[1px] border-gray-300"
                                     >
                                         <img
-                                            className="explore-blog-cardImage w-full h-[67%] sm:w-full sm:h-[67%] md:h-[68%] lg:h-[67%] xl:h-full !max-w-[404px] !max-h-[295px] rounded-[8px] sm:rounded-xl"
+                                            className="explore-blog-cardImage w-full h-[67%] sm:w-full sm:h-[67%] md:h-[68%] lg:h-[67%] xl:h-full !max-w-[404px] !max-h-[295px] rounded-[8px] sm:rounded-xl object-cover object-center"
                                             src={data.thumbhnailBlog}
                                         >
                                         </img>
                                         <div className="flex flex-col w-full h-full gap-1 px-1 sm:px-2">
-                                            <span className="card-blog-title text-wrap w-fit text-[#171717] font-semibold !text-sm sm:!text-xl lg:!text-2xl xl:!text-3xl">
+                                            <span className="card-blog-title text-wrap w-fit text-[#171717] font-semibold !text-sm sm:!text-xl lg:!text-2xl xl:!text-3xl overflow-hidden">
                                                 {data.title}
                                             </span>
                                             <span className="text-xs w-fit text-secondary sm:text-lg lg:text-xl xl:text-2xl">

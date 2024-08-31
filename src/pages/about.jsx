@@ -64,7 +64,7 @@ export default function AboutPage() {
                 <section id="about-us" className="w-full h-auto pt-5 pb-1 sm:pt-10 sm:pb-5">
                     <div className="container w-full h-auto">
                         <div className="flex flex-col justify-between w-full h-auto gap-2 text-center">
-                            <span className="text-secondary text-sm sm:text-lg md:text-2xl xl:text-[24px] cursor-pointer" onClick={() => handleScrollToAbout('about-us')}>ABOUT US</span>
+                            <span className="text-secondary text-sm sm:text-lg md:text-2xl xl:text-[24px] cursor-pointer font-semibold" onClick={() => handleScrollToAbout('about-us')}>ABOUT US</span>
                             <h1 className="text-2xl font-semibold sm:text-3xl md:text-4xl xl:text-6xl">Mengenal Lebih Jauh Tentang Placeir</h1>
                             <p className="text-sm sm:text-md lg:text-xl xl:text-3xl leading-5 md:leading-7 xl:leading-10 px-0 sm:px-[36px] lg:px-[72px] !mt-0 sm:!mt-1 md:!mt-3 text-fourly">
                                 Placeir merupakan sebuah platform  yang berfokus untuk mempromosikan sektor-sektor pariwisata yang ada di Indonesia. Placeir  menyediakan informasi lengkap mengenai berbagai destinasi wisata di Indonesia. 
@@ -75,7 +75,7 @@ export default function AboutPage() {
                 <section id="visi" className="w-full h-auto py-5 sm:py-10">
                     <div className="container w-full h-auto">
                         <div className="flex flex-col justify-between w-full h-auto gap-2 text-center">
-                            <span className="text-secondary text-sm sm:text-lg md:text-2xl xl:text-[24px]">VISI DAN MISI</span>
+                            <span className="text-secondary text-sm sm:text-lg md:text-2xl xl:text-[24px] font-semibold">VISI DAN MISI</span>
                             <h1 className="text-2xl font-semibold sm:text-3xl md:text-4xl xl:text-6xl">Visi Placeir</h1>
                             <p className="text-sm sm:text-md lg:text-xl xl:text-3xl leading-5 md:leading-7 xl:leading-10 px-0 sm:px-[36px] lg:px-[72px] !mt-0 sm:!mt-1 md:!mt-3 text-fourly">
                                 Menjadi sumber informasi utama Anda untuk menjelajahi keindahan dan keragaman destinasi wisata di Indonesia. Kami berkomitmen untuk membawa Anda lebih dekat dengan pesona alam, budaya, dan kekayaan tradisi yang tersebar di seluruh Indonesia.
@@ -96,7 +96,7 @@ export default function AboutPage() {
                 <section id="team" className="w-full h-auto py-5 sm:py-10 md:py-20">
                     <div className="container w-full h-auto">
                         <div className="flex flex-col justify-between w-full h-auto gap-0 text-center md:gap-2">
-                            <span className="text-secondary text-sm sm:text-lg md:text-2xl xl:text-[24px]">OUR TEAM</span>
+                            <span className="text-secondary text-sm sm:text-lg md:text-2xl xl:text-[24px] font-semibold">OUR TEAM</span>
                             <h1 className="text-2xl font-semibold sm:text-3xl md:text-4xl xl:text-6xl">Tim di Balik Placeir</h1>
                             <div className="flex items-center justify-center w-full h-auto gap-0 sm:gap-7 lg:gap-14 !mt-3 sm:!mt-8">
                                 <div className="flex flex-col items-center w-full h-full max-w-[242px] max-h-[232px] gap-2">
